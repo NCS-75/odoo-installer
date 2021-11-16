@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2021 Akretion
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+    <record id="view_partner_form" model="ir.ui.view" >
+        <field name="name">res.partner.form (in dualsun_address)</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='company_type']" position="after">
+                <field name="address_type" widget="radio" class="oe_edit_only" options="{'horizontal': true}" attrs="{'invisible': [('type', '=', 'contact')]}"/>
+            </xpath>
+
+            <xpath expr="//page[@name='contact_addresses']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+            <xpath expr="//page[@name='contact_addresses']" position="before">
+                <page string="Contacts" name="contacts" attrs="{'invisible': ['|', ('type', '!=', 'contact'), ('is_company', '=', False)]}">
+                    <field name="contact_ids"
+                        context="{
+                            'default_parent_id': active_id,
+                            'default_street': street,
+                            'default_street2': street2,
+                            'default_city': city,
+                            'default_state_id': state_id,
+                            'default_zip': zip,
+                            'default_country_id': country_id,
+                            'default_lang': lang,
+                            'default_user_id': user_id,
+                            'default_type': 'contact',
+                            'default_is_company': False,
+                            'default_category_id': category_id,
+                        }"
+                    >
+                        <tree string="Contacts">
+                            <field name="name" />
+                            <field name="category_id" widget="many2many_tags" options="{'color_field': 'color'}" string="Categories" optional="hide"/>
+                            <field name="function"/>
+                            <field name="phone"/>
+                            <field name="mobile" optional="hide"/>
+                            <field name="email" string="Email"/>
+                            <field name="zip" optional="hide"/>
+                            <field name="city" />
+                            <field name="country_id" optional="hide"/>
+                            <control>
+                              <create string="Add a contact" />
+                            </control>
+                        </tree>
+                    </field>
+                </page>
+                <page string="Coworkers" name="coworkers" attrs="{'invisible': ['|', ('type', '!=', 'contact'), ('is_company', '=', True)]}">
+                    <field name="coworker_ids">
+                        <tree string="Coworkers">
+                            <field name="name" />
+                            <field name="category_id" widget="many2many_tags" options="{'color_field': 'color'}" string="Categories" optional="hide"/>
+                            <field name="function"/>
+                            <field name="phone"/>
+                            <field name="mobile" optional="hide"/>
+                            <field name="email" string="Email"/>
+                            <field name="zip" optional="hide"/>
+                            <field name="city" />
+                            <field name="country_id" optional="hide"/>
+                        </tree>
+                    </field>
+                </page>
+                <page string="Addresses" name="addresses" attrs="{'invisible': [('type', '!=', 'contact')]}">
+                    <field name="address_ids"
+                        context="{
+                            'default_parent_id': active_id,
+                            'default_street': street,
+                            'default_street2': street2,
+                            'default_city': city,
+                            'default_state_id': state_id,
+                            'default_zip': zip,
+                            'default_country_id': country_id,
+                            'default_lang': lang,
+                            'default_user_id': user_id,
+                            'default_type': 'delivery',
+                            'default_address_type': 'delivery',
+                            'default_is_company': False,
+                        }"
+                    >
+                        <tree string="Addresses">
+                            <field name="name" />
+                            <field name="type" optional="show" string="Address Type"/>
+                            <field name="street" />
+                            <field name="street2" />
+                            <field name="zip"/>
+                            <field name="city" />
+                            <field name="country_id"/>
+                            <control>
+                              <create string="Add an address" />
+                            </control>
+                        </tree>
+                    </field>
+                </page>
+
+            </xpath>
+        </field>
+    </record>
+
+
+
+</odoo>
