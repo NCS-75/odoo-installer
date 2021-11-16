@@ -1,0 +1,82 @@
+/* License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). */
+// Custom form background
+
+.o_form_view {
+  @mixin o_form_sheet_bg_template {
+    // backend_theme_v12
+    background: none !important;
+    padding: 0;
+    // native
+    border-bottom: 1px solid #ddd;
+    position: relative;
+
+    .o_form_sheet {
+      // backend_theme_v14
+      border: 1px solid #d9d7d7;
+      box-shadow: 0 5px 20px -15px black;
+      // web_responsive
+      max-width: calc(100% - 32px);
+      overflow-x: auto;
+      // native
+      min-width: 650px;
+      min-height: 330px;
+      padding: 16px;
+      background: white;
+      margin: 12px auto;
+    }
+  }
+
+  .o_form_sheet_bg_lead {
+    @include o_form_sheet_bg_template;
+    background-color: #dbddfd69 !important;
+  }
+
+  .o_form_sheet_bg_opportunity {
+    @include o_form_sheet_bg_template;
+    background-color: #dbddfd69 !important;
+  }
+
+  .o_form_sheet_bg_sale {
+    @include o_form_sheet_bg_template;
+    background-color: #FFAC631A !important;
+  }
+
+  .o_form_sheet_bg_invoice {
+    @include o_form_sheet_bg_template;
+    background-color: #FFC9992E !important;
+  }
+
+  .o_form_sheet_bg_event {
+    @include o_form_sheet_bg_template;
+    background-color: #ebf9f2 !important;
+  }
+
+  .o_form_sheet_bg_purchase {
+    @include o_form_sheet_bg_template;
+    background-color: #eff4ff !important;
+  }
+
+  .o_form_sheet_bg_picking {
+    @include o_form_sheet_bg_template;
+    background-color: #f4e7e7 !important;
+  }
+
+  .o_form_sheet_bg_manufacture {
+    @include o_form_sheet_bg_template;
+    background-color: #d9eee08f !important;
+  }
+}
+// NOT WORKING :
+// .o_form_view {
+//     .o_form_sheet_bg_lead {
+//         background-color: #f2e6ff !important;
+//
+//         .o_form_sheet {}
+//     }
+//
+//     .o_form_sheet_bg_event {
+//         background-color: #ebf9f2 !important;
+//
+//         .o_form_sheet {}
+//     }
+// }

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="relation_established" model="crm.stage">
+      <field name="name">Relation established</field>
+      <field name="fold_pipeline">False</field>
+      <field name="fold_aftersales">True</field>
+      <field name="sequence">0</field>
+      <field name="requirements">
+  >
+      </field>
+  </record>
+  <record id="qualified_project" model="crm.stage">
+      <field name="name">Qualified project</field>
+      <field name="fold_pipeline">False</field>
+      <field name="fold_aftersales">True</field>
+      <field name="sequence">1</field>
+      <field name="requirements">
+  >
+      </field>
+  </record>
+  <record id="proposition_made" model="crm.stage">
+      <field name="name">Proposition made</field>
+      <field name="fold_pipeline">False</field>
+      <field name="fold_aftersales">True</field>
+      <field name="sequence">2</field>
+      <field name="requirements">
+  >
+      </field>
+  </record>
+  <record id="deal_signed" model="crm.stage">
+      <field name="name">Deal signed</field>
+      <field name="fold_pipeline">False</field>
+      <field name="fold_aftersales">True</field>
+      <field name="sequence">3</field>
+      <field name="requirements">
+  >
+      </field>
+  </record>
+  <record id="installation_started" model="crm.stage">
+      <field name="name">Installation started</field>
+      <field name="is_won">True</field>
+      <field name="fold_pipeline">False</field>
+      <field name="fold_aftersales">False</field>
+      <field name="sequence">4</field>
+      <field name="requirements">
+  >
+      </field>
+  </record>
+
+  <record id="commissioned" model="crm.stage">
+      <field name="name">Commissioned</field>
+      <field name="is_won">True</field>
+      <field name="fold_pipeline">True</field>
+      <field name="fold_aftersales">False</field>
+      <field name="worksite_completed">True</field>
+      <field name="sequence">101</field>
+      <field name="requirements">
+  >
+      </field>
+  </record>
+  <record id="guarantees_granted" model="crm.stage">
+      <field name="name">Guarantees granted</field>
+      <field name="is_won">True</field>
+      <field name="fold_pipeline">True</field>
+      <field name="fold_aftersales">False</field>
+      <field name="worksite_completed">True</field>
+      <field name="guarantees_granted">True</field>
+      <field name="sequence">102</field>
+      <field name="requirements">
+  >
+      </field>
+  </record>
+  <record id="aftersale_dualsun" model="crm.stage">
+      <field name="name">After-Sale Service DualSun</field>
+      <field name="is_won">True</field>
+      <field name="fold_pipeline">True</field>
+      <field name="fold_aftersales">False</field>
+      <field name="worksite_completed">True</field>
+      <field name="guarantees_granted">True</field>
+      <field name="sequence">103</field>
+      <field name="requirements">
+  >
+      </field>
+  </record>
+  <record id="aftersale_installer" model="crm.stage">
+      <field name="name">After-Sale Service Installer</field>
+      <field name="is_won">True</field>
+      <field name="fold_pipeline">True</field>
+      <field name="fold_aftersales">False</field>
+      <field name="worksite_completed">True</field>
+      <field name="guarantees_granted">True</field>
+      <field name="sequence">103</field>
+      <field name="requirements">
+  >
+      </field>
+  </record>
+
+</odoo>
