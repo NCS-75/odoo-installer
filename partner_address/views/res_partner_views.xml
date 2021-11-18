@@ -13,6 +13,16 @@
             <xpath expr="//field[@name='company_type']" position="after">
                 <field name="address_type" widget="radio" class="oe_edit_only" options="{'horizontal': true}" attrs="{'invisible': [('type', '=', 'contact')]}"/>
             </xpath>
+            <xpath expr="//field[@name='company_type']" position="attributes">
+                <attribute name="attrs">{"invisible": [("type", "!=", "contact")]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='category_id']" position="attributes">
+                <attribute name="attrs">{"invisible": [("type", "!=", "contact")]}</attribute>
+            </xpath>
+            <!-- Hide parent_id on children pop-up as it is not filled when adding a new child from pop-up -->
+            <xpath expr="//field[@name='parent_id']" position="attributes">
+                <attribute name="invisible">context.get("default_parent_id")</attribute>
+            </xpath>
 
             <xpath expr="//page[@name='contact_addresses']" position="attributes">
                 <attribute name="invisible">True</attribute>
