@@ -7,13 +7,6 @@ from odoo import api, fields, models
 class CrmLead(models.Model):
     _inherit = "crm.lead"
 
-    worksite_completed = fields.Boolean(
-        related="stage_id.worksite_completed", store=True
-    )
-    guarantees_granted = fields.Boolean(
-        related="stage_id.guarantees_granted", store=True
-    )
-
     @api.model
     def _read_group_stage_ids(self, stages, domain, order):
         """Override native '_read_group_stage_ids' to display and fold columns depending
@@ -44,5 +37,3 @@ class CrmStage(models.Model):
 
     fold_pipeline = fields.Boolean("Folded in main Pipeline")
     fold_aftersales = fields.Boolean("Folded in After-Sales")
-    worksite_completed = fields.Boolean("Worksite completed")
-    guarantees_granted = fields.Boolean("Guarantees granted")

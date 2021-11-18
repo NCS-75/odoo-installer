@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <!-- Inherit Search -->
-    <record id="view_crm_case_opportunities_filter" model="ir.ui.view">
-      <field name="name">crm.lead.search.opportunity (in dualsun_base)</field>
-      <field name="model">crm.lead</field>
-      <field name="inherit_id" ref="crm.view_crm_case_opportunities_filter"/>
-      <field name="arch" type="xml">
-          <xpath expr="//filter[@name='lost']" position="after">
-              <filter string="Worksite completed" name="worksite_completed" domain="[('worksite_completed', '=', True)]"/>
-          </xpath>
-      </field>
-    </record>
-
-    <!-- Inherit Form view for After-Sales -->
+    <!-- Inherit original Lead Form view -->
     <record id="crm_lead_view_form" model="ir.ui.view">
       <field name="name">crm.lead.form (in crm_aftersale)</field>
       <field name="model">crm.lead</field>
@@ -26,7 +14,7 @@
       </field>
     </record>
 
-    <!-- Inherit Form view for After-Sales -->
+    <!-- New lead Form view for After-Sales -->
     <record id="crm_lead_aftersales_view_form" model="ir.ui.view">
       <field name="name">crm.lead.form.aftersales (primary mode)</field>
       <field name="model">crm.lead</field>
