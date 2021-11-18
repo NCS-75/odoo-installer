@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Buildings -->
+    <record id="individual_house" model="crm.building">
+        <field name="name">Individual house</field>
+        <field name="is_with_pm">False</field>
+    </record>
+    <record id="boarding_school" model="crm.building">
+        <field name="name">Boarding school</field>
+        <field name="is_with_pm">True</field>
+    </record>
+    <record id="half_board" model="crm.building">
+        <field name="name">Half board</field>
+        <field name="is_with_pm">True</field>
+    </record>
+    <record id="collective_housing" model="crm.building">
+        <field name="name">Collective housing</field>
+        <field name="is_with_pm">True</field>
+    </record>
+    <record id="agricultural_exploitation" model="crm.building">
+        <field name="name">Agricultural exploitation</field>
+        <field name="is_with_pm">False</field>
+    </record>
+    <record id="sports_complex" model="crm.building">
+        <field name="name">Sports Complex</field>
+        <field name="is_with_pm">True</field>
+    </record>
+    <record id="ehpad" model="crm.building">
+        <field name="name">EHPAD</field>
+        <field name="is_with_pm">True</field>
+    </record>
+    <record id="hospital" model="crm.building">
+        <field name="name">Hospital</field>
+        <field name="is_with_pm">True</field>
+    </record>
+    <record id="camping" model="crm.building">
+        <field name="name">Camping</field>
+        <field name="is_with_pm">False</field>
+    </record>
+    <record id="hotel" model="crm.building">
+        <field name="name">Hotel</field>
+        <field name="is_with_pm">True</field>
+    </record>
+    <record id="industrial_building" model="crm.building">
+        <field name="name">Industrial building</field>
+        <field name="is_with_pm">True</field>
+    </record>
+    <record id="commercial_building" model="crm.building">
+        <field name="name">Commercial building</field>
+        <field name="is_with_pm">True</field>
+    </record>
+
+</odoo>

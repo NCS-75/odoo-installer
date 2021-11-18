@@ -9,9 +9,11 @@
     "license": "AGPL-3",
     "author": "Akretion",
     "website": "http://akretion.com",
-    "depends": ["crm"],
+    "depends": ["crm", "partner_role"],
     "data": [
-        "data/crm_stage_data.xml",
+        # Security
+        "security/ir.model.access.csv",
+        # Views
         "views/crm_lead_views.xml",
         "views/crm_stage_views.xml",
     ],

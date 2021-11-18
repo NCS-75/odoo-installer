@@ -14,7 +14,7 @@
         "base_rest_datamodel",
         "auth_api_key",
         "partner_role",
-        "dualsun_base",
+        "crm_installer",
         "incwo_url",
     ],
     "data": [],

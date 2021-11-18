@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Roofs -->
+    <record id="flat" model="crm.roof">
+        <field name="name">Flat</field>
+    </record>
+    <record id="sloped" model="crm.roof">
+        <field name="name">Sloped</field>
+    </record>
+    <record id="ground" model="crm.roof">
+        <field name="name">Ground</field>
+    </record>
+    <record id="shade_house" model="crm.roof">
+        <field name="name">Shade House</field>
+    </record>
+
+</odoo>

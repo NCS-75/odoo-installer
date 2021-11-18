@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Lost reason -->
+    <record id="no_answer" model="crm.lost.reason">
+      <field name="name">No answer</field>
+    </record>
+    <record id="meeting_cancelled" model="crm.lost.reason">
+      <field name="name">Meeting cancelled</field>
+    </record>
+    <record id="project_aborted" model="crm.lost.reason">
+      <field name="name">Project aborted</field>
+    </record>
+    <record id="quotation_cancelled" model="crm.lost.reason">
+      <field name="name">Quotation cancelled</field>
+    </record>
+    <record id="competing_offer_selected" model="crm.lost.reason">
+      <field name="name">Competing offer selected</field>
+    </record>
+    <record id="too_long_term" model="crm.lost.reason">
+      <field name="name">Too long term</field>
+    </record>
+    <record id="listed_building" model="crm.lost.reason">
+      <field name="name">Listed building</field>
+    </record>
+    <record id="technical_infeasibility" model="crm.lost.reason">
+      <field name="name">Technical infeasibility</field>
+    </record>
+    <record id="standby_customer" model="crm.lost.reason">
+      <field name="name">Put on stand-by by the customer</field>
+    </record>
+    <record id="wrong_number" model="crm.lost.reason">
+      <field name="name">Wrong number</field>
+    </record>
+    <record id="wrong_email" model="crm.lost.reason">
+      <field name="name">Wrong email</field>
+    </record>
+    <record id="not_owner" model="crm.lost.reason">
+      <field name="name">Not owner</field>
+    </record>
+    <record id="lead_out" model="crm.lost.reason">
+      <field name="name">Lead out-of-zone</field>
+    </record>
+    <record id="no_installer_in_zone" model="crm.lost.reason">
+      <field name="name">No installer in zone</field>
+    </record>
+    <record id="no_certified_installer" model="crm.lost.reason">
+      <field name="name">No certified or boosted installer in zone</field>
+    </record>
+    <record id="duplicated_lead" model="crm.lost.reason">
+      <field name="name">Duplicated Lead</field>
+    </record>
+
+</odoo>

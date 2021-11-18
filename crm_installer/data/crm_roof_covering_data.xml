@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Roof Coverings-->
+    <record id="slate" model="crm.roof.covering">
+        <field name="name">Slate</field>
+    </record>
+    <record id="corrugated_metal_sheet" model="crm.roof.covering">
+        <field name="name">Corrugated Metal Sheet</field>
+    </record>
+    <record id="trapezoidal_sheet" model="crm.roof.covering">
+        <field name="name">Trapezoidal Sheet</field>
+    </record>
+    <record id="fibrocement" model="crm.roof.covering">
+        <field name="name">Fibrocement</field>
+    </record>
+    <record id="tiles" model="crm.roof.covering">
+        <field name="name">Tiles</field>
+    </record>
+    <record id="zinc" model="crm.roof.covering">
+        <field name="name">Zinc</field>
+    </record>
+    <record id="sandwich_panel" model="crm.roof.covering">
+        <field name="name">Sandwich Panel</field>
+    </record>
+    <record id="green_roof" model="crm.roof.covering">
+        <field name="name">Green Roof</field>
+    </record>
+    <record id="bituminous_waterproof_membrane" model="crm.roof.covering">
+        <field name="name">Bituminous Waterproof Membrane</field>
+    </record>
+    <record id="polymer_waterproof_membrane" model="crm.roof.covering">
+        <field name="name">Polymer Waterproof Membrane</field>
+    </record>
+    <record id="gravelled_waterproof_membrane" model="crm.roof.covering">
+        <field name="name">Gravelled Waterproof Membrane</field>
+    </record>
+</odoo>

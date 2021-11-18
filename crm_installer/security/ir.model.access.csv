@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+1access_crm_building,access_crm_building,model_crm_building,base.group_user,1,1,1,1
+1access_crm_roof,access_crm_roof,model_crm_roof,base.group_user,1,1,1,1
+1access_crm_roof_covering,access_crm_roof_covering,model_crm_roof_covering,base.group_user,1,1,1,1
+1access_crm_use,access_crm_use,model_crm_use,base.group_user,1,1,1,1
+1access_crm_heater,access_crm_heater,model_crm_heater,base.group_user,1,1,1,1

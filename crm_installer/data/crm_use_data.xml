@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Uses -->
+    <record id="water_heater" model="crm.use">
+      <field name="name">Water Heater</field>
+      <field name="color">3</field>
+      <field name="sequence">1</field>
+    </record>
+    <record id="pool" model="crm.use">
+      <field name="name">Swiming-pool</field>
+      <field name="color">4</field>
+      <field name="sequence">2</field>
+    </record>
+    <record id="heating" model="crm.use">
+        <field name="name">Heating</field>
+        <field name="color">2</field>
+        <field name="sequence">3</field>
+    </record>
+
+</odoo>
