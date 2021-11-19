@@ -25,7 +25,8 @@ def pre_init_hook(cr):
     env = api.Environment(cr, SUPERUSER_ID, {})
     _logger.info(_("Loading mandatory res.partner datas..."))
 
-    # Necessary pre-load because XML partner categories called in crm_lead.py
+    # Necessary pre-load because partner categories in XML datas are called in
+    # crm_lead.py
     for file in PARTNER_BASE_FILES:
         convert_file(cr, MODULE, file, None, mode="init", noupdate=True, kind="init")
 

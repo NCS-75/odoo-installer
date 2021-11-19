@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2021 Akretion
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+    <record id="view_partner_form" model="ir.ui.view">
+        <field name="name">res.partner.form (in partner_company)</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <!-- Page for companies -->
+            <xpath expr="//page[@name='sales_purchases']" position="before">
+                <page string="Company" attrs="{'invisible': [('is_company', '=', False)]}">
+                    <group name="company_legal" class="col-12 col-lg-6" />
+                    <group name="company_info" class="col-12 col-lg-6">
+                        <field name="headcount" attrs="{'invisible': [('is_company', '=', False)]}"/>
+                        <field name="annual_revenue" attrs="{'invisible': [('is_company', '=', False)]}"/>
+                        <field name="share_capital" attrs="{'invisible': [('is_company', '=', False)]}"/>
+                    </group>
+                </page>
+            </xpath>
+
+            <xpath expr="//group[@name='company_legal']" position="inside">
+                <xpath expr="//field[@name='vat']" position="move" />
+                <xpath expr="//field[@name='industry_id']" position="move" />
+            </xpath>
+
+        </field>
+    </record>
+
+
+
+</odoo>
