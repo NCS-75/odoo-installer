@@ -11,6 +11,15 @@
     "website": "http://akretion.com",
     "depends": ["crm", "partner_role"],
     "data": [
+        # Data
+        "data/crm_building_data.xml",
+        "data/crm_heater_data.xml",
+        "data/crm_lost_reason_data.xml",
+        "data/crm_roof_covering_data.xml",
+        "data/crm_roof_data.xml",
+        "data/crm_stage_data.xml",
+        "data/crm_use_data.xml",
+        "data/partner_category_data.xml",
         # Security
         "security/ir.model.access.csv",
         # Views
@@ -18,5 +27,6 @@
         "views/crm_stage_views.xml",
     ],
     "demo": [],
+    "pre_init_hook": "pre_init_hook",
     "post_init_hook": "post_init_hook",
 }

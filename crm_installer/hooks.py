@@ -1,22 +1,33 @@
 # Copyright 2021 Akretion
 # License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
 
+import pathlib
+
 import logging
-
-from lxml import etree
-
 from odoo import SUPERUSER_ID, _, api, tools
-from odoo.tools import file_open, load_language
+from odoo.tools import convert_file, load_language
 
 _logger = logging.getLogger(__name__)
 
-MODULE = "crm_installer"
+CURRENT_DIR = pathlib.Path(__file__).resolve().parent
+MODULE = CURRENT_DIR.stem
 STAGE_CONVERT = {
     "New": MODULE + ".relation_established",
     "Qualified": MODULE + ".qualified_project",
     "Proposition": MODULE + ".proposition_made",
     "Won": MODULE + ".installation_started",
 }
+
+PARTNER_BASE_FILES = ["data/partner_category_data.xml"]
+
+
+def pre_init_hook(cr):
+    env = api.Environment(cr, SUPERUSER_ID, {})
+    _logger.info(_("Loading mandatory res.partner datas..."))
+
+    # Necessary pre-load because XML partner categories called in crm_lead.py
+    for file in PARTNER_BASE_FILES:
+        convert_file(cr, MODULE, file, None, mode="init", noupdate=True, kind="init")
 
 
 def post_init_hook(cr, registry):
@@ -32,7 +43,9 @@ def post_init_hook(cr, registry):
     old_lead_ids = (
         env["crm.lead"]
         .with_context(lang="en_US")
-        .search([("stage_id", "in", old_stage_ids.ids), ("active", "in", [True, False])])
+        .search(
+            [("stage_id", "in", old_stage_ids.ids), ("active", "in", [True, False])]
+        )
     )
     for lead_id in old_lead_ids:
         new_stage = STAGE_CONVERT.get(
