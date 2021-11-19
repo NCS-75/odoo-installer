@@ -13,8 +13,12 @@
         "base_rest",
         "base_rest_datamodel",
         "auth_api_key",
-        "partner_role",
+        # https://github.com/akretion/odoo-installer
         "crm_installer",
+        "partner_role",
+        "partner_relation",
+        "partner_installer",
+        # TODO: remove
         "incwo_url",
     ],
     "data": [],
