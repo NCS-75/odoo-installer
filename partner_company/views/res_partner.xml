@@ -26,6 +26,11 @@
                 <xpath expr="//field[@name='industry_id']" position="move" />
             </xpath>
 
+            <!-- Hide TVA on non-company -->
+            <xpath expr="//field[@name='vat']" position="attributes">
+                <attribute name="attrs">{'readonly': [('parent_id','!=',False)], 'invisible': [('is_company', '=', False)]}</attribute>
+            </xpath>
+
         </field>
     </record>
 

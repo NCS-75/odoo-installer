@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2021 Akretion
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+    <!-- Roofs -->
+    <record model="ir.ui.view" id="crm_roof_form_view">
+        <field name="name">crm.roof.form (in crm_installer)</field>
+        <field name="model">crm.roof</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group class="col-12 col-lg-6">
+                        <field name="name"/>
+                    </group>
+                </sheet>
+                <div class="oe_chatter"></div>
+            </form>
+        </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="crm_roof_tree_view">
+        <field name="name">crm.roof.tree (in crm_installer)</field>
+        <field name="model">crm.roof</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="crm_roof_act_window">
+        <field name="name">Roofs</field>
+        <field name="res_model">crm.roof</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.ui.menu" id="crm_roof_menu">
+        <field name="name">Roofs</field>
+        <field name="parent_id" ref="crm_installations_menu"/>
+        <field name="action" ref="crm_roof_act_window"/>
+        <field name="sequence" eval="3"/>
+    </record>
+
+    <!-- Roof Coverings -->
+    <record model="ir.ui.view" id="crm_roof_covering_form_view">
+        <field name="name">crm.roof.covering.form (in crm_installer)</field>
+        <field name="model">crm.roof.covering</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group class="col-12 col-lg-6">
+                        <field name="name"/>
+                    </group>
+                </sheet>
+                <div class="oe_chatter"></div>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="crm_roof_covering_tree_view">
+        <field name="name">crm.roof.covering.tree (in crm_installer)</field>
+        <field name="model">crm.roof.covering</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="crm_roof_covering_act_window">
+        <field name="name">Roof Coverings</field>
+        <field name="res_model">crm.roof.covering</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.ui.menu" id="crm_roof_covering_menu">
+        <field name="name">Roof Coverings</field>
+        <field name="parent_id" ref="crm_installations_menu"/>
+        <field name="action" ref="crm_roof_covering_act_window"/>
+        <field name="sequence" eval="4"/>
+    </record>
+
+</odoo>

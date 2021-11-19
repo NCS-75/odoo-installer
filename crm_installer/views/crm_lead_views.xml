@@ -16,5 +16,174 @@
     </field>
   </record>
 
+  <!-- Inherit Form view -->
+  <record id="crm_lead_view_form" model="ir.ui.view">
+    <field name="name">crm.lead.form (in crm_installer)</field>
+    <field name="model">crm.lead</field>
+    <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+    <field name="arch" type="xml">
+      <!-- Subtitle -->
+      <xpath expr="//h2" position="attributes">
+          <attribute name="invisible">True</attribute>
+      </xpath>
+      <xpath expr="//div[hasclass('oe_title')]" position="after">
+          <h2 class="o_row col-12 col-xl-7" name="installer_h2">
+              <div class="o_row mr-2">
+                  <field name="pvt_nb" class="oe_inline" style="max-width: 60px;"/>
+                  <label for="pvt_nb" string="PVT" class="ml-1"/>
+              </div>
+              <div class="o_row">
+                  <field name="pv_nb" class="oe_inline" style="max-width: 60px;"/>
+                  <label for="pv_nb" string="PV" class="ml-1"/>
+              </div>
+              <!-- TODO: Add original expected_revenue here -->
+              <div>
+                  <span class="oe_grey"> %</span>
+              </div>
+          </h2>
+          <field name="is_with_pm" invisible="1" />
+      </xpath>
+      <xpath expr="(//h2[@name='installer_h2']/div/span)[position() = 1]" position="before">
+          <xpath expr="//field[@name='probability']" position="move" />
+      </xpath>
+      <xpath expr="//field[@name='probability']" position="attributes">
+          <attribute name="style">max-width: 60px;</attribute>
+      </xpath>
+      <!-- Main Partners -->
+      <xpath expr="//group[@name='opportunity_partner']" position="attributes">
+          <attribute name="invisible">True</attribute>
+      </xpath>
+      <xpath expr="//group[@name='opportunity_partner']" position="before">
+          <group name="main_lead_partners">
+              <field name="project_manager_id" options="{'no_create': True}"/>
+              <field name="installer_seller_id" options="{'no_create': True}"/>
+              <field name="installer_fitter_id" options="{'no_create': True}"/>
+              <field name="distributor_id" options="{'no_create': True}"/>
+          </group>
+      </xpath>
+      <xpath expr="(//group[@name='main_lead_partners']/field)[position() = 1]" position="before">
+          <xpath expr="//field[@name='partner_id']" position="move" />
+      </xpath>
+      <xpath expr="//field[@name='partner_id']" position="attributes">
+          <attribute name="groups"></attribute>
+          <attribute name="options">{'no_create': True}</attribute>
+      </xpath>
+      <!-- Management -->
+      <xpath expr="//field[@name='date_deadline']/.." position="inside">
+          <xpath expr="//field[@name='user_id']" position="move" />
+          <xpath expr="//field[@name='team_id']" position="move" />
+          <field name="referrent_id" options="{'no_create': True}"/>
+      </xpath>
+      <xpath expr="//field[@name='user_id']" position="attributes">
+          <attribute name="string">Manager</attribute>
+          <attribute name="options">{'no_create': True}</attribute>
+      </xpath>
+      <xpath expr="//field[@name='referred']" position="attributes">
+          <attribute name="invisible">True</attribute>
+      </xpath>
+
+      <xpath expr="//field[@name='date_deadline']/.." position="after">
+          <group name="address_installation"/>
+      </xpath>
+      <xpath expr="//group[@name='address_installation']" position="inside">
+          <xpath expr="//page[@name='lead']//label[@for='street_page_lead']" position="move" />
+          <xpath expr="//page[@name='lead']//div[hasclass('o_address_format')]" position="move" />
+      </xpath>
+      <xpath expr="//group[@name='address_installation']//label[@for='street_page_lead']" position="attributes">
+          <attribute name="string">Installation Address</attribute>
+      </xpath>
+
+      <!-- Conditionnal date_deadline label -->
+      <xpath expr="//field[@name='date_deadline']" position="attributes">
+          <attribute name="attrs">{'invisible': [('worksite_completed', '=', False)]}</attribute>
+      </xpath>
+      <xpath expr="//field[@name='date_deadline']" position="after">
+          <field name="date_deadline" string="Expected worksite date" attrs="{'invisible': [('worksite_completed', '=', True)]}"/>
+          <field name="worksite_completed" invisible="1"/>
+      </xpath>
+
+      <!-- Partners list -->
+      <xpath expr="//page[@name='internal_notes']" position="before">
+          <page string="Contacts" name="contacts">
+              <field name="partner_ids" widget="many2many">
+                <tree string="Contacts">
+                    <field name="display_name" string="Name"/>
+                    <field name="category_id" widget="many2many_tags" options="{'color_field': 'color'}" string="Categories"/>
+                    <field name="function"/>
+                    <field name="phone"/>
+                    <field name="mobile" optional="hide"/>
+                    <field name="email" />
+                    <field name="zip" optional="hide"/>
+                    <field name="city" />
+                    <field name="country_id" />
+                </tree>
+              </field>
+          </page>
+      </xpath>
+      <!-- Installation -->
+      <xpath expr="//page[@name='internal_notes']" position="before">
+          <page string="Installation" name="installation">
+              <group name="installation_files"  class="col-12 col-lg-6">
+                  <field name="commission_file" />
+                  <field name="guarantees_file" />
+                  <field name="is_photogenic" widget="boolean_toggle"/>
+              </group>
+          </page>
+      </xpath>
+
+      <!-- Progress -->
+      <xpath expr="//page[@name='internal_notes']" position="before">
+          <page string="Progress" name="progress">
+              <group>
+                  <group class="col-12 col-lg-6" attrs="{'invisible': [('is_with_pm', '=', False)]}">
+                      <field name="phase" widget="selection"/>
+                  </group>
+                  <separator attrs="{'invisible': [('is_with_pm', '=', False)]}"/>
+                  <group  string="Permissions" class="col-12 col-lg-6">
+                      <field name="regulatory_calcul_ok" widget="boolean_toggle" string="Regul. Calculation" attrs="{'invisible': [('is_with_pm', '=', False)]}"/>
+                      <field name="worksite_request_ok" widget="boolean_toggle"/>
+                      <field name="purchase_obligation_ok" widget="boolean_toggle"/>
+                      <field name="security_ok" widget="boolean_toggle"/>
+                      <field name="powergrid_ok" widget="boolean_toggle"/>
+                  </group>
+                  <group string="Dates" class="col-12 col-lg-6">
+                      <field name="date_prestudy" string="Pre-study sent" attrs="{'invisible': [('is_with_pm', '=', False)]}"/>
+                      <field name="date_qualified_project" string="1st meeting" attrs="{'invisible': [('is_with_pm', '=', True)]}"/>
+                      <field name="date_qualified_project" string="APS Validated" attrs="{'invisible': [('is_with_pm', '=', False)]}"/>
+                      <field name="date_proposition_made" string="Quotation provided" attrs="{'invisible': [('is_with_pm', '=', True)]}"/>
+                      <field name="date_proposition_made" string="Consultation launched" attrs="{'invisible': [('is_with_pm', '=', False)]}"/>
+                      <field name="date_deal_signed" string="Quotation signed" attrs="{'invisible': [('is_with_pm', '=', True)]}"/>
+                      <field name="date_deal_signed" string="Worksite allocated" attrs="{'invisible': [('is_with_pm', '=', False)]}"/>
+                      <field name="date_commission" string="Commissioned"/>
+                      <field name="date_guarantees_granted" string="Guarantees granted"/>
+                  </group>
+              </group>
+          </page>
+      </xpath>
+      <xpath expr="//page[@name='lead']" position="attributes">
+          <attribute name="invisible">True</attribute>
+      </xpath>
+      <!-- Studies Results -->
+      <xpath expr="//page[@name='internal_notes']" position="after">
+          <page string="Studies Results" name="studies">
+              <field name="studies_results"/>
+          </page>
+      </xpath>
+
+    </field>
+  </record>
+
+  <!-- Inherit main action, remove default search assigned to me -->
+  <record id="crm.crm_lead_action_pipeline" model="ir.actions.act_window" >
+      <field name="context">{
+              'default_type': 'opportunity',
+      }</field>
+  </record>
+  <menuitem
+      id="crm.menu_crm_opportunities"
+      name="Pipeline"
+      parent="crm.crm_menu_sales"
+      sequence="1"/>
+
 
 </odoo>

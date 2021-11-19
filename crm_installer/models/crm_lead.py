@@ -2,6 +2,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from odoo import api, fields, models, _
+from odoo.exceptions import ValidationError
 
 
 class CrmLead(models.Model):
@@ -81,7 +82,7 @@ class CrmLead(models.Model):
     date_commission = fields.Date("Commission date")
     date_guarantees_granted = fields.Date("Date Guarantees granted")
     # Overwrite native date_deadline's string and help in order to match with
-    # the "worksite workflow" related to DualSun's leads
+    # the "worksite workflow" related to Installer's leads
     date_deadline = fields.Date(
         string="Worksite date",
         help="'Expected' Worksite date if the worksite is not completed yet",

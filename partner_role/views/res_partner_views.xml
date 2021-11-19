@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- Inherit Form view -->
+  <record id="view_partner_category_form" model="ir.ui.view">
+    <field name="name">res.partner.category.form (in partner_role)</field>
+    <field name="model">res.partner.category</field>
+    <field name="inherit_id" ref="base.view_partner_category_form"/>
+    <field name="arch" type="xml">
+        <xpath expr="//field[@name='parent_id']" position="after">
+            <field name="role_id"/>
+        </xpath>
+    </field>
+  </record>
+
+  <!-- Add search fields by Role -->
+  <record id="view_res_partner_filter" model="ir.ui.view">
+    <field name="name">res.partner.select (in partner_role)</field>
+    <field name="model">res.partner</field>
+    <field name="inherit_id" ref="base.view_res_partner_filter"/>
+    <field name="arch" type="xml">
+        <xpath expr="//filter[@name='type_company']" position="after">
+            <separator />
+            <filter name="installers" string="Installers" domain="[('is_installer', '=', True)]"/>
+            <filter name="distributors" string="Distributors" domain="[('is_distributor', '=', True)]"/>
+            <filter name="project_manager" string="Project Managers" domain="[('is_project_manager', '=', True)]"/>
+        </xpath>
+        <xpath expr="//filter[@name='group_company']" position="after">
+            <filter name="group_role" string="Role" context="{'group_by': 'role_id'}"/>
+        </xpath>
+    </field>
+  </record>
+</odoo>

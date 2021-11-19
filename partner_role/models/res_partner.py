@@ -2,7 +2,7 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 from odoo import api, fields, models, _
-
+from odoo.exceptions import ValidationError
 
 class ResPartnerRole(models.Model):
     _name = "res.partner.role"

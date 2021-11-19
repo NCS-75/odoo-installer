@@ -23,8 +23,12 @@
         # Security
         "security/ir.model.access.csv",
         # Views
+        "views/crm_building_views.xml",
+        "views/crm_heater_views.xml",
         "views/crm_lead_views.xml",
         "views/crm_stage_views.xml",
+        "views/crm_roof_views.xml",
+        "views/crm_use_views.xml",
     ],
     "demo": [],
     "pre_init_hook": "pre_init_hook",

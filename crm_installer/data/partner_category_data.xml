@@ -10,26 +10,10 @@
       <field name="color">9</field>
       <field name="role_id" eval="ref('partner_role.role_distributor')"/>
   </record>
-  <record id="education" model="res.partner.category">
-      <field name="name">Education and Training</field>
-      <field name="color">8</field>
-  </record>
-  <record id="manufacturer" model="res.partner.category">
-      <field name="name">Manufacturer</field>
-      <field name="color">7</field>
-  </record>
   <record id="installer" model="res.partner.category">
       <field name="name">Installer</field>
       <field name="color">6</field>
       <field name="role_id" eval="ref('partner_role.role_installer')"/>
-  </record>
-  <record id="political" model="res.partner.category">
-      <field name="name">Institutional and Politics</field>
-      <field name="color">5</field>
-  </record>
-  <record id="investor" model="res.partner.category">
-      <field name="name">Investor</field>
-      <field name="color">4</field>
   </record>
   <record id="project_owner" model="res.partner.category">
       <field name="name">Project Owner</field>
@@ -40,13 +24,5 @@
       <field name="name">Project Manager</field>
       <field name="color">2</field>
       <field name="role_id" eval="ref('partner_role.role_project_manager')"/>
-  </record>
-  <record id="energy_provider" model="res.partner.category">
-      <field name="name">Energy Provider</field>
-      <field name="color">1</field>
-  </record>
-  <record id="poseurs_avenirs" model="res.partner.category">
-      <field name="name">Poseurs d'Avenir</field>
-      <field name="color">1</field>
   </record>
 </odoo>

@@ -112,6 +112,21 @@
         </field>
     </record>
 
+    <record id="view_res_partner_filter" model="ir.ui.view">
+      <field name="name">res.partner.select (in partner_address)</field>
+      <field name="model">res.partner</field>
+      <field name="inherit_id" ref="base.view_res_partner_filter"/>
+      <field name="arch" type="xml">
+          <xpath expr="//filter[@name='type_person']" position="attributes">
+              <attribute name="domain">[('is_company', '=', False), ('type', '=', 'contact')]</attribute>
+              <attribute name="string">Contacts</attribute>
+              <attribute name="invisible">True</attribute>
+          </xpath>
+          <xpath expr="//filter[@name='type_company']" position="after">
+              <filter string="Adresses" name="type_address" domain="[('is_company', '=', False), ('type', '!=', 'contact')]"/>
+          </xpath>
+      </field>
+    </record>
 
 
 </odoo>
