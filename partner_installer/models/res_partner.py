@@ -3,26 +3,21 @@
 
 from odoo import api, fields, models, _
 
+class ResPartnerRange(models.Model):
+    _name = "res.partner.range"
+    _description = "Installation Ranges"
+    _rec_name = "name"
+    _order = "sequence, name"
+
+    name = fields.Char(string="Name", translate=True)
+    sequence = fields.Integer()
+
 
 class ResPartner(models.Model):
     _inherit = 'res.partner'
-    _order = "relation_code desc, name"
 
     # Rename 'Individual' into 'Contact'
     company_type = fields.Selection(selection_add=[("person", "Contact")])
-
-    stage_id = fields.Many2one(
-        string="Installer Stage",
-        comodel_name="res.partner.stage",
-        ondelete="set null",
-        group_expand="_read_group_stage_ids",
-        store=True,
-        index=True,
-        tracking=True,
-        readonly=False,
-        copy=False,
-        help="Installer Qualification Stage",
-    )
 
     is_pv = fields.Boolean("PV")
     is_pvt = fields.Boolean("PVT")

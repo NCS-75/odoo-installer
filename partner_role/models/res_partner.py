@@ -14,7 +14,6 @@ class ResPartnerRole(models.Model):
     is_installer = fields.Boolean()
     is_distributor = fields.Boolean()
     is_project_manager = fields.Boolean()
-
     # TODO: add constrains to secure each boolean is only True for one role only.
 
 

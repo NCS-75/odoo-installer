@@ -20,7 +20,7 @@
         <field name="code">4</field>
         <field name="name">Premium</field>
         <field name="sequence">4</field>
-        <field name="role_ids" eval="[(6, 0, [ref('dualsun_base.role_installer')])]"/>
+        <field name="role_ids" eval="[(6, 0, [ref('partner_role.role_installer')])]"/>
     </record>
     <record id="unauthorized" model="res.partner.relation">
         <field name="code">0</field>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Ranges -->
+    <record id="residential" model="res.partner.range">
+        <field name="name">Residential (&lt; 9kWc)</field>
+        <field name="sequence">1</field>
+    </record>
+    <record id="commercial" model="res.partner.range">
+        <field name="name">Commercial (&gt; 9kWc)</field>
+        <field name="sequence">2</field>
+    </record>
+</odoo>
