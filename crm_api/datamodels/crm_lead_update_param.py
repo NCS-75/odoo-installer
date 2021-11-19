@@ -18,7 +18,6 @@ class LeadUpdateParam(Datamodel):
     country_code = fields.String()
 
     # Custom DualSun
-    incwo_id = fields.Integer()
     myds_id = fields.Integer()
     myds_url = fields.String()
     white_label = fields.String()

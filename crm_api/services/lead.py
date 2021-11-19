@@ -71,18 +71,6 @@ class leadService(Component):
         return self._to_lead_info(lead)
 
     @restapi.method(
-        [(["/<int:idincwo>/incwo"], "GET")],
-        output_param=Datamodel("ds.lead.info"),
-        auth=AUTH,
-    )
-    def getincwo(self, _idincwo):
-        """
-        Get lead information by its Incwo ID
-        """
-        lead = self.env["crm.lead"].search([("incwo_id", "=", _idincwo)], limit=1)
-        return self._to_lead_info(lead)
-
-    @restapi.method(
         [(["/"], "POST")],
         input_param=Datamodel("ds.lead.create.param"),
         output_param=Datamodel("ds.lead.info"),
@@ -190,7 +178,6 @@ class leadService(Component):
         lead_info.kam_id = lead.user_id.partner_id.id
 
         # Custom DualSun
-        lead_info.incwo_id = lead.incwo_id
         lead_info.myds_id = lead.myds_id
         lead_info.incwo_url = lead.incwo_url
         lead_info.white_label = lead.white_label

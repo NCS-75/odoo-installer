@@ -72,34 +72,6 @@ class PartnerService(Component):
         return self._to_partner_info(partner)
 
     @restapi.method(
-        [(["/<int:idincwo>/incwo_contact"], "GET")],
-        output_param=Datamodel("ds.partner.info"),
-        auth=AUTH,
-    )
-    def getincwo_contact(self, _idincwo):
-        """
-        Get partner information by its Incwo ID (only contacts)
-        """
-        partner = self.env["res.partner"].search(
-            [("incwo_id", "=", _idincwo), ("is_company", "=", False)], limit=1
-        )
-        return self._to_partner_info(partner)
-
-    @restapi.method(
-        [(["/<int:idincwo>/incwo_company"], "GET")],
-        output_param=Datamodel("ds.partner.info"),
-        auth=AUTH,
-    )
-    def getincwo_company(self, _idincwo):
-        """
-        Get partner information by its Incwo ID (only companies)
-        """
-        partner = self.env["res.partner"].search(
-            [("incwo_id", "=", _idincwo), ("is_company", "=", True)], limit=1
-        )
-        return self._to_partner_info(partner)
-
-    @restapi.method(
         [(["/"], "POST")],
         input_param=Datamodel("ds.partner.create.param"),
         output_param=Datamodel("ds.partner.info"),
@@ -213,7 +185,6 @@ class PartnerService(Component):
         partner_info.kam_id = partner.user_id.partner_id.id
 
         # custom DualSun:
-        partner_info.incwo_id = partner.incwo_id
         partner_info.myds_id = partner.myds_id
         partner_info.myds_url = partner.myds_url
         partner_info.role_name = partner.role_id.name

@@ -10,16 +10,20 @@
     "author": "Akretion",
     "depends": [
         "crm",
+        # https://github.com/OCA/rest-framework
+        "datamodel",
         "base_rest",
         "base_rest_datamodel",
+        # https://github.com/OCA/server-auth
         "auth_api_key",
+        # https://github.com/OCA/partner-contact
+        "partner_firstname",
         # https://github.com/akretion/odoo-installer
         "crm_installer",
-        "partner_role",
-        "partner_relation",
         "partner_installer",
-        # TODO: remove
-        "incwo_url",
+        "partner_relation",
+        "partner_role",
+        "partner_stage",
     ],
     "data": [],
     "demo": [

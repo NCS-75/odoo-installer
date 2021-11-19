@@ -28,7 +28,6 @@ class PartnerUpdateParam(Datamodel):
     kam_id = fields.Integer()
 
     # custom DualSun:
-    incwo_id = fields.Integer()
     myds_id = fields.Integer()
     myds_url = fields.String()
     role_name = fields.String()
