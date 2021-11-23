@@ -11,6 +11,10 @@
     "author": "Akretion",
     "website": "http://akretion.com",
     "depends": ["crm_installer"],
-    "data": ["security/ir.model.access.csv", "data/res_partner_range_data.xml"],
+    "data": [
+        "security/ir.model.access.csv",
+        "data/res_partner_range_data.xml",
+        "views/res_partner_views.xml",
+    ],
     "demo": [],
 }
