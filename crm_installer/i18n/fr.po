@@ -1,0 +1,883 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* crm_installer
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: crm_installer
+#: model:ir.model.fields,help:crm_installer.field_crm_lead__date_deadline
+msgid "'Expected' Worksite date if the worksite is not completed yet"
+msgstr "Date de chantier 'espérée' si le chantier n'est pas encore terminé"
+
+#. module: crm_installer
+#: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
+msgid "1st meeting"
+msgstr "1er rendez-vous"
+
+#. module: crm_installer
+#: model:ir.model.fields.selection,name:crm_installer.selection__crm_lead__phase__apd
+msgid "APD"
+msgstr ""
+
+#. module: crm_installer
+#: model:ir.model.fields.selection,name:crm_installer.selection__crm_lead__phase__aps
+msgid "APS"
+msgstr ""
+
+#. module: crm_installer
+#: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
+msgid "APS Validated"
+msgstr "APS Validée"
+
+#. module: crm_installer
+#: model:crm.building,name:crm_installer.agricultural_exploitation
+msgid "Agricultural exploitation"
+msgstr "Exploitation agricole"
+
+#. module: crm_installer
+#: model:ir.model.fields,help:crm_installer.field_crm_lead__partner_ids
+msgid "All the contacts related to the lead"
+msgstr "Tous les contacts liés à l'affaire"
+
+#. module: crm_installer
+#: model:ir.model.fields,help:crm_installer.field_crm_lead__heater_ids
+msgid "Auxiliary Heaters selected for this lead."
+msgstr "Appoints de chauffage proposés pour cette affaire"
+
+#. module: crm_installer
+#: model:crm.roof.covering,name:crm_installer.bituminous_waterproof_membrane
+msgid "Bituminous Waterproof Membrane"
+msgstr "Etanchéité bitumineuse"
+
+#. module: crm_installer
+#: model:crm.building,name:crm_installer.boarding_school
+msgid "Boarding school"
+msgstr "Internat"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__building_id
+msgid "Building"
+msgstr "Bâtiment"
+
+#. module: crm_installer
+#: model:ir.actions.act_window,name:crm_installer.crm_building_act_window
+#: model:ir.ui.menu,name:crm_installer.crm_building_menu_crm
+msgid "Buildings"
+msgstr "Bâtiments"
+
+#. module: crm_installer
+#: model:ir.model,name:crm_installer.model_crm_building
+msgid "CRM Building"
+msgstr ""
+
+#. module: crm_installer
+#: model:ir.model,name:crm_installer.model_crm_heater
+msgid "CRM Heater"
+msgstr ""
+
+#. module: crm_installer
+#: model:ir.model,name:crm_installer.model_crm_roof
+msgid "CRM Roof"
+msgstr ""
+
+#. module: crm_installer
+#: model:ir.model,name:crm_installer.model_crm_roof_covering
+msgid "CRM Roof Covering"
+msgstr ""
+
+#. module: crm_installer
+#: model:ir.model,name:crm_installer.model_crm_stage
+msgid "CRM Stages"
+msgstr ""
+
+#. module: crm_installer
+#: model:ir.model,name:crm_installer.model_crm_use
+msgid "CRM Use"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.building,name:crm_installer.camping
+msgid "Camping"
+msgstr ""
+
+#. module: crm_installer
+#: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
+msgid "Categories"
+msgstr "Catégories"
+
+#. module: crm_installer
+#: model:crm.building,name:crm_installer.collective_housing
+msgid "Collective housing"
+msgstr "Logement Collectif"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_heater__color
+#: model:ir.model.fields,field_description:crm_installer.field_crm_use__color
+msgid "Color"
+msgstr "Couleur"
+
+#. module: crm_installer
+#: model:crm.building,name:crm_installer.commercial_building
+msgid "Commercial building"
+msgstr "Bâtiment tertiaire"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__commission_file
+msgid "Commission"
+msgstr "PV de Mise en Service"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__date_commission
+msgid "Commission date"
+msgstr "Date de Mise en Service"
+
+#. module: crm_installer
+#: model:crm.stage,name:crm_installer.commissioned
+#: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
+msgid "Commissioned"
+msgstr "Mis en Service"
+
+#. module: crm_installer
+#: model:crm.lost.reason,name:crm_installer.competing_offer_selected
+msgid "Competing offer selected"
+msgstr "Mis en Service"
+
+#. module: crm_installer
+#: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
+msgid "Consultation launched"
+msgstr "Consultation lancée"
+
+#. module: crm_installer
+#: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
+msgid "Contacts"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.roof.covering,name:crm_installer.corrugated_metal_sheet
+msgid "Corrugated Metal Sheet"
+msgstr "Tôle ondulée"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_building__create_uid
+#: model:ir.model.fields,field_description:crm_installer.field_crm_heater__create_uid
+#: model:ir.model.fields,field_description:crm_installer.field_crm_roof__create_uid
+#: model:ir.model.fields,field_description:crm_installer.field_crm_roof_covering__create_uid
+#: model:ir.model.fields,field_description:crm_installer.field_crm_use__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_building__create_date
+#: model:ir.model.fields,field_description:crm_installer.field_crm_heater__create_date
+#: model:ir.model.fields,field_description:crm_installer.field_crm_roof__create_date
+#: model:ir.model.fields,field_description:crm_installer.field_crm_roof_covering__create_date
+#: model:ir.model.fields,field_description:crm_installer.field_crm_use__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: crm_installer
+#: model:ir.model.fields.selection,name:crm_installer.selection__crm_lead__phase__dce
+msgid "DCE"
+msgstr ""
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__date_guarantees_granted
+msgid "Date Guarantees granted"
+msgstr "Date garanties émises"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__date_deal_signed
+msgid "Date deal signed"
+msgstr "Date affaire signée"
+
+#. module: crm_installer
+#: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
+msgid "Dates"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.stage,name:crm_installer.deal_signed
+msgid "Deal signed"
+msgstr "Affaire signée"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_building__display_name
+#: model:ir.model.fields,field_description:crm_installer.field_crm_heater__display_name
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__display_name
+#: model:ir.model.fields,field_description:crm_installer.field_crm_roof__display_name
+#: model:ir.model.fields,field_description:crm_installer.field_crm_roof_covering__display_name
+#: model:ir.model.fields,field_description:crm_installer.field_crm_stage__display_name
+#: model:ir.model.fields,field_description:crm_installer.field_crm_use__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__distributor_id
+#: model:res.partner.category,name:crm_installer.distributor
+msgid "Distributor"
+msgstr "Distributeur"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__date_distributor_order
+msgid "Distributor Order date"
+msgstr "Date de commande au distributeur"
+
+#. module: crm_installer
+#: model:crm.heater,name:crm_installer.district_heating
+msgid "District Heating"
+msgstr "Réseau de chaleur"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__dropbox_folder
+msgid "Dropbox folder"
+msgstr "Dossier Dropbox"
+
+#. module: crm_installer
+#: model:crm.lost.reason,name:crm_installer.duplicated_lead
+msgid "Duplicated Lead"
+msgstr "Affaire en doublon"
+
+#. module: crm_installer
+#: model:crm.building,name:crm_installer.ehpad
+msgid "EHPAD"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.heater,name:crm_installer.elec_resistance
+msgid "Electrical Resistance"
+msgstr "Résistance Éléctrique"
+
+#. module: crm_installer
+#: model:res.partner.category,name:crm_installer.end_customer
+msgid "End Customer"
+msgstr "Client final"
+
+#. module: crm_installer
+#: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
+msgid "Expected worksite date"
+msgstr "Date de chantier prévue"
+
+#. module: crm_installer
+#: model:crm.roof.covering,name:crm_installer.fibrocement
+msgid "Fibrocement"
+msgstr "Fibrociment"
+
+#. module: crm_installer
+#: model:ir.model.fields,help:crm_installer.field_crm_lead__studies_results
+msgid "Filled by the MyDS API when a new study is made around this lead"
+msgstr ""
+"Rempli par l'API avec MyDS quand une étude est réalisée en lien avec cette "
+"affaire"
+
+#. module: crm_installer
+#: model:crm.roof,name:crm_installer.flat
+msgid "Flat"
+msgstr "Terrasse"
+
+#. module: crm_installer
+#: model:crm.heater,name:crm_installer.gas_boiler
+msgid "Gas boiler"
+msgstr "Chaudière gaz"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__generator_power
+msgid "Generator Power"
+msgstr "Puissance générateur"
+
+#. module: crm_installer
+#: model:crm.roof.covering,name:crm_installer.gravelled_waterproof_membrane
+msgid "Gravelled Waterproof Membrane"
+msgstr "Etanchéité gravillonnée"
+
+#. module: crm_installer
+#: model:crm.roof.covering,name:crm_installer.green_roof
+msgid "Green Roof"
+msgstr "Végétale"
+
+#. module: crm_installer
+#: model:crm.roof,name:crm_installer.ground
+msgid "Ground"
+msgstr "Sol"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__guarantees_file
+msgid "Guarantees"
+msgstr "Garanties"
+
+#. module: crm_installer
+#: model:crm.stage,name:crm_installer.guarantees_granted
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__guarantees_granted
+#: model:ir.model.fields,field_description:crm_installer.field_crm_stage__guarantees_granted
+#: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
+msgid "Guarantees granted"
+msgstr "Garanties émises"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_heater__is_hp_required
+msgid "HP qualification"
+msgstr "QualiPAC"
+
+#. module: crm_installer
+#: model:crm.building,name:crm_installer.half_board
+msgid "Half board"
+msgstr "Demi-pension"
+
+#. module: crm_installer
+#: model:crm.heater,name:crm_installer.heat_pump_air
+msgid "Heat Pump air/water"
+msgstr "PAC air/eau"
+
+#. module: crm_installer
+#: model:crm.heater,name:crm_installer.heat_pump_water
+msgid "Heat Pump water/water"
+msgstr "PAC eau/eau"
+
+#. module: crm_installer
+#: model:ir.actions.act_window,name:crm_installer.crm_heater_act_window
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__heater_ids
+#: model:ir.ui.menu,name:crm_installer.crm_heater_menu_contacts
+#: model:ir.ui.menu,name:crm_installer.crm_heater_menu_crm
+msgid "Heaters"
+msgstr "Appoints"
+
+#. module: crm_installer
+#: model:crm.use,name:crm_installer.heating
+msgid "Heating"
+msgstr "Chauffage"
+
+#. module: crm_installer
+#: model:crm.building,name:crm_installer.hospital
+msgid "Hospital"
+msgstr "Hôpital"
+
+#. module: crm_installer
+#: model:crm.building,name:crm_installer.hotel
+msgid "Hotel"
+msgstr "Hôtel"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_building__id
+#: model:ir.model.fields,field_description:crm_installer.field_crm_heater__id
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__id
+#: model:ir.model.fields,field_description:crm_installer.field_crm_roof__id
+#: model:ir.model.fields,field_description:crm_installer.field_crm_roof_covering__id
+#: model:ir.model.fields,field_description:crm_installer.field_crm_stage__id
+#: model:ir.model.fields,field_description:crm_installer.field_crm_use__id
+msgid "ID"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.building,name:crm_installer.individual_house
+msgid "Individual house"
+msgstr "Maison Individuelle"
+
+#. module: crm_installer
+#: model:crm.building,name:crm_installer.industrial_building
+msgid "Industrial building"
+msgstr "Bâtiment industriel"
+
+#. module: crm_installer
+#: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
+msgid "Installation"
+msgstr ""
+
+#. module: crm_installer
+#: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
+msgid "Installation Address"
+msgstr "Adresse de l'installation"
+
+#. module: crm_installer
+#: model:crm.stage,name:crm_installer.installation_started
+msgid "Installation started"
+msgstr "Installation démarrée"
+
+#. module: crm_installer
+#: model:ir.ui.menu,name:crm_installer.crm_installations_menu
+msgid "Installations"
+msgstr "Installations"
+
+#. module: crm_installer
+#: model:res.partner.category,name:crm_installer.installer
+msgid "Installer"
+msgstr "Installateur"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__installer_fitter_id
+msgid "Installer (Fitter)"
+msgstr "Installateur (Poseur)"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__installer_seller_id
+msgid "Installer (Seller)"
+msgstr "Installateur (Vendeur)"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__is_with_pm
+msgid "Is With Pm"
+msgstr "Est avec MOE"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_building____last_update
+#: model:ir.model.fields,field_description:crm_installer.field_crm_heater____last_update
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead____last_update
+#: model:ir.model.fields,field_description:crm_installer.field_crm_roof____last_update
+#: model:ir.model.fields,field_description:crm_installer.field_crm_roof_covering____last_update
+#: model:ir.model.fields,field_description:crm_installer.field_crm_stage____last_update
+#: model:ir.model.fields,field_description:crm_installer.field_crm_use____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_building__write_uid
+#: model:ir.model.fields,field_description:crm_installer.field_crm_heater__write_uid
+#: model:ir.model.fields,field_description:crm_installer.field_crm_roof__write_uid
+#: model:ir.model.fields,field_description:crm_installer.field_crm_roof_covering__write_uid
+#: model:ir.model.fields,field_description:crm_installer.field_crm_use__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_building__write_date
+#: model:ir.model.fields,field_description:crm_installer.field_crm_heater__write_date
+#: model:ir.model.fields,field_description:crm_installer.field_crm_roof__write_date
+#: model:ir.model.fields,field_description:crm_installer.field_crm_roof_covering__write_date
+#: model:ir.model.fields,field_description:crm_installer.field_crm_use__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.lost.reason,name:crm_installer.lead_out
+msgid "Lead out-of-zone"
+msgstr "Affaire hors-zone"
+
+#. module: crm_installer
+#: model:ir.model,name:crm_installer.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Piste/opportunité"
+
+#. module: crm_installer
+#: model:crm.lost.reason,name:crm_installer.listed_building
+msgid "Listed building"
+msgstr "Bâtiment classé"
+
+#. module: crm_installer
+#: code:addons/crm_installer/hooks.py:0
+#, python-format
+msgid "Loading mandatory res.partner datas..."
+msgstr ""
+
+#. module: crm_installer
+#: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
+msgid "Manager"
+msgstr "Responsable"
+
+#. module: crm_installer
+#: model:crm.lost.reason,name:crm_installer.meeting_cancelled
+msgid "Meeting cancelled"
+msgstr "Rendez-vous annulé"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_building__name
+#: model:ir.model.fields,field_description:crm_installer.field_crm_heater__name
+#: model:ir.model.fields,field_description:crm_installer.field_crm_roof__name
+#: model:ir.model.fields,field_description:crm_installer.field_crm_roof_covering__name
+#: model:ir.model.fields,field_description:crm_installer.field_crm_use__name
+#: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
+msgid "Name"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.lost.reason,name:crm_installer.no_answer
+msgid "No answer"
+msgstr "Pas de réponse"
+
+#. module: crm_installer
+#: model:crm.lost.reason,name:crm_installer.no_certified_installer
+msgid "No certified or boosted installer in zone"
+msgstr "Pas d'installateur agréé ou boosté sur zone"
+
+#. module: crm_installer
+#: model:crm.lost.reason,name:crm_installer.no_installer_in_zone
+msgid "No installer in zone"
+msgstr "Pas d'installateur sur zone"
+
+#. module: crm_installer
+#: model:crm.lost.reason,name:crm_installer.not_owner
+msgid "Not owner"
+msgstr "Pas propriétaire"
+
+#. module: crm_installer
+#: model:crm.heater,name:crm_installer.oil_boiler
+msgid "Oil boiler"
+msgstr "Chaudière fioul"
+
+#. module: crm_installer
+#: model:ir.model.fields.selection,name:crm_installer.selection__crm_lead__phase__pro
+msgid "PRO"
+msgstr ""
+
+#. module: crm_installer
+#: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
+msgid "PV"
+msgstr ""
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__url_monitoring_pv
+msgid "PV Monitoring"
+msgstr "Monitoring PV"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__pv_nb
+msgid "PV number"
+msgstr "Nombre de PV"
+
+#. module: crm_installer
+#: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
+msgid "PVT"
+msgstr ""
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__pvt_nb
+msgid "PVT number"
+msgstr "Nombre de PVT"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__partner_ids
+msgid "Partners"
+msgstr "Contacts"
+
+#. module: crm_installer
+#: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
+msgid "Permissions"
+msgstr "Autorisations"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__phase
+msgid "Phase"
+msgstr ""
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__is_photogenic
+msgid "Photogenic Installation"
+msgstr "Installation photogénique"
+
+#. module: crm_installer
+#: model:crm.roof.covering,name:crm_installer.polymer_waterproof_membrane
+msgid "Polymer Waterproof Membrane"
+msgstr "Etanchéité polymère"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__pool_area
+msgid "Pool Size"
+msgstr "Taille piscine"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__powergrid_ok
+msgid "Power Grid"
+msgstr "Raccord. ENEDIS"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__date_prestudy
+msgid "Pre-study date"
+msgstr "Date de pré-étude"
+
+#. module: crm_installer
+#: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
+msgid "Pre-study sent"
+msgstr "Pré-étude envoyée"
+
+#. module: crm_installer
+#: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
+msgid "Progress"
+msgstr "Avancement"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__project_manager_id
+#: model:res.partner.category,name:crm_installer.project_manager
+msgid "Project Manager"
+msgstr "MOE"
+
+#. module: crm_installer
+#: model:res.partner.category,name:crm_installer.project_owner
+msgid "Project Owner"
+msgstr "MOA"
+
+#. module: crm_installer
+#: model:crm.lost.reason,name:crm_installer.project_aborted
+msgid "Project aborted"
+msgstr "Projet abandonné"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__date_proposition_made
+msgid "Proposition Made date"
+msgstr "Date Proposition faite"
+
+#. module: crm_installer
+#: model:crm.stage,name:crm_installer.proposition_made
+msgid "Proposition made"
+msgstr "Proposition faite"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__purchase_obligation_ok
+msgid "Purchase Obligation"
+msgstr "Contrat EDF OA"
+
+#. module: crm_installer
+#: model:crm.lost.reason,name:crm_installer.standby_customer
+msgid "Put on stand-by by the customer"
+msgstr "Mis en stand-by par le client"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__date_qualified_project
+msgid "Qualfied Project date"
+msgstr "Date Projet Qualifié"
+
+#. module: crm_installer
+#: model:crm.stage,name:crm_installer.qualified_project
+msgid "Qualified project"
+msgstr "Projet qualifié"
+
+#. module: crm_installer
+#: model:crm.lost.reason,name:crm_installer.quotation_cancelled
+msgid "Quotation cancelled"
+msgstr "Devis annulé"
+
+#. module: crm_installer
+#: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
+msgid "Quotation provided"
+msgstr "Devis remis"
+
+#. module: crm_installer
+#: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
+msgid "Quotation signed"
+msgstr "Devis signé"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__referrent_id
+msgid "Referred by"
+msgstr "Apportée par"
+
+#. module: crm_installer
+#: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
+msgid "Regul. Calculation"
+msgstr "Calcul Réglementaire"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__regulatory_calcul_ok
+msgid "Regularoty Calcultation"
+msgstr "Calcul Réglementaire validé"
+
+#. module: crm_installer
+#: model:crm.stage,name:crm_installer.relation_established
+msgid "Relation established"
+msgstr "Relation établie"
+
+#. module: crm_installer
+#: code:addons/crm_installer/hooks.py:0
+#, python-format
+msgid "Removing original CRM stages..."
+msgstr ""
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_building__is_with_pm
+msgid "Require a Project Manager"
+msgstr "Nécessite un MOE"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__roof_id
+msgid "Roof"
+msgstr "Toiture"
+
+#. module: crm_installer
+#: model:ir.actions.act_window,name:crm_installer.crm_roof_covering_act_window
+#: model:ir.ui.menu,name:crm_installer.crm_roof_covering_menu
+msgid "Roof Coverings"
+msgstr "Couvertures"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__roof_covering_id
+msgid "Roof covering"
+msgstr "Couverture"
+
+#. module: crm_installer
+#: model:ir.actions.act_window,name:crm_installer.crm_roof_act_window
+#: model:ir.ui.menu,name:crm_installer.crm_roof_menu
+msgid "Roofs"
+msgstr "Toitures"
+
+#. module: crm_installer
+#: model:crm.roof.covering,name:crm_installer.sandwich_panel
+msgid "Sandwich Panel"
+msgstr "Panneau sandwich"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__security_ok
+msgid "Security"
+msgstr "CONSUEL"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_heater__sequence
+#: model:ir.model.fields,field_description:crm_installer.field_crm_use__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.roof,name:crm_installer.shade_house
+msgid "Shade House"
+msgstr "Ombrière"
+
+#. module: crm_installer
+#: model:crm.roof.covering,name:crm_installer.slate
+msgid "Slate"
+msgstr "Ardoise"
+
+#. module: crm_installer
+#: model:crm.roof,name:crm_installer.sloped
+msgid "Sloped"
+msgstr "Inclinée"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__solar_power
+msgid "Solar Power"
+msgstr "Puissance de l'Installation"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__url_specifications
+msgid "Specifications"
+msgstr "Cahier des charges"
+
+#. module: crm_installer
+#: model:crm.building,name:crm_installer.sports_complex
+msgid "Sports Complex"
+msgstr "Complexe sportif"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__studies_results
+#: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
+msgid "Studies Results"
+msgstr "Résultats Études"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__url_study
+msgid "Study MyDS"
+msgstr "Étude MyDS"
+
+#. module: crm_installer
+#: model:crm.use,name:crm_installer.pool
+msgid "Swiming-pool"
+msgstr "Piscine"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__tank_volume
+msgid "Tank volume"
+msgstr "Volume ballon"
+
+#. module: crm_installer
+#: model:crm.lost.reason,name:crm_installer.technical_infeasibility
+msgid "Technical infeasibility"
+msgstr "Infaisabilité technique"
+
+#. module: crm_installer
+#: code:addons/crm_installer/models/crm_lead.py:0
+#, python-format
+msgid "The choosen %s '%s' is not recorded as a %s"
+msgstr "Le %s choisi '%s' n'est pas enregistré comme un %s"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__url_monitoring_th
+msgid "Thermal Monitoring graph"
+msgstr "Monitoring TH graphe"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__url_monitoring_th_2
+msgid "Thermal Monitoring scheme"
+msgstr "Monitoring TH schéma"
+
+#. module: crm_installer
+#: model:crm.heater,name:crm_installer.thermodynamic_water_heater
+msgid "Thermodynamic Water Heater"
+msgstr "Chauffe-eau Thermodynamique"
+
+#. module: crm_installer
+#: model:crm.roof.covering,name:crm_installer.tiles
+msgid "Tiles"
+msgstr "Tuiles"
+
+#. module: crm_installer
+#: model:crm.lost.reason,name:crm_installer.too_long_term
+msgid "Too long term"
+msgstr "Échéance trop lointaine"
+
+#. module: crm_installer
+#: model:crm.roof.covering,name:crm_installer.trapezoidal_sheet
+msgid "Trapezoidal Sheet"
+msgstr "Tôle trapezoïdale"
+
+#. module: crm_installer
+#: model:ir.actions.act_window,name:crm_installer.crm_use_act_window
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__use_ids
+#: model:ir.ui.menu,name:crm_installer.crm_use_menu_contacts
+#: model:ir.ui.menu,name:crm_installer.crm_use_menu_crm
+msgid "Uses"
+msgstr "Usages"
+
+#. module: crm_installer
+#: model:ir.model.fields,help:crm_installer.field_crm_lead__use_ids
+msgid "Uses selected for this lead"
+msgstr "Usages choisis pour cette affaire"
+
+#. module: crm_installer
+#: model:crm.use,name:crm_installer.water_heater
+msgid "Water Heater"
+msgstr "ECS"
+
+#. module: crm_installer
+#: model:crm.heater,name:crm_installer.wood_boiler
+msgid "Wood boiler"
+msgstr "Chaudière bois"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__worksite_request_ok
+msgid "Worksite Request"
+msgstr "Demande de travaux"
+
+#. module: crm_installer
+#: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
+msgid "Worksite allocated"
+msgstr "Chantier attribué"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__worksite_completed
+#: model:ir.model.fields,field_description:crm_installer.field_crm_stage__worksite_completed
+#: model_terms:ir.ui.view,arch_db:crm_installer.view_crm_case_opportunities_filter
+msgid "Worksite completed"
+msgstr "Chantier terminé"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__date_deadline
+msgid "Worksite date"
+msgstr "Date de chantier"
+
+#. module: crm_installer
+#: model:crm.lost.reason,name:crm_installer.wrong_email
+msgid "Wrong email"
+msgstr "Faux email"
+
+#. module: crm_installer
+#: model:crm.lost.reason,name:crm_installer.wrong_number
+msgid "Wrong number"
+msgstr "Faux numéro"
+
+#. module: crm_installer
+#: model:crm.roof.covering,name:crm_installer.zinc
+msgid "Zinc"
+msgstr ""

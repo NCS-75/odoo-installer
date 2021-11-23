@@ -1,0 +1,127 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* dualsun_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-13 11:04+0000\n"
+"PO-Revision-Date: 2021-10-13 11:04+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: partner_relation
+#: model:res.partner.relation,name:partner_relation.accredited
+msgid "Accredited"
+msgstr "Agréé"
+
+#. module: partner_relation
+#: model:res.partner.relation,name:partner_relation.authorized
+msgid "Authorized"
+msgstr "Autorisé"
+
+#. module: partner_relation
+#: model:res.partner.relation,name:partner_relation.certified
+msgid "Certified"
+msgstr "Certifié"
+
+#. module: partner_relation
+#: model:ir.model.fields,field_description:partner_relation.field_res_partner_relation__code
+msgid "Code"
+msgstr ""
+
+#. module: partner_relation
+#: model:ir.model,name:partner_relation.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: partner_relation
+#: model:ir.model.fields,field_description:partner_relation.field_res_partner_relation__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: partner_relation
+#: model:ir.model.fields,field_description:partner_relation.field_res_partner_relation__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: partner_relation
+#: model:ir.model.fields,help:partner_relation.field_res_partner_relation__role_ids
+msgid ""
+"Define if the Relation is visible on partners with specific Roles.\n"
+"If empty, the relation is visible on all the partners, even those with no "
+"Role."
+msgstr ""
+
+#. module: partner_relation
+#: model:ir.model.fields,field_description:partner_relation.field_res_partner__display_name
+#: model:ir.model.fields,field_description:partner_relation.field_res_partner_relation__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: partner_relation
+#: model:ir.model.fields,field_description:partner_relation.field_res_partner__id
+#: model:ir.model.fields,field_description:partner_relation.field_res_partner_relation__id
+msgid "ID"
+msgstr ""
+
+#. module: partner_relation
+#: model:ir.model.fields,field_description:partner_relation.field_res_partner____last_update
+#: model:ir.model.fields,field_description:partner_relation.field_res_partner_relation____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: partner_relation
+#: model:ir.model.fields,field_description:partner_relation.field_res_partner_relation__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: partner_relation
+#: model:ir.model.fields,field_description:partner_relation.field_res_partner_relation__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: partner_relation
+#: model:ir.model.fields,field_description:partner_relation.field_res_partner_relation__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: partner_relation
+#: model:res.partner.relation,name:partner_relation.premium
+msgid "Premium"
+msgstr ""
+
+#. module: partner_relation
+#: model:ir.model.fields,field_description:partner_relation.field_res_partner_relation__role_ids
+#, fuzzy
+msgid "Relation visibility"
+msgstr "Relation"
+
+#. module: partner_relation
+#: model:ir.model,name:partner_relation.model_res_partner_relation
+#: model:ir.model.fields,field_description:partner_relation.field_res_partner__relation_id
+#: model:ir.model.fields,field_description:partner_relation.field_res_users__relation_id
+msgid "Relationship"
+msgstr "Relation"
+
+#. module: partner_relation
+#: model:ir.model.fields,help:partner_relation.field_res_partner__relation_id
+#: model:ir.model.fields,help:partner_relation.field_res_users__relation_id
+msgid "Relationship level with this partner."
+msgstr "Niveau de relation avec le partenaire"
+
+#. module: partner_relation
+#: model:ir.model.fields,field_description:partner_relation.field_res_partner_relation__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: partner_relation
+#: model:res.partner.relation,name:partner_relation.unauthorized
+msgid "Unauthorized"
+msgstr "Non-autorisé"

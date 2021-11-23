@@ -1,0 +1,67 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* partner_company
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: partner_company
+#: model:ir.model.fields,field_description:partner_company.field_res_partner__annual_revenue
+#: model:ir.model.fields,field_description:partner_company.field_res_users__annual_revenue
+msgid "Annual Revenue"
+msgstr "CA annuel"
+
+#. module: partner_company
+#: model:ir.model,name:partner_company.model_res_company
+msgid "Companies"
+msgstr "Sociétés"
+
+#. module: partner_company
+#: model_terms:ir.ui.view,arch_db:partner_company.view_partner_form
+msgid "Company"
+msgstr "Société"
+
+#. module: partner_company
+#: model:ir.model,name:partner_company.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: partner_company
+#: model:ir.model.fields,field_description:partner_company.field_res_company__display_name
+#: model:ir.model.fields,field_description:partner_company.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: partner_company
+#: model:ir.model.fields,field_description:partner_company.field_res_partner__headcount
+#: model:ir.model.fields,field_description:partner_company.field_res_users__headcount
+msgid "Headcount"
+msgstr "Effectif"
+
+#. module: partner_company
+#: model:ir.model.fields,field_description:partner_company.field_res_company__id
+#: model:ir.model.fields,field_description:partner_company.field_res_partner__id
+msgid "ID"
+msgstr ""
+
+#. module: partner_company
+#: model:ir.model.fields,field_description:partner_company.field_res_company____last_update
+#: model:ir.model.fields,field_description:partner_company.field_res_partner____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: partner_company
+#: model:ir.model.fields,field_description:partner_company.field_res_company__share_capital
+#: model:ir.model.fields,field_description:partner_company.field_res_partner__share_capital
+#: model:ir.model.fields,field_description:partner_company.field_res_users__share_capital
+msgid "Share Capital"
+msgstr "Capital social"

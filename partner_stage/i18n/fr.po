@@ -1,0 +1,123 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* dualsun_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-10-13 11:04+0000\n"
+"PO-Revision-Date: 2021-10-13 11:04+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: partner_stage
+#: model:ir.model.fields,field_description:partner_stage.field_res_partner_stage__code
+msgid "Code"
+msgstr ""
+
+#. module: partner_stage
+#: model:ir.model,name:partner_stage.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: partner_stage
+#: model:ir.model.fields,field_description:partner_stage.field_res_partner_stage__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: partner_stage
+#: model:ir.model.fields,field_description:partner_stage.field_res_partner_stage__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: partner_stage
+#: model:ir.model.fields,field_description:partner_stage.field_res_partner__display_name
+#: model:ir.model.fields,field_description:partner_stage.field_res_partner_stage__display_name
+msgid "Display Name"
+msgstr "Nom affiché"
+
+#. module: partner_stage
+#: model:ir.model.fields,field_description:partner_stage.field_res_partner_stage__fold
+msgid "Folded in kanban view"
+msgstr ""
+
+#. module: partner_stage
+#: model:ir.model.fields,field_description:partner_stage.field_res_partner__id
+#: model:ir.model.fields,field_description:partner_stage.field_res_partner_stage__id
+msgid "ID"
+msgstr ""
+
+#. module: partner_stage
+#: model:res.partner.stage,name:partner_stage.identified
+msgid "Identified"
+msgstr "Identifié"
+
+#. module: partner_stage
+#: model:res.partner.stage,name:partner_stage.incoming
+msgid "Incoming"
+msgstr "Entrant"
+
+#. module: partner_stage
+#: model:ir.model.fields,help:partner_stage.field_res_partner__stage_id
+#: model:ir.model.fields,help:partner_stage.field_res_users__stage_id
+msgid "Installer Qualification Stage"
+msgstr "Etape de qualification d'Installateur"
+
+#. module: partner_stage
+#: model:ir.model.fields,field_description:partner_stage.field_res_partner__stage_id
+#: model:ir.model.fields,field_description:partner_stage.field_res_users__stage_id
+msgid "Installer Stage"
+msgstr "Etape d'Installateur"
+
+#. module: partner_stage
+#: model:ir.model,name:partner_stage.model_res_partner_stage
+#, fuzzy
+msgid "Installers Qualification Stages"
+msgstr "Etape de qualification d'Installateur"
+
+#. module: partner_stage
+#: model:ir.model.fields,field_description:partner_stage.field_res_partner____last_update
+#: model:ir.model.fields,field_description:partner_stage.field_res_partner_stage____last_update
+msgid "Last Modified on"
+msgstr "Dernière modification le"
+
+#. module: partner_stage
+#: model:ir.model.fields,field_description:partner_stage.field_res_partner_stage__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: partner_stage
+#: model:ir.model.fields,field_description:partner_stage.field_res_partner_stage__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: partner_stage
+#: model:res.partner.stage,name:partner_stage.launched
+msgid "Launched"
+msgstr "Lancé"
+
+#. module: partner_stage
+#: model:ir.model.fields,field_description:partner_stage.field_res_partner_stage__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: partner_stage
+#: model:res.partner.stage,name:partner_stage.installer_qualified
+msgid "Qualified"
+msgstr "Qualifié"
+
+#. module: partner_stage
+#: model:ir.model.fields,field_description:partner_stage.field_res_partner_stage__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: partner_stage
+#: model:ir.model.fields,help:partner_stage.field_res_partner_stage__sequence
+msgid "Used to order stages. Lower is better."
+msgstr ""

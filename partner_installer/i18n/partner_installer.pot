@@ -1,0 +1,169 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* partner_installer
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: partner_installer
+#: model:ir.model.fields,field_description:partner_installer.field_res_partner__accept_fitting_for_x
+#: model:ir.model.fields,field_description:partner_installer.field_res_users__accept_fitting_for_x
+msgid "Accept fitting PVT for X"
+msgstr ""
+
+#. module: partner_installer
+#: model:ir.model.fields,field_description:partner_installer.field_res_partner__action_radius
+#: model:ir.model.fields,field_description:partner_installer.field_res_users__action_radius
+msgid "Action Radius"
+msgstr ""
+
+#. module: partner_installer
+#: model:ir.model.fields,help:partner_installer.field_res_partner__heater_ids
+#: model:ir.model.fields,help:partner_installer.field_res_users__heater_ids
+msgid "Auxiliary Heaters proposed by the installer"
+msgstr ""
+
+#. module: partner_installer
+#: model:res.partner.range,name:partner_installer.commercial
+msgid "Commercial (> 9kWc)"
+msgstr ""
+
+#. module: partner_installer
+#: model:ir.model.fields,field_description:partner_installer.field_res_partner__company_type
+#: model:ir.model.fields,field_description:partner_installer.field_res_users__company_type
+msgid "Company Type"
+msgstr ""
+
+#. module: partner_installer
+#: model:ir.model,name:partner_installer.model_res_partner
+#: model:ir.model.fields.selection,name:partner_installer.selection__res_partner__company_type__person
+msgid "Contact"
+msgstr ""
+
+#. module: partner_installer
+#: model:ir.model.fields,field_description:partner_installer.field_res_partner_range__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: partner_installer
+#: model:ir.model.fields,field_description:partner_installer.field_res_partner_range__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: partner_installer
+#: model:ir.model.fields,field_description:partner_installer.field_res_partner__display_name
+#: model:ir.model.fields,field_description:partner_installer.field_res_partner_range__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: partner_installer
+#: model:ir.model.fields,field_description:partner_installer.field_res_partner__distributor_ids
+#: model:ir.model.fields,field_description:partner_installer.field_res_users__distributor_ids
+msgid "Distributors"
+msgstr ""
+
+#. module: partner_installer
+#: model:ir.model.fields,field_description:partner_installer.field_res_partner__is_fitter
+#: model:ir.model.fields,field_description:partner_installer.field_res_users__is_fitter
+msgid "Fitter"
+msgstr ""
+
+#. module: partner_installer
+#: model:ir.model.fields,field_description:partner_installer.field_res_partner__heater_ids
+#: model:ir.model.fields,field_description:partner_installer.field_res_users__heater_ids
+msgid "Heaters"
+msgstr ""
+
+#. module: partner_installer
+#: model:ir.model.fields,field_description:partner_installer.field_res_partner__id
+#: model:ir.model.fields,field_description:partner_installer.field_res_partner_range__id
+msgid "ID"
+msgstr ""
+
+#. module: partner_installer
+#: model:ir.model,name:partner_installer.model_res_partner_range
+#: model:ir.model.fields,field_description:partner_installer.field_res_partner__range_ids
+#: model:ir.model.fields,field_description:partner_installer.field_res_users__range_ids
+msgid "Installation Ranges"
+msgstr ""
+
+#. module: partner_installer
+#: model:ir.model.fields,field_description:partner_installer.field_res_partner____last_update
+#: model:ir.model.fields,field_description:partner_installer.field_res_partner_range____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: partner_installer
+#: model:ir.model.fields,field_description:partner_installer.field_res_partner_range__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: partner_installer
+#: model:ir.model.fields,field_description:partner_installer.field_res_partner_range__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: partner_installer
+#: model:ir.model.fields,field_description:partner_installer.field_res_partner_range__name
+msgid "Name"
+msgstr ""
+
+#. module: partner_installer
+#: model:ir.model.fields,field_description:partner_installer.field_res_partner__is_pv
+#: model:ir.model.fields,field_description:partner_installer.field_res_users__is_pv
+msgid "PV"
+msgstr ""
+
+#. module: partner_installer
+#: model:ir.model.fields,field_description:partner_installer.field_res_partner__is_pvt
+#: model:ir.model.fields,field_description:partner_installer.field_res_users__is_pvt
+msgid "PVT"
+msgstr ""
+
+#. module: partner_installer
+#: model:ir.model.fields,help:partner_installer.field_res_partner__distributor_ids
+#: model:ir.model.fields,help:partner_installer.field_res_users__distributor_ids
+msgid "Potential distributors for this installer."
+msgstr ""
+
+#. module: partner_installer
+#: model:res.partner.range,name:partner_installer.residential
+msgid "Residential (< 9kWc)"
+msgstr ""
+
+#. module: partner_installer
+#: model:ir.model.fields,field_description:partner_installer.field_res_partner__is_seller
+#: model:ir.model.fields,field_description:partner_installer.field_res_users__is_seller
+msgid "Seller"
+msgstr ""
+
+#. module: partner_installer
+#: model:ir.model.fields,field_description:partner_installer.field_res_partner_range__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: partner_installer
+#: model:ir.model.fields,help:partner_installer.field_res_partner__range_ids
+#: model:ir.model.fields,help:partner_installer.field_res_users__range_ids
+msgid "The installation sizes accepted by the installer"
+msgstr ""
+
+#. module: partner_installer
+#: model:ir.model.fields,field_description:partner_installer.field_res_partner__use_ids
+#: model:ir.model.fields,field_description:partner_installer.field_res_users__use_ids
+msgid "Uses"
+msgstr ""
+
+#. module: partner_installer
+#: model:ir.model.fields,help:partner_installer.field_res_partner__use_ids
+#: model:ir.model.fields,help:partner_installer.field_res_users__use_ids
+msgid "Uses covered by the installer"
+msgstr ""
