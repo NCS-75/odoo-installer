@@ -12,6 +12,9 @@
           <xpath expr="(//page[@name='coworkers']//tree/field)[position()=1]" position="before">
               <field name="id" widget="open_tab" string=" "/>
           </xpath>
+          <xpath expr="(//page[@name='addresses']//tree/field)[position()=1]" position="before">
+              <field name="id" widget="open_tab" string=" "/>
+          </xpath>          
 
       </field>
     </record>
