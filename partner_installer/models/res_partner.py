@@ -3,6 +3,7 @@
 
 from odoo import api, fields, models, _
 
+
 class ResPartnerRange(models.Model):
     _name = "res.partner.range"
     _description = "Installation Ranges"
@@ -14,7 +15,7 @@ class ResPartnerRange(models.Model):
 
 
 class ResPartner(models.Model):
-    _inherit = 'res.partner'
+    _inherit = "res.partner"
 
     # Rename 'Individual' into 'Contact'
     company_type = fields.Selection(selection_add=[("person", "Contact")])

@@ -11,7 +11,7 @@
     "license": "AGPL-3",
     "author": "Akretion",
     "website": "http://akretion.com",
-    "depends": ["base"],
+    "depends": ["base", "account"],
     "data": ["views/res_company.xml", "views/res_partner.xml"],
     "demo": [],
 }

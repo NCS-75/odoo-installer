@@ -14,7 +14,6 @@ class ResPartner(models.Model):
         group_expand="_read_group_stage_ids",
         store=True,
         index=True,
-        tracking=True,
         readonly=False,
         copy=False,
         help="Installer Qualification Stage",
@@ -27,7 +26,7 @@ class ResPartner(models.Model):
         stage_ids = stages._search(
             search_domain, order=order, access_rights_uid=SUPERUSER_ID
         )
-        return stages.browse(stage_ids)    
+        return stages.browse(stage_ids)
 
 class ResPartnerStage(models.Model):
     _name = "res.partner.stage"
