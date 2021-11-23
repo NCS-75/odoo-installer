@@ -10,13 +10,30 @@
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
 
+            <!-- Add address_type  -->
             <xpath expr="//field[@name='company_type']" position="after">
                 <field name="address_type" widget="radio" class="oe_edit_only" options="{'horizontal': true}" attrs="{'invisible': [('type', '=', 'contact')]}"/>
             </xpath>
+            <!-- Original type field displayed only in debug -->
+            <xpath expr="//span[@name='address_name']/..//field[@name='type']" position="attributes">
+                <attribute name="attrs">{'invisible': False, 'readonly': [('user_ids', '!=', [])]}</attribute>
+                <attribute name="groups">base.group_no_one</attribute>
+            </xpath>
+            <!-- Hide fields for addresses -->
             <xpath expr="//field[@name='company_type']" position="attributes">
                 <attribute name="attrs">{"invisible": [("type", "!=", "contact")]}</attribute>
             </xpath>
             <xpath expr="//field[@name='category_id']" position="attributes">
+                <attribute name="attrs">{"invisible": [("type", "!=", "contact")]}</attribute>
+            </xpath>
+            <xpath expr="//page[@name='sales_purchases']" position="attributes">
+                <attribute name="attrs">{"invisible": [("type", "!=", "contact")]}</attribute>
+            </xpath>
+            <!-- WARNING : hide all buttons for addresses -->
+            <xpath expr="//div[@name='button_box']" position="attributes">
+                <attribute name="attrs">{"invisible": [("type", "!=", "contact")]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='function']/.." position="attributes">
                 <attribute name="attrs">{"invisible": [("type", "!=", "contact")]}</attribute>
             </xpath>
             <!-- Hide parent_id on children pop-up as it is not filled when adding a new child from pop-up -->
