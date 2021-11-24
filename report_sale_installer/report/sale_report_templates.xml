@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_saleorder_document"
+              inherit_id="sale.report_saleorder_document">
+
+        <!-- addresses in flex containers -->
+        <xpath expr="//t[@t-set='address']" position="after">
+              <div class="d-flex" name="address_installer">
+                  <table class="table table-sm" style="width: 33%;margin-right: 33%;">
+                      <thead style="display: table-row-group">
+                          <tr>
+                              <th>Invoicing Address</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <td>
+                              <div t-field="doc.partner_invoice_id"
+                                   t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}' />
+                          </td>
+                      </tbody>
+                  </table>
+                  <table class="table table-sm" style="width: 33%;">
+                      <thead style="display: table-row-group">
+                          <tr>
+                              <th>Shipping Address</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <td>
+                              <div t-field="doc.partner_shipping_id"
+                                   t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True, "phone_icons": True}' />
+                          </td>
+                      </tbody>
+                  </table>
+              </div>
+        </xpath>
+
+        <!-- Add {"widget": "date"} to existing div dates -->
+        <xpath expr="(//div[@id='informations']/div)[position() = 2]/p" position="attributes">
+            <attribute name="t-options">{"widget": "date"}</attribute>
+        </xpath>
+        <xpath expr="//div[@name='expiration_date']" position="attributes">
+            <attribute name="t-options">{"widget": "date"}</attribute>
+        </xpath>
+
+        <!-- Add Products image -->
+        <xpath expr="//th[@name='th_description']" position="before">
+            <th t-if="doc.has_product_photo" name="th_photo"></th>
+        </xpath>
+        <xpath expr="//td[@name='td_name']" position="before">
+            <td t-if="doc.has_product_photo" name="td_photo" class="ds_td_photo">
+                <span>
+                    <img t-if="line.product_id and line.product_id.image_1920"
+                            t-att-src="image_data_uri(line.product_id.image_1920)"/>
+                </span>
+            </td>
+        </xpath>
+
+        <!-- Add €HT on columns -->
+        <xpath expr="//th[@name='th_priceunit']" position="attributes">
+            <attribute name="class">text-nowrap</attribute>
+        </xpath>
+        <xpath expr="//th[@name='th_priceunit']" position="inside">
+            <div class="text-nowrap">
+                <span t-field="doc.currency_id.symbol" />
+                <span groups="account.group_show_line_subtotals_tax_excluded">excl.&#160;tax</span>
+                <span groups="account.group_show_line_subtotals_tax_included">incl.&#160;tax</span>
+            </div>
+        </xpath>
+        <xpath expr="//th[@name='th_subtotal']" position="inside">
+            <div class="text-nowrap">
+                <span t-field="doc.currency_id.symbol" />
+                <span groups="account.group_show_line_subtotals_tax_excluded">excl.&#160;tax</span>
+                <span groups="account.group_show_line_subtotals_tax_included">incl.&#160;tax</span>
+            </div>
+        </xpath>
+
+        <!-- Format quantity -->
+        <xpath expr="//span[@t-field='line.product_uom_qty']" position="attributes">
+            <attribute name="class">d-none</attribute>
+        </xpath>
+        <xpath expr="//span[@t-field='line.product_uom_qty']" position="after">
+            <span t-esc="doc.qty_to_str(line.product_uom_qty)"/>
+        </xpath>
+        <!-- Remove Unit UoM if unecessary -->
+        <xpath expr="//span[@t-field='line.product_uom']" position="attributes">
+            <attribute name="t-if">doc.display_uom</attribute>
+        </xpath>
+        <!-- Format Unit Price -->
+        <xpath expr="//span[@t-field='line.price_unit']" position="attributes">
+            <attribute name="class">d-none</attribute>
+        </xpath>
+        <xpath expr="//span[@t-field='line.price_unit']" position="after">
+            <span t-esc="doc.price_to_str(line.price_unit)"/>
+        </xpath>
+        <!-- Remove € on subtotal -->
+        <xpath expr="//td[@name='td_subtotal']/span[@t-field='line.price_subtotal']" position="attributes">
+            <attribute name="class">d-none</attribute>
+        </xpath>
+        <xpath expr="//td[@name='td_subtotal']/span[@t-field='line.price_total']" position="attributes">
+            <attribute name="class">d-none</attribute>
+        </xpath>
+        <xpath expr="//td[@name='td_subtotal']" position="inside">
+            <span t-esc="doc.price_to_str(line.price_subtotal)" groups="account.group_show_line_subtotals_tax_excluded"/>
+            <span t-esc="doc.price_to_str(line.price_total)" groups="account.group_show_line_subtotals_tax_included"/>
+        </xpath>
+
+        <!-- Payment tems title-->
+        <xpath expr="//div[hasclass('oe_structure')][2]" position="after">
+            <div t-if="doc.payment_term_id.note or doc.note" name="payment_term_note" class="mt-2" style="page-break-inside: avoid;">
+                <strong>Payment terms:</strong>
+                <br/>
+            </div>
+        </xpath>
+
+        <!-- Hide original payment term and move both payment term and general note inside new paragrap "payment_term_note" -->
+        <xpath expr="//p[@t-if='doc.payment_term_id.note']" position="attributes">
+          <attribute name="class">d-none</attribute>
+        </xpath>
+        <xpath expr="//div[@name='payment_term_note']" position="inside">
+            <xpath expr="//span[@t-field='doc.payment_term_id.note']" position="move" />
+            <xpath expr="//p[@t-field='doc.note']" position="move" />
+        </xpath>
+        <xpath expr="//p[@t-field='doc.note']" position="attributes">
+            <attribute name="class">mb-0</attribute>
+        </xpath>
+
+    </template>
+</odoo>
