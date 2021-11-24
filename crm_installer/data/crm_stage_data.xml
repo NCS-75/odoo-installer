@@ -8,6 +8,8 @@
       <field name="requirements">
   >
       </field>
+      <field name="on_change" eval="True" />
+      <field name="probability">5</field>
   </record>
   <record id="qualified_project" model="crm.stage">
       <field name="name">Qualified project</field>
@@ -17,6 +19,8 @@
       <field name="requirements">
   >
       </field>
+      <field name="on_change" eval="True" />
+      <field name="probability">20</field>
   </record>
   <record id="proposition_made" model="crm.stage">
       <field name="name">Proposition made</field>
@@ -26,6 +30,8 @@
       <field name="requirements">
   >
       </field>
+      <field name="on_change" eval="True" />
+      <field name="probability">50</field>
   </record>
   <record id="deal_signed" model="crm.stage">
       <field name="name">Deal signed</field>
@@ -35,6 +41,8 @@
       <field name="requirements">
   >
       </field>
+      <field name="on_change" eval="True" />
+      <field name="probability">80</field>
   </record>
   <record id="installation_started" model="crm.stage">
       <field name="name">Installation started</field>
@@ -45,6 +53,8 @@
       <field name="requirements">
   >
       </field>
+      <field name="on_change" eval="True" />
+      <field name="probability">100</field>         
   </record>
 
   <record id="commissioned" model="crm.stage">

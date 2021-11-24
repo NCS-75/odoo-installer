@@ -9,7 +9,7 @@
     "license": "AGPL-3",
     "author": "Akretion",
     "website": "http://akretion.com",
-    "depends": ["crm", "partner_role", "crm_aftersale"],
+    "depends": ["crm", "partner_role", "crm_aftersale", "crm_stage_probability"],
     "data": [
         # Data
         "data/crm_building_data.xml",

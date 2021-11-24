@@ -9,6 +9,11 @@ class CrmLead(models.Model):
     _inherit = "crm.lead"
 
     is_with_pm = fields.Boolean(compute="_compute_is_with_pm")
+    is_installer_company = fields.Boolean(
+        related="company_id.partner_id.is_installer",
+        help="Used to customize Lead's form if the current user's company is an "
+        "installer or not",
+    )
     pvt_nb = fields.Integer("PVT number")
     pv_nb = fields.Integer("PV number")
     use_ids = fields.Many2many(
@@ -208,3 +213,14 @@ class CrmLead(models.Model):
             if not lead.distributor_id:
                 dist_id = part_ids.filtered(lambda p: p.is_company and p.is_distributor)
                 lead.distributor_id = dist_id[0] if dist_id else ResPartner
+
+    @api.model
+    def default_get(self, fields):
+        res = super().default_get(fields)
+        cpy_id = res.get("company_id", self.env.company.id)
+        company_id = self.env["res.company"].browse([cpy_id])
+        cpy_partner_id = company_id.partner_id
+        if cpy_partner_id.is_installer:
+            res["installer_seller_id"] = cpy_partner_id.id
+
+        return res
