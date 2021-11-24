@@ -23,11 +23,10 @@
     <field name="inherit_id" ref="crm.crm_lead_view_form"/>
     <field name="arch" type="xml">
       <!-- Subtitle -->
-      <xpath expr="//h2" position="attributes">
-          <attribute name="invisible">True</attribute>
+      <xpath expr="//div[hasclass('oe_title')]/h2/div" position="attributes">
+          <attribute name="class">ml-3</attribute>
       </xpath>
-      <xpath expr="//div[hasclass('oe_title')]" position="after">
-          <h2 class="o_row col-12 col-xl-7" name="installer_h2">
+      <xpath expr="//div[hasclass('oe_title')]/h2/div" position="before">
               <div class="o_row mr-2">
                   <field name="pvt_nb" class="oe_inline" style="max-width: 60px;"/>
                   <label for="pvt_nb" string="PVT" class="ml-1"/>
@@ -36,18 +35,6 @@
                   <field name="pv_nb" class="oe_inline" style="max-width: 60px;"/>
                   <label for="pv_nb" string="PV" class="ml-1"/>
               </div>
-              <!-- TODO: Add original expected_revenue here -->
-              <div>
-                  <span class="oe_grey"> %</span>
-              </div>
-          </h2>
-          <field name="is_with_pm" invisible="1" />
-      </xpath>
-      <xpath expr="(//h2[@name='installer_h2']/div/span)[position() = 1]" position="before">
-          <xpath expr="//field[@name='probability']" position="move" />
-      </xpath>
-      <xpath expr="//field[@name='probability']" position="attributes">
-          <attribute name="style">max-width: 60px;</attribute>
       </xpath>
       <!-- Main Partners -->
       <xpath expr="//group[@name='opportunity_partner']" position="attributes">
@@ -59,6 +46,7 @@
               <field name="installer_seller_id" options="{'no_create': True}"/>
               <field name="installer_fitter_id" options="{'no_create': True}"/>
               <field name="distributor_id" options="{'no_create': True}"/>
+              <field name="is_with_pm" invisible="1" />
           </group>
       </xpath>
       <xpath expr="(//group[@name='main_lead_partners']/field)[position() = 1]" position="before">
