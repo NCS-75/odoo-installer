@@ -1,0 +1,175 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* report_base_installer
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: report_base_installer
+#: model_terms:ir.ui.view,arch_db:report_base_installer.external_layout_boxed
+msgid ", SAS au capital de"
+msgstr ""
+
+#. module: report_base_installer
+#: model_terms:ir.ui.view,arch_db:report_base_installer.ds_header
+msgid "<strong>Pro-Forma Invoice</strong>"
+msgstr ""
+
+#. module: report_base_installer
+#: model:ir.model.fields,field_description:report_base_installer.field_base_document_layout__ape
+msgid "APE"
+msgstr ""
+
+#. module: report_base_installer
+#: model_terms:ir.ui.view,arch_db:report_base_installer.external_layout_boxed
+msgid "APE:"
+msgstr ""
+
+#. module: report_base_installer
+#: model_terms:ir.ui.view,arch_db:report_base_installer.ds_header
+msgid "Cancelled Invoice"
+msgstr ""
+
+#. module: report_base_installer
+#: model_terms:ir.ui.view,arch_db:report_base_installer.ds_header
+msgid "Cancelled Purchase Order"
+msgstr ""
+
+#. module: report_base_installer
+#: model:ir.model,name:report_base_installer.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: report_base_installer
+#: model:ir.model,name:report_base_installer.model_base_document_layout
+msgid "Company Document Layout"
+msgstr ""
+
+#. module: report_base_installer
+#: model_terms:ir.ui.view,arch_db:report_base_installer.ds_header
+msgid "Credit Note"
+msgstr ""
+
+#. module: report_base_installer
+#: model_terms:ir.ui.view,arch_db:report_base_installer.ds_header
+msgid "Delivery Receipt"
+msgstr ""
+
+#. module: report_base_installer
+#: model:ir.model.fields,field_description:report_base_installer.field_base_document_layout__display_name
+#: model:ir.model.fields,field_description:report_base_installer.field_res_company__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: report_base_installer
+#: model_terms:ir.ui.view,arch_db:report_base_installer.ds_header
+msgid "Draft Invoice"
+msgstr ""
+
+#. module: report_base_installer
+#: model:ir.model.fields,field_description:report_base_installer.field_base_document_layout__id
+#: model:ir.model.fields,field_description:report_base_installer.field_res_company__id
+msgid "ID"
+msgstr ""
+
+#. module: report_base_installer
+#: model_terms:ir.ui.view,arch_db:report_base_installer.ds_header
+msgid "Invoice"
+msgstr ""
+
+#. module: report_base_installer
+#: model:ir.model.fields,field_description:report_base_installer.field_base_document_layout____last_update
+#: model:ir.model.fields,field_description:report_base_installer.field_res_company____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: report_base_installer
+#: code:addons/report_base_installer/hooks.py:0
+#, python-format
+msgid "Loading custom A4 paper format and Company report parameters..."
+msgstr ""
+
+#. module: report_base_installer
+#: model:ir.model.fields,field_description:report_base_installer.field_base_document_layout__logo
+#: model_terms:ir.ui.view,arch_db:report_base_installer.ds_header
+msgid "Logo"
+msgstr ""
+
+#. module: report_base_installer
+#: model:ir.model.fields,help:report_base_installer.field_base_document_layout__logo
+#: model:ir.model.fields,help:report_base_installer.field_base_document_layout__report_logo
+#: model:ir.model.fields,help:report_base_installer.field_res_company__report_logo
+msgid "Logo used on report's header"
+msgstr ""
+
+#. module: report_base_installer
+#: model_terms:ir.ui.view,arch_db:report_base_installer.ds_header
+msgid "Packing List"
+msgstr ""
+
+#. module: report_base_installer
+#: model_terms:ir.ui.view,arch_db:report_base_installer.ds_header
+msgid "Purchase Order"
+msgstr ""
+
+#. module: report_base_installer
+#: model_terms:ir.ui.view,arch_db:report_base_installer.ds_header
+msgid "Quotation"
+msgstr ""
+
+#. module: report_base_installer
+#: model_terms:ir.ui.view,arch_db:report_base_installer.external_layout_boxed
+msgid "RCS:"
+msgstr ""
+
+#. module: report_base_installer
+#: model:ir.model.fields,field_description:report_base_installer.field_base_document_layout__report_logo
+#: model:ir.model.fields,field_description:report_base_installer.field_res_company__report_logo
+msgid "Report Logo"
+msgstr ""
+
+#. module: report_base_installer
+#: model_terms:ir.ui.view,arch_db:report_base_installer.ds_header
+msgid "Request for Quotation"
+msgstr ""
+
+#. module: report_base_installer
+#: model:ir.model.fields,field_description:report_base_installer.field_base_document_layout__siret
+msgid "SIRET"
+msgstr ""
+
+#. module: report_base_installer
+#: model_terms:ir.ui.view,arch_db:report_base_installer.external_layout_boxed
+msgid "SIRET:"
+msgstr ""
+
+#. module: report_base_installer
+#: model_terms:ir.ui.view,arch_db:report_base_installer.ds_header
+msgid "Sale Order"
+msgstr ""
+
+#. module: report_base_installer
+#: model:ir.model.fields,help:report_base_installer.field_base_document_layout__siret
+msgid ""
+"The SIRET number is the official identity number of this company's office in"
+" France. It is composed of the 9 digits of the SIREN number and the 5 digits"
+" of the NIC number, ie. 14 digits."
+msgstr ""
+
+#. module: report_base_installer
+#: model_terms:ir.ui.view,arch_db:report_base_installer.ds_header
+msgid "Vendor Bill"
+msgstr ""
+
+#. module: report_base_installer
+#: model_terms:ir.ui.view,arch_db:report_base_installer.ds_header
+msgid "Vendor Credit Note"
+msgstr ""
