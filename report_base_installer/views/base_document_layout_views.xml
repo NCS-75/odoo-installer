@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- Inherit Form view -->
+  <record id="view_base_document_layout" model="ir.ui.view">
+    <field name="name">Document Layout (in report_base_installer)</field>
+    <field name="model">base.document.layout</field>
+    <field name="inherit_id" ref="web.view_base_document_layout"/>
+    <field name="arch" type="xml">
+        <xpath expr="//field[@name='logo']" position="attributes">
+            <attribute name="invisible">True</attribute>
+        </xpath>
+        <xpath expr="//field[@name='logo']" position="after">
+            <field name="report_logo" widget="image"/>
+        </xpath>
+    </field>
+  </record>
+</odoo>

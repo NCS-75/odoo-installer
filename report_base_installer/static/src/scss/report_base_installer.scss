@@ -1,0 +1,61 @@
+/* License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl). */
+.o_report_layout_boxed {
+  table {
+    &.o_main_table thead {
+      // force repeating table header on each page
+      display: table-header-group !important;
+
+      tr {
+        th {
+          // Center text horizontally and vertically
+          text-align: center !important;
+          vertical-align: middle;
+          min-width: 50px;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        td {
+          // Add a border-top. Alternative light blue : c1e9eb
+          border-top: 1px solid #e4e6e8;
+        }
+      }
+    }
+  }
+}
+
+.o_boxed_footer, .o_boxed_header, .o_report_layout_boxed {
+  font-size: 12px;
+}
+
+.ds_small {
+  font-size: smaller;
+}
+
+.d-flex {
+  table {
+    // Independent table sizes in flex containers
+    align-self: start;
+  }
+}
+
+.ds_td_photo {
+  text-align: center !important;
+  max-width: 50px; // I don't know why it needs to be so small, but it needs to be!
+
+  img {
+    width: 100%;
+    max-width: 80px;
+  }
+}
+
+.report_contact {
+  margin-top: 2px;
+  color: #6c757d !important; // =bootstrap 'text-muted' color
+
+  span:first-child{
+    margin-right: ($spacer * .25) !important; // = bootstrap 'mr-1'
+  }
+}

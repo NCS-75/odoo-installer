@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Never display original address field -->
+    <template id="address_layout" inherit_id="web.address_layout">
+        <xpath expr="//t[@t-if='address']" position="attributes">
+            <attribute name="t-if">False</attribute>
+        </xpath>
+    </template>
+
+    <template id="ds_header">
+      <!-- Custom header with no "header" class to avoid being considered as header by wkhtmltopdf
+      + add special report logo and doc names to this custom header-->
+      <div t-attf-class="o_company_#{company.id}_layout" t-att-style="report_header_style">
+          <div class="d-flex o_boxed_header">
+              <div style="width: 65%;">
+                  <img t-if="company.report_logo" t-att-src="image_data_uri(company.report_logo)" alt="Logo"/>
+              </div>
+              <div style="margin-top: 24px;width: 35%;">
+                  <h5 t-if="o" class="text-center">
+                      <t t-if="o._name == 'sale.order'" >
+                          <t t-if="not (env.context.get('proforma', False) or is_pro_forma)">
+                              <strong t-if="o.state not in ['draft','sent']">Sale Order</strong>
+                              <strong t-if="o.state in ['draft','sent']">Quotation</strong>
+                          </t>
+                          <t t-if="env.context.get('proforma', False) or is_pro_forma">
+                              <strong>Pro-Forma Invoice</strong>
+                          </t>
+                          <br/>
+                          <span t-field="doc.name"/>
+                      </t>
+                      <t t-if="o._name == 'stock.picking'" >
+                          <strong t-if="o.picking_type_id.code == 'incoming'">Delivery Receipt</strong>
+                          <strong t-if="o.picking_type_id.code != 'incoming'">Packing List</strong>
+                          <br/>
+                          <span t-field="o.name"/>
+                      </t>
+                      <t t-if="o._name == 'purchase.order'">
+                          <strong t-if="o.state == 'draft'">Request for Quotation</strong>
+                          <strong t-if="o.state not in ['draft', 'cancel']">Purchase Order</strong>
+                          <strong t-if="o.state == 'cancel'">Cancelled Purchase Order</strong>
+                          <br/>
+                          <span t-field="o.name"/>
+                      </t>
+                      <t t-if="o._name == 'account.move'">
+                          <strong t-if="o.move_type == 'out_invoice' and o.state == 'posted'">Invoice</strong>
+                          <strong t-if="o.move_type == 'out_invoice' and o.state == 'draft'">Draft Invoice</strong>
+                          <strong t-if="o.move_type == 'out_invoice' and o.state == 'cancel'">Cancelled Invoice</strong>
+                          <strong t-if="o.move_type == 'out_refund'">Credit Note</strong>
+                          <strong t-if="o.move_type == 'in_refund'">Vendor Credit Note</strong>
+                          <strong t-if="o.move_type == 'in_invoice'">Vendor Bill</strong>
+                          <br/>
+                          <span t-if="o.name != '/'" t-field="o.name"/>
+                      </t>
+                  </h5>
+              </div>
+          </div>
+      </div>
+    </template>
+
+    <template id="external_layout_boxed" inherit_id="web.external_layout_boxed">
+        <!-- Load report_base_installer CSS -->
+        <xpath expr="//div" position="before">
+            <t t-call-assets="report_base_installer.assets_common" t-js="false"/>
+        </xpath>
+
+        <!-- Hide original header -->
+        <xpath expr="//div[@t-att-style='report_header_style']" position="attributes">
+            <attribute name="t-attf-class">d-none</attribute>
+        </xpath>
+        <xpath expr="//t[@t-call='web.address_layout']/.." position="before">
+            <t t-call="report_base_installer.ds_header"/>
+        </xpath>
+
+        <!-- Bottom -->
+        <xpath expr="//li[@t-if='company.phone']/../.." position="attributes">
+            <attribute name="class">text-center ds_small</attribute>
+        </xpath>
+        <xpath expr="//li[@t-if='company.phone']/.." position="attributes">
+            <attribute name="class">d-none</attribute>
+        </xpath>
+        <xpath expr="//li[@t-if='company.vat']/.." position="before">
+            <ul class="list-inline">
+                <li class="list-inline-item"><span t-field="company.name" />, SAS au capital de <span t-field="company.share_capital" /></li>
+                <li t-if="company.website" class="list-inline-item">-</li>
+                <li t-if="company.website" class="list-inline-item"><span t-field="company.website"/></li>
+            </ul>
+            <ul class="list-inline">
+            <li class="list-inline-item">
+                <span t-field="company.partner_id.street"/>,
+                <span t-field="company.partner_id.street2"/>
+                <span t-field="company.partner_id.city"/>
+                <span t-field="company.partner_id.country_id.name"/>
+                </li>
+            </ul>
+        </xpath>
+
+        <xpath expr="//li[@t-if='company.vat']/.." position="after">
+            <ul class="list-inline">
+                <li class="list-inline-item">RCS: <span t-field="company.company_registry" /></li>
+                <li class="list-inline-item">-</li>
+                <li class="list-inline-item">SIRET: <span t-field="company.siret" /></li>
+                <li class="list-inline-item">-</li>
+                <li class="list-inline-item">APE: <span t-field="company.ape" /></li>
+                <li class="list-inline-item">-</li>
+                <li class="list-inline-item"><t t-esc="company.country_id.vat_label or 'Tax ID'"/>: <span t-field="company.vat"/></li>
+            </ul>
+        </xpath>
+    </template>
+
+</odoo>
