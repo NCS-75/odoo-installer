@@ -29,7 +29,10 @@ class ReportToolsMixin(models.AbstractModel):
 
         # Force cents to have min 2 significatives zero and max prec digits
         if len(res_tuplet) > 1:
-            cents = res_tuplet[1].strip("0")
+            cents = res_tuplet[1]
+            # Remove zeros from the right
+            while cents[-1] == "0":
+                cents = cents[:-1]
         while len(cents) < 2:
             cents += "0"
 
