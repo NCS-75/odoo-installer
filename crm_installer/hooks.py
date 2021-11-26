@@ -40,6 +40,7 @@ def pre_init_hook(cr):
     insert_sql_datas(
         cr, MODULE, "res.partner.category", "res_partner_category_data.csv"
     )
+    env.cr.commit()
 
 
 def post_init_hook(cr, registry):

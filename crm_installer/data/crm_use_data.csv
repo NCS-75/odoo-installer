@@ -1,4 +1,4 @@
-id,xmlid,name,color,role_id
-1,water_heater,Water Heater,3,1
-2,pool,Swiming-pool,4,2
-3,heating,Heating,2,3
+id,xmlid,name,color
+1,water_heater,Water Heater,3
+2,pool,Swiming-pool,4
+3,heating,Heating,2
