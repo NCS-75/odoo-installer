@@ -11,6 +11,7 @@
     "author": "Akretion",
     "website": "http://akretion.com",
     "depends": [],
-    "data": ["security/ir.model.access.csv", "data/res_partner_stage_data.xml"],
+    "data": ["security/ir.model.access.csv"],
     "demo": [],
+    "post_init_hook": "post_init_hook",
 }

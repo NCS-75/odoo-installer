@@ -1,0 +1,5 @@
+id,xmlid,code,name,sequence
+1,incoming,E,Incoming,0
+2,identified,I,Identified,1
+3,installer_qualified,Q,Qualified,2
+4,launched,L,Launched,3
