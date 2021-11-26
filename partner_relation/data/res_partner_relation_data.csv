@@ -1,0 +1,6 @@
+id,xmlid,name,sequence
+1,authorized,Authorized,1
+2,accredited,Accredited,2
+3,certified,Certified,3
+4,premium,Premium,4
+5,unauthorized,Unauthorized,0
