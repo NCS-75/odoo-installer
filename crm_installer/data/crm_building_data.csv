@@ -1,0 +1,13 @@
+id,xmlid,name,is_with_pm
+7,individual_house,Individual house,False
+8,boarding_school,Boarding school,True
+9,half_board,Half board,True
+10,collective_housing,Collective housing,True
+11,agricultural_exploitation,Agricultural exploitation,False
+12,sports_complex,Sports Complex,True
+13,ehpad,EHPAD,True
+14,hospital,Hospital,True
+15,camping,Camping,False
+3,hotel,Hotel,True
+16,industrial_building,Industrial building,True
+17,commercial_building,Commercial building,True

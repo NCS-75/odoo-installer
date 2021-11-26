@@ -1,0 +1,9 @@
+id,xmlid,name,color,sequence
+1,elec_resistance,Electrical Resistance,1,1
+2,heat_pump_air,Heat Pump air/water,5,2
+3,heat_pump_water,Heat Pump water/water,6,3
+4,gas_boiler,Gas boiler,7,4
+5,wood_boiler,Wood boiler,8,5
+6,oil_boiler,Oil boiler,9,6
+7,district_heating,District Heating,10,7
+8,thermodynamic_water_heater,Thermodynamic Water Heater,11,8

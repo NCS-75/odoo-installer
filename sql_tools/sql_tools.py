@@ -18,11 +18,11 @@ def insert_sql_datas_from_vals_list(cr, module, model, vals_list):
     sql = ""
     table_name = model.replace(".", "_")
     if not all(v.get("id") for v in vals_list):
-        m = f"{module}'s hard datas do not provide an ID for all the datas'"
+        m = f"{model}'s hard datas do not provide an ID for all the datas'"
         _logger.critical(m)
         raise IOError(m)
     if not all(v.get("xmlid") for v in vals_list):
-        m = f"{module}'s hard datas do not provide an XML ID for all the datas'"
+        m = f"{model}'s hard datas do not provide an XML ID for all the datas'"
         _logger.critical(m)
         raise IOError(m)
 

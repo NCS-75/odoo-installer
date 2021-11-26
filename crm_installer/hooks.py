@@ -6,6 +6,7 @@ import pathlib
 import logging
 from odoo import SUPERUSER_ID, _, api, tools
 from odoo.tools import convert_file, load_language
+from odoo.addons.sql_tools.sql_tools import insert_sql_datas
 
 _logger = logging.getLogger(__name__)
 
@@ -18,21 +19,36 @@ STAGE_CONVERT = {
     "Won": MODULE + ".installation_started",
 }
 
-PARTNER_BASE_FILES = ["data/partner_category_data.xml"]
+SQL_DATAS = [
+    ("crm.building", "crm_building_data.csv"),
+    ("crm.heater", "crm_heater_data.csv"),
+    ("crm.lost.reason", "crm_lost_reason_data.csv"),
+    ("crm.roof.covering", "crm_roof_covering_data.csv"),
+    ("crm.roof", "crm_roof_data.csv"),
+    ("crm.stage", "crm_stage_data.csv"),
+    ("crm.use", "crm_use_data.csv"),
+]
 
 
 def pre_init_hook(cr):
     env = api.Environment(cr, SUPERUSER_ID, {})
-    _logger.info(_("Loading mandatory res.partner datas..."))
 
-    # Necessary pre-load because partner categories in XML datas are called in
-    # crm_lead.py
-    for file in PARTNER_BASE_FILES:
-        convert_file(cr, MODULE, file, None, mode="init", noupdate=True, kind="init")
+    _logger.info(_("Delete original CRM lost reason..."))
+    env["crm.lost.reason"].search([]).unlink()
+
+    _logger.info(_("Loading mandatory res.partner.category datas..."))
+    insert_sql_datas(
+        cr, MODULE, "res.partner.category", "res_partner_category_data.csv"
+    )
 
 
 def post_init_hook(cr, registry):
     env = api.Environment(cr, SUPERUSER_ID, {})
+
+    _logger.info(_("Loading %s SQL datas...") % MODULE)
+    for model, file in SQL_DATAS:
+        insert_sql_datas(cr, MODULE, model, file)
+
     _logger.info(_("Removing original CRM stages..."))
 
     all_stage_ids = env["crm.stage"].search([])

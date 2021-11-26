@@ -1,0 +1,17 @@
+id,xmlid,name
+4,no_answer,No answer
+5,meeting_cancelled,Meeting cancelled
+6,project_aborted,Project aborted
+7,quotation_cancelled,Quotation cancelled
+8,competing_offer_selected,Competing offer selected
+9,too_long_term,Too long term
+10,listed_building,Listed building
+11,technical_infeasibility,Technical infeasibility
+12,standby_customer,Put on stand-by by the customer
+13,wrong_number,Wrong number
+14,wrong_email,Wrong email
+15,not_owner,Not owner
+16,lead_out,Lead out-of-zone
+17,no_installer_in_zone,No installer in zone
+18,no_certified_installer,No certified or boosted installer in zone
+19,duplicated_lead,Duplicated Lead

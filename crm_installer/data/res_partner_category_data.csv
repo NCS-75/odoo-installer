@@ -1,0 +1,6 @@
+id,xmlid,name,color,role_id
+1,installer,Installer,6,16
+2,distributor,Distributor,9,17
+3,project_manager,Project Manager,2,18
+4,end_customer,End Customer,3,19
+5,project_owner,Project Owner,10,20
