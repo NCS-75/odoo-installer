@@ -1,0 +1,6 @@
+"id","xmlid","name","is_installer","is_distributor","is_project_manager"
+1,"role_installer","Installer","True",,
+2,"role_distributor","Distributor",,"True",
+3,"role_project_manager","Project Manager",,,"True"
+4,"role_end_customer","End Customer",,,
+5,"role_project_owner","Project Owner",,,

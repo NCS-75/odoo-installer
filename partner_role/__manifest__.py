@@ -16,11 +16,11 @@
     "license": "AGPL-3",
     "author": "Akretion",
     "website": "http://akretion.com",
-    "depends": ["base"],
+    "depends": ["base", "sql_tools"],
     "data": [
-        "data/partner_role_data.xml",
         "security/ir.model.access.csv",
         "views/res_partner_views.xml",
     ],
     "demo": [],
+    "post_init_hook": "post_init_hook",
 }

@@ -1,0 +1,181 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* partner_role
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: partner_role
+#: model:ir.model,name:partner_role.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: partner_role
+#: model:ir.model.fields,field_description:partner_role.field_res_partner_role__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: partner_role
+#: model:ir.model.fields,field_description:partner_role.field_res_partner_role__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: partner_role
+#: model:ir.model.fields,field_description:partner_role.field_res_partner__display_name
+#: model:ir.model.fields,field_description:partner_role.field_res_partner_category__display_name
+#: model:ir.model.fields,field_description:partner_role.field_res_partner_role__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: partner_role
+#: model:res.partner.role,name:partner_role.role_distributor
+msgid "Distributor"
+msgstr ""
+
+#. module: partner_role
+#: model_terms:ir.ui.view,arch_db:partner_role.view_res_partner_filter
+msgid "Distributors"
+msgstr ""
+
+#. module: partner_role
+#: model:res.partner.role,name:partner_role.role_end_customer
+msgid "End Customer"
+msgstr ""
+
+#. module: partner_role
+#: model:ir.model.fields,field_description:partner_role.field_res_partner__id
+#: model:ir.model.fields,field_description:partner_role.field_res_partner_category__id
+#: model:ir.model.fields,field_description:partner_role.field_res_partner_role__id
+msgid "ID"
+msgstr ""
+
+#. module: partner_role
+#: code:addons/partner_role/models/res_partner.py:0
+#, python-format
+msgid ""
+"Impossible to delete the category '%s' as it is linked to a specific 'Role' "
+"used in the API with MyDualSun"
+msgstr ""
+
+#. module: partner_role
+#: model:res.partner.role,name:partner_role.role_installer
+msgid "Installer"
+msgstr ""
+
+#. module: partner_role
+#: model_terms:ir.ui.view,arch_db:partner_role.view_res_partner_filter
+msgid "Installers"
+msgstr ""
+
+#. module: partner_role
+#: model:ir.model,name:partner_role.model_res_partner_role
+msgid "Installers Role in MyDualSun"
+msgstr ""
+
+#. module: partner_role
+#: model:ir.model.fields,field_description:partner_role.field_res_partner__is_distributor
+#: model:ir.model.fields,field_description:partner_role.field_res_partner_role__is_distributor
+#: model:ir.model.fields,field_description:partner_role.field_res_users__is_distributor
+msgid "Is Distributor"
+msgstr ""
+
+#. module: partner_role
+#: model:ir.model.fields,field_description:partner_role.field_res_partner__is_installer
+#: model:ir.model.fields,field_description:partner_role.field_res_partner_role__is_installer
+#: model:ir.model.fields,field_description:partner_role.field_res_users__is_installer
+msgid "Is Installer"
+msgstr ""
+
+#. module: partner_role
+#: model:ir.model.fields,field_description:partner_role.field_res_partner__is_project_manager
+#: model:ir.model.fields,field_description:partner_role.field_res_partner_role__is_project_manager
+#: model:ir.model.fields,field_description:partner_role.field_res_users__is_project_manager
+msgid "Is Project Manager"
+msgstr ""
+
+#. module: partner_role
+#: code:addons/partner_role/models/res_partner.py:0
+#, python-format
+msgid ""
+"It is not possible to modify both partner's Categories and Role.\n"
+"The field 'Role' is designed to be edited only by API while not touching to 'Categories'."
+msgstr ""
+
+#. module: partner_role
+#: model:ir.model.fields,field_description:partner_role.field_res_partner____last_update
+#: model:ir.model.fields,field_description:partner_role.field_res_partner_category____last_update
+#: model:ir.model.fields,field_description:partner_role.field_res_partner_role____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: partner_role
+#: model:ir.model.fields,field_description:partner_role.field_res_partner_role__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: partner_role
+#: model:ir.model.fields,field_description:partner_role.field_res_partner_role__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: partner_role
+#: model:ir.model.fields,field_description:partner_role.field_res_partner_role__name
+msgid "Name"
+msgstr ""
+
+#. module: partner_role
+#: model:ir.model.fields,field_description:partner_role.field_res_partner_category__role_id
+msgid "Partner Role"
+msgstr ""
+
+#. module: partner_role
+#: model:ir.model,name:partner_role.model_res_partner_category
+msgid "Partner Tags"
+msgstr ""
+
+#. module: partner_role
+#: model:ir.model.fields,help:partner_role.field_res_partner__role_id
+#: model:ir.model.fields,help:partner_role.field_res_users__role_id
+msgid "Partner's Role related to MyDualSun Role field"
+msgstr ""
+
+#. module: partner_role
+#: model:res.partner.role,name:partner_role.role_project_manager
+msgid "Project Manager"
+msgstr ""
+
+#. module: partner_role
+#: model_terms:ir.ui.view,arch_db:partner_role.view_res_partner_filter
+msgid "Project Managers"
+msgstr ""
+
+#. module: partner_role
+#: model:res.partner.role,name:partner_role.role_project_owner
+msgid "Project Owner"
+msgstr ""
+
+#. module: partner_role
+#: model:ir.model.fields,field_description:partner_role.field_res_partner__role_id
+#: model:ir.model.fields,field_description:partner_role.field_res_users__role_id
+#: model_terms:ir.ui.view,arch_db:partner_role.view_res_partner_filter
+msgid "Role"
+msgstr ""
+
+#. module: partner_role
+#: model:ir.model.fields,help:partner_role.field_res_partner_category__role_id
+msgid ""
+"Role (in MyDualSun) applied to the Partner if this Category is selected."
+msgstr ""
+
+#. module: partner_role
+#: model:ir.model.fields,field_description:partner_role.field_res_partner_category__name
+msgid "Tag Name"
+msgstr ""
