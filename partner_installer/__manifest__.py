@@ -13,8 +13,8 @@
     "depends": ["crm_installer"],
     "data": [
         "security/ir.model.access.csv",
-        "data/res_partner_range_data.xml",
         "views/res_partner_views.xml",
     ],
     "demo": [],
+    "post_init_hook": "post_init_hook",
 }

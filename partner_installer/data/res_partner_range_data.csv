@@ -1,0 +1,3 @@
+id,xmlid,name,sequence
+1,residential,Residential (< 9kWc),1
+2,commercial,Commercial (> 9kWc),2
