@@ -49,14 +49,14 @@ def insert_sql_datas_from_vals_list(cr, module, model, vals_list):
             SETVAL('{table_name}_id_seq', 1);
         """
 
-    _logger.info(_("Creating SQL datas for %s...") % module)
+    _logger.info(_("Creating SQL datas for %s...") % model)
     cr.execute(sql)
 
 
 def insert_sql_datas(cr, module, model, data_file):
     file = modules.get_resource_path(module, "data", data_file)
     if not file:
-        m = f"File not found: '{data_file}' in data folder (module '{module}')."
+        m = f"File not found: '{data_file}' not in 'data' folder (module '{module}')."
         _logger.critical(m)
         raise IOError(m)
 

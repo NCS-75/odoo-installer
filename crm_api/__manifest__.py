@@ -25,8 +25,6 @@
         "partner_role",
         "partner_stage",
     ],
-    "data": [],
-    "demo": [
-        "demo/auth_api_key_demo.xml",
-    ],
+    "data": ["data/rest_menu.xml"],
+    "demo": ["demo/auth_api_key_demo.xml"],
 }
