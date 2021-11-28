@@ -18,7 +18,9 @@ class ResPartner(models.Model):
     _inherit = "res.partner"
 
     # Rename 'Individual' into 'Contact'
-    company_type = fields.Selection(selection_add=[("person", "Contact")])
+    company_type = fields.Selection(
+        selection_add=[("person", "Contact")], default="person"
+    )
 
     is_pv = fields.Boolean("PV")
     is_pvt = fields.Boolean("PVT")
