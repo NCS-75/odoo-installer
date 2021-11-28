@@ -9,7 +9,7 @@
     "license": "AGPL-3",
     "author": "Akretion",
     "website": "http://akretion.com",
-    "depends": ["base", "partner_address", "partner_firstname"],
+    "depends": ["base", "partner_address", "partner_firstname", "partner_company"],
     "data": ["views/res_partner_views.xml"],
     "demo": [],
 }

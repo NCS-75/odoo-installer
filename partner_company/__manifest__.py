@@ -4,8 +4,9 @@
 {
     "name": "Partner Share Capital",
     "description": """
-        Add 'Share Capital' field in res.partner and res.company and
-        gather all res.partner's company fields in a new page
+        - Add 'Share Capital' field in res.partner and res.company
+        - New page for company specific res.partner's fields
+        - New page for Coworkers if any
     """,
     "version": "14.0.1.0.0",
     "license": "AGPL-3",

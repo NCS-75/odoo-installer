@@ -21,6 +21,11 @@ msgid "Annual Revenue"
 msgstr "CA annuel"
 
 #. module: partner_company
+#: model_terms:ir.ui.view,arch_db:partner_company.view_partner_form
+msgid "Categories"
+msgstr ""
+
+#. module: partner_company
 #: model:ir.model,name:partner_company.model_res_company
 msgid "Companies"
 msgstr "Sociétés"
@@ -36,10 +41,28 @@ msgid "Contact"
 msgstr ""
 
 #. module: partner_company
+#: model:ir.model.fields,field_description:partner_company.field_res_partner__coworker_ids
+#: model:ir.model.fields,field_description:partner_company.field_res_users__coworker_ids
+#: model_terms:ir.ui.view,arch_db:partner_company.view_partner_form
+msgid "Coworkers"
+msgstr "Collègues"
+
+#. module: partner_company
 #: model:ir.model.fields,field_description:partner_company.field_res_company__display_name
 #: model:ir.model.fields,field_description:partner_company.field_res_partner__display_name
 msgid "Display Name"
 msgstr "Nom affiché"
+
+#. module: partner_company
+#: model_terms:ir.ui.view,arch_db:partner_company.view_partner_form
+msgid "Email"
+msgstr ""
+
+#. module: partner_company
+#: model:ir.model.fields,help:partner_company.field_res_partner__coworker_ids
+#: model:ir.model.fields,help:partner_company.field_res_users__coworker_ids
+msgid "Employees from the same company as current partner"
+msgstr "Employés de la même entreprise que le contact."
 
 #. module: partner_company
 #: model:ir.model.fields,field_description:partner_company.field_res_partner__headcount

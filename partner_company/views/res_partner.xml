@@ -9,6 +9,25 @@
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
+            <!-- Page for Coworkers -->
+            <xpath expr="//page" position="before">
+                <page string="Coworkers" name="coworkers" attrs="{'invisible': [('coworker_ids', '=', [])]}">
+                    <field name="coworker_ids">
+                        <tree string="Coworkers">
+                            <field name="name" />
+                            <field name="category_id" widget="many2many_tags" options="{'color_field': 'color'}" string="Categories" optional="hide"/>
+                            <field name="function"/>
+                            <field name="phone"/>
+                            <field name="mobile" optional="hide"/>
+                            <field name="email" string="Email"/>
+                            <field name="zip" optional="hide"/>
+                            <field name="city" />
+                            <field name="country_id" optional="hide"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+
             <!-- Page for companies -->
             <xpath expr="//page[@name='sales_purchases']" position="before">
                 <page string="Company" attrs="{'invisible': [('is_company', '=', False)]}">

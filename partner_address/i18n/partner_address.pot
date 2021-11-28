@@ -67,13 +67,6 @@ msgid "Contacts"
 msgstr ""
 
 #. module: partner_address
-#: model:ir.model.fields,field_description:partner_address.field_res_partner__coworker_ids
-#: model:ir.model.fields,field_description:partner_address.field_res_users__coworker_ids
-#: model_terms:ir.ui.view,arch_db:partner_address.view_partner_form
-msgid "Coworkers"
-msgstr ""
-
-#. module: partner_address
 #: model:ir.model.fields.selection,name:partner_address.selection__res_partner__address_type__delivery
 msgid "Delivery Address"
 msgstr ""
@@ -86,12 +79,6 @@ msgstr ""
 #. module: partner_address
 #: model_terms:ir.ui.view,arch_db:partner_address.view_partner_form
 msgid "Email"
-msgstr ""
-
-#. module: partner_address
-#: model:ir.model.fields,help:partner_address.field_res_partner__coworker_ids
-#: model:ir.model.fields,help:partner_address.field_res_users__coworker_ids
-msgid "Employees from the same company as current partner"
 msgstr ""
 
 #. module: partner_address

@@ -20,15 +20,6 @@ class ResPartner(models.Model):
         string="Addresses",
         domain=[("active", "=", True), ("type", "!=", "contact")],
     )
-    coworker_ids = fields.Many2many(
-        string="Coworkers",
-        comodel_name="res.partner",
-        relation="res_partner_coworker",
-        column1="res_partner",
-        column2="coworker",
-        compute="_compute_coworker_ids",
-        help="Employees from the same company as current partner",
-    )
     # New address_type field related to original 'type' but without the 'contact' option
     address_type = fields.Selection(
         string="Address Type",
@@ -45,15 +36,6 @@ class ResPartner(models.Model):
         readonly=False,
         store=True,
     )
-
-    @api.depends("parent_id", "is_company", "type")
-    def _compute_coworker_ids(self):
-        for rec in self:
-            company_id = rec.parent_id.filtered("is_company")
-            employee_ids = company_id.child_ids.filtered(
-                lambda p: p.type == "contact" and p.is_company == False
-            )
-            rec.coworker_ids = employee_ids - rec
 
     @api.depends("address_type")
     def _compute_contact_type(self):
