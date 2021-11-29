@@ -38,7 +38,7 @@
             </xpath>
             <!-- Hide parent_id on children pop-up as it is not filled when adding a new child from pop-up -->
             <xpath expr="//field[@name='parent_id']" position="attributes">
-                <attribute name="invisible">context.get("default_parent_id")</attribute>
+                <attribute name="invisible">context.get("default_type")</attribute>
             </xpath>
 
             <xpath expr="//page[@name='contact_addresses']" position="attributes">

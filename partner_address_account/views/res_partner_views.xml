@@ -10,7 +10,7 @@
               <attribute name="attrs">{'invisible': ['|', ('type', '!=', 'contact'), '|', ('is_company','=',True), ('parent_id','=',False)]}</attribute>
           </xpath>
           <xpath expr="//page[@name='accounting']" position="attributes">
-              <attribute name="invisible">context.get("default_parent_id")</attribute>
+              <attribute name="invisible">context.get("default_type")</attribute>
           </xpath>
 
       </field>
