@@ -132,7 +132,6 @@ class PartnerService(Component):
             "lang",
             "website",
             # DS custom fields
-            "incwo_id",
             "myds_id",
             "myds_url",
             "is_seller",

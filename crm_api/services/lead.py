@@ -126,7 +126,6 @@ class leadService(Component):
             "street2",
             "city",
             # Custom DualSun
-            "incwo_id",
             "myds_id",
             "myds_url",
             "white_label",
@@ -179,7 +178,6 @@ class leadService(Component):
 
         # Custom DualSun
         lead_info.myds_id = lead.myds_id
-        lead_info.incwo_url = lead.incwo_url
         lead_info.white_label = lead.white_label
         lead_info.phase = lead.phase
         lead_info.pvt_nb = lead.pvt_nb
