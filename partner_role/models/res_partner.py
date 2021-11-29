@@ -62,6 +62,14 @@ class ResPartner(models.Model):
         for partner_id in self:
             partner_id.role_id  = partner_id.category_id.role_id[-1:]
 
+    @api.onchange("category_id")
+    def _onchange_category_id(self):
+        """Kepp only one category related to a role"""
+        categ_role_id = self.category_id.filtered(lambda c: c.role_id)
+        if len(categ_role_id) > 1:
+            # Keep only the last category related to a role
+            self.category_id -= categ_role_id - categ_role_id[-1]            
+
     def write(self, vals):
         """Change category_id depending on role_id"""
         # 'role_id' can be modified only by MyDS API (=through method write)
