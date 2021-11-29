@@ -744,11 +744,6 @@ msgid "Sloped"
 msgstr ""
 
 #. module: crm_installer
-#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__solar_power
-msgid "Solar Power"
-msgstr ""
-
-#. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__url_specifications
 msgid "Specifications"
 msgstr ""

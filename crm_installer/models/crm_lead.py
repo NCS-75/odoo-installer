@@ -104,7 +104,6 @@ class CrmLead(models.Model):
     guarantees_file = fields.Binary("Guarantees")
     is_photogenic = fields.Boolean("Photogenic Installation")
 
-    solar_power = fields.Float("Solar Power", compute="_compute_solar_power")
     generator_power = fields.Float("Generator Power")
     tank_volume = fields.Float("Tank volume")
     pool_area = fields.Float("Pool Size")

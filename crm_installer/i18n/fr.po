@@ -746,11 +746,6 @@ msgid "Sloped"
 msgstr "Inclinée"
 
 #. module: crm_installer
-#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__solar_power
-msgid "Solar Power"
-msgstr "Puissance de l'Installation"
-
-#. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__url_specifications
 msgid "Specifications"
 msgstr "Cahier des charges"
