@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Inherit Form view -->
+    <record id="crm_lead_view_form" model="ir.ui.view">
+      <field name="name">crm.lead.form (in crm_installer_maps)</field>
+      <field name="model">crm.lead</field>
+      <field name="inherit_id" ref="crm_installer.crm_lead_view_form"/>
+      <field name="arch" type="xml">
+          <xpath expr="//group[@name='address_installation']//field[@name='street']" position="attributes">
+              <attribute name="widget">gplaces_address_autocomplete</attribute>
+              <attribute name="options">{'lat': 'customer_latitude', 'lng': 'customer_longitude'}</attribute>
+          </xpath>
+      </field>
+    </record>
+</odoo>
