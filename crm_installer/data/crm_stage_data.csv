@@ -3,6 +3,6 @@ id,xmlid,name,fold_pipeline,fold_aftersales,sequence,on_change,probability,works
 6,qualified_project,Qualified project,False,True,1,True,20,,
 7,proposition_made,Proposition made,False,True,2,True,50,,
 8,deal_signed,Deal signed,False,True,3,True,80,,
-9,installation_started,Installation started,True,False,4,True,100,,
+9,installation_started,Installation started,False,False,4,True,100,,
 10,commissioned,Commissioned,True,False,5,True,100,True,
 11,guarantees_granted,Guarantees granted,True,False,6,True,100,True,True
