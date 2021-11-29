@@ -1,6 +1,6 @@
 id,xmlid,name,color,role_id,active
-1,installer,Installer,6,16,True
-2,distributor,Distributor,9,17,True
-3,project_manager,Project Manager,2,18,True
-4,end_customer,End Customer,3,19,True
-5,project_owner,Project Owner,10,20,True
+38,installer,Installer,6,16,True
+35,distributor,Distributor,9,17,True
+42,project_manager,Project Manager,2,18,True
+34,end_customer,End Customer,3,19,True
+41,project_owner,Project Owner,10,20,True
