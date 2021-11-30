@@ -33,9 +33,6 @@ SQL_DATAS = [
 def pre_init_hook(cr):
     env = api.Environment(cr, SUPERUSER_ID, {})
 
-    _logger.info(_("Delete original CRM lost reason..."))
-    env["crm.lost.reason"].search([]).unlink()
-
     _logger.info(_("Loading mandatory res.partner.category datas..."))
     insert_sql_datas(
         cr, MODULE, "res.partner.category", "res_partner_category_data.csv"
@@ -49,28 +46,3 @@ def post_init_hook(cr, registry):
     _logger.info(_("Loading %s SQL datas...") % MODULE)
     for model, file in SQL_DATAS:
         insert_sql_datas(cr, MODULE, model, file)
-
-    _logger.info(_("Removing original CRM stages..."))
-
-    all_stage_ids = env["crm.stage"].search([])
-    all_stage_xmlids = all_stage_ids.get_external_id()
-    ids_to_rm = [id for id, xmlid in all_stage_xmlids.items() if MODULE not in xmlid]
-    old_stage_ids = env["crm.stage"].browse(ids_to_rm)
-
-    # Modify actual leads related to an old Stage
-    old_lead_ids = (
-        env["crm.lead"]
-        .with_context(lang="en_US")
-        .search(
-            [("stage_id", "in", old_stage_ids.ids), ("active", "in", [True, False])]
-        )
-    )
-    for lead_id in old_lead_ids:
-        new_stage = STAGE_CONVERT.get(
-            lead_id.stage_id.name, MODULE + ".relation_established"
-        )
-        lead_id.write({"stage_id": env.ref(new_stage).id})
-    env.cr.commit()
-
-    # Delete old stages
-    old_stage_ids.unlink()
