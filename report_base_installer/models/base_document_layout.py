@@ -13,3 +13,8 @@ class BaseDocumentLayout(models.TransientModel):
     )
     siret = fields.Char(related="company_id.siret", readonly=True)
     ape = fields.Char(related="company_id.ape", readonly=True)
+    company_registry = fields.Char(related="company_id.company_registry", readonly=True)
+    currency_id = fields.Many2one(related="company_id.currency_id", readonly=True)
+    share_capital = fields.Monetary(
+        related="company_id.share_capital", readonly=True, currency_field="currency_id"
+    )
