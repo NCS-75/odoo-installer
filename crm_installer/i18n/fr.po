@@ -8,6 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
@@ -222,7 +223,6 @@ msgstr ""
 
 #. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__distributor_id
-#: model:res.partner.category,name:crm_installer.distributor
 msgid "Distributor"
 msgstr "Distributeur"
 
@@ -255,11 +255,6 @@ msgstr ""
 #: model:crm.heater,name:crm_installer.elec_resistance
 msgid "Electrical Resistance"
 msgstr "Résistance Éléctrique"
-
-#. module: crm_installer
-#: model:res.partner.category,name:crm_installer.end_customer
-msgid "End Customer"
-msgstr "Client final"
 
 #. module: crm_installer
 #: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
@@ -406,11 +401,6 @@ msgid "Installations"
 msgstr "Installations"
 
 #. module: crm_installer
-#: model:res.partner.category,name:crm_installer.installer
-msgid "Installer"
-msgstr "Installateur"
-
-#. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__installer_fitter_id
 msgid "Installer (Fitter)"
 msgstr "Installateur (Poseur)"
@@ -419,6 +409,12 @@ msgstr "Installateur (Poseur)"
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__installer_seller_id
 msgid "Installer (Seller)"
 msgstr "Installateur (Vendeur)"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__is_installer_company
+#, fuzzy
+msgid "Is Installer"
+msgstr "Installateur"
 
 #. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__is_with_pm
@@ -472,7 +468,7 @@ msgstr "Bâtiment classé"
 #. module: crm_installer
 #: code:addons/crm_installer/hooks.py:0
 #, python-format
-msgid "Loading mandatory res.partner datas..."
+msgid "Loading %s SQL datas..."
 msgstr ""
 
 #. module: crm_installer
@@ -602,14 +598,8 @@ msgstr "Avancement"
 
 #. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__project_manager_id
-#: model:res.partner.category,name:crm_installer.project_manager
 msgid "Project Manager"
 msgstr "MOE"
-
-#. module: crm_installer
-#: model:res.partner.category,name:crm_installer.project_owner
-msgid "Project Owner"
-msgstr "MOA"
 
 #. module: crm_installer
 #: model:crm.lost.reason,name:crm_installer.project_aborted
@@ -680,12 +670,6 @@ msgstr "Calcul Réglementaire validé"
 #: model:crm.stage,name:crm_installer.relation_established
 msgid "Relation established"
 msgstr "Relation établie"
-
-#. module: crm_installer
-#: code:addons/crm_installer/hooks.py:0
-#, python-format
-msgid "Removing original CRM stages..."
-msgstr ""
 
 #. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_building__is_with_pm
@@ -818,6 +802,13 @@ msgid "Trapezoidal Sheet"
 msgstr "Tôle trapezoïdale"
 
 #. module: crm_installer
+#: model:ir.model.fields,help:crm_installer.field_crm_lead__is_installer_company
+msgid ""
+"Used to customize Lead's form if the current user's company is an installer "
+"or not"
+msgstr ""
+
+#. module: crm_installer
 #: model:ir.actions.act_window,name:crm_installer.crm_use_act_window
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__use_ids
 #: model:ir.ui.menu,name:crm_installer.crm_use_menu_contacts
@@ -876,3 +867,12 @@ msgstr "Faux numéro"
 #: model:crm.roof.covering,name:crm_installer.zinc
 msgid "Zinc"
 msgstr ""
+
+#~ msgid "End Customer"
+#~ msgstr "Client final"
+
+#~ msgid "Installer"
+#~ msgstr "Installateur"
+
+#~ msgid "Project Owner"
+#~ msgstr "MOA"

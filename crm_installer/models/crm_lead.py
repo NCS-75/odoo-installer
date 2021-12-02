@@ -178,8 +178,8 @@ class CrmLead(models.Model):
 
     def _inverse_partner_ids(self):
         ResPartner = self.env["res.partner"]
-        cust_categ_id = self.env.ref("crm_installer.end_customer")
-        po_categ_id = self.env.ref("crm_installer.project_owner")
+        cust_categ_id = self.env.ref("partner_role.end_customer")
+        po_categ_id = self.env.ref("partner_role.project_owner")
 
         for lead in self:
             lead.partner_ids |= lead.partner_ids.commercial_partner_id

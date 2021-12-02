@@ -222,7 +222,6 @@ msgstr ""
 
 #. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__distributor_id
-#: model:res.partner.category,name:crm_installer.distributor
 msgid "Distributor"
 msgstr ""
 
@@ -254,11 +253,6 @@ msgstr ""
 #. module: crm_installer
 #: model:crm.heater,name:crm_installer.elec_resistance
 msgid "Electrical Resistance"
-msgstr ""
-
-#. module: crm_installer
-#: model:res.partner.category,name:crm_installer.end_customer
-msgid "End Customer"
 msgstr ""
 
 #. module: crm_installer
@@ -404,11 +398,6 @@ msgid "Installations"
 msgstr ""
 
 #. module: crm_installer
-#: model:res.partner.category,name:crm_installer.installer
-msgid "Installer"
-msgstr ""
-
-#. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__installer_fitter_id
 msgid "Installer (Fitter)"
 msgstr ""
@@ -416,6 +405,11 @@ msgstr ""
 #. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__installer_seller_id
 msgid "Installer (Seller)"
+msgstr ""
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__is_installer_company
+msgid "Is Installer"
 msgstr ""
 
 #. module: crm_installer
@@ -470,7 +464,7 @@ msgstr ""
 #. module: crm_installer
 #: code:addons/crm_installer/hooks.py:0
 #, python-format
-msgid "Loading mandatory res.partner datas..."
+msgid "Loading %s SQL datas..."
 msgstr ""
 
 #. module: crm_installer
@@ -600,13 +594,7 @@ msgstr ""
 
 #. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__project_manager_id
-#: model:res.partner.category,name:crm_installer.project_manager
 msgid "Project Manager"
-msgstr ""
-
-#. module: crm_installer
-#: model:res.partner.category,name:crm_installer.project_owner
-msgid "Project Owner"
 msgstr ""
 
 #. module: crm_installer
@@ -677,12 +665,6 @@ msgstr ""
 #. module: crm_installer
 #: model:crm.stage,name:crm_installer.relation_established
 msgid "Relation established"
-msgstr ""
-
-#. module: crm_installer
-#: code:addons/crm_installer/hooks.py:0
-#, python-format
-msgid "Removing original CRM stages..."
 msgstr ""
 
 #. module: crm_installer
@@ -813,6 +795,13 @@ msgstr ""
 #. module: crm_installer
 #: model:crm.roof.covering,name:crm_installer.trapezoidal_sheet
 msgid "Trapezoidal Sheet"
+msgstr ""
+
+#. module: crm_installer
+#: model:ir.model.fields,help:crm_installer.field_crm_lead__is_installer_company
+msgid ""
+"Used to customize Lead's form if the current user's company is an installer "
+"or not"
 msgstr ""
 
 #. module: crm_installer

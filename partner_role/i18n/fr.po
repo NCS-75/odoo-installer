@@ -37,6 +37,7 @@ msgid "Display Name"
 msgstr ""
 
 #. module: partner_role
+#: model:res.partner.category,name:partner_role.distributor
 #: model:res.partner.role,name:partner_role.role_distributor
 msgid "Distributor"
 msgstr "Distributeur"
@@ -47,6 +48,7 @@ msgid "Distributors"
 msgstr "Distributeurs"
 
 #. module: partner_role
+#: model:res.partner.category,name:partner_role.end_customer
 #: model:res.partner.role,name:partner_role.role_end_customer
 msgid "End Customer"
 msgstr "Client final"
@@ -69,6 +71,7 @@ msgstr ""
 "utilisé dans l'API avec MyDualSun"
 
 #. module: partner_role
+#: model:res.partner.category,name:partner_role.installer
 #: model:res.partner.role,name:partner_role.role_installer
 msgid "Installer"
 msgstr "Installateur"
@@ -152,6 +155,7 @@ msgid "Partner's Role related to MyDualSun Role field"
 msgstr "Rôle du partenaire. Lié au champ Rôle dans MyDualSun"
 
 #. module: partner_role
+#: model:res.partner.category,name:partner_role.project_manager
 #: model:res.partner.role,name:partner_role.role_project_manager
 msgid "Project Manager"
 msgstr "MOE"
@@ -162,6 +166,7 @@ msgid "Project Managers"
 msgstr "Bureaux d'Études"
 
 #. module: partner_role
+#: model:res.partner.category,name:partner_role.project_owner
 #: model:res.partner.role,name:partner_role.role_project_owner
 msgid "Project Owner"
 msgstr "Maîtrise d'Ouvrage"
