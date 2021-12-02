@@ -1,6 +1,6 @@
-id,xmlid,name,sequence
-9,authorized,Authorized,1
-10,accredited,Accredited,2
-11,certified,Certified,3
-12,premium,Premium,4
-13,unauthorized,Unauthorized,0
+id,xmlid,name,code,sequence
+9,authorized,Authorized,1,0
+10,accredited,Accredited,2,1
+11,certified,Certified,3,2
+12,premium,Premium,4,3
+13,unauthorized,Unauthorized,0,4
