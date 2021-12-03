@@ -3,7 +3,7 @@
 
 {
     "name": "Partner Address Firstname",
-    "description": """
+    "summary": """
         Improvements on partner_address used with partner_firstname""",
     "version": "14.0.1.0.0",
     "license": "AGPL-3",

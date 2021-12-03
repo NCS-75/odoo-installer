@@ -3,7 +3,7 @@
 
 {
     "name": "Partner Address Open Tab",
-    "description": """
+    "summary": """
         Improvements on partner_address used with web_widget_open_tab""",
     "version": "14.0.1.0.0",
     "license": "AGPL-3",

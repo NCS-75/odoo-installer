@@ -3,7 +3,7 @@
 
 {
     "name": "Partner Installer",
-    "description": """
+    "summary": """
         Minimum installer's fields on res.partner for connection with MyDS,
         with datas but no views.""",
     "version": "14.0.1.0.0",

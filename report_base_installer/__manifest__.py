@@ -3,7 +3,7 @@
 
 {
     "name": "Base Report for Installer",
-    "description": """
+    "summary": """
         Custom base header and footer for Installers reports""",
     "version": "14.0.1.0.0",
     "license": "AGPL-3",

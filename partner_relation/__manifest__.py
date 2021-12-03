@@ -3,7 +3,7 @@
 
 {
     "name": "Partner Relation",
-    "description": """
+    "summary": """
         We separate this model's creation from `dualsun_base` because we need the model
         to exist before loading "dualsun_base/data/partner_extra_data.xml"
         in pre_init_hook.

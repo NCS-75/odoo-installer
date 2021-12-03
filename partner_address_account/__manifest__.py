@@ -3,7 +3,7 @@
 
 {
     "name": "Partner Address Account",
-    "description": """
+    "summary": """
         Improvements on partner_address used with account module""",
     "version": "14.0.1.0.0",
     "license": "AGPL-3",

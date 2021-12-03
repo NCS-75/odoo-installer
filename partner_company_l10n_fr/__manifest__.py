@@ -3,7 +3,7 @@
 
 {
     "name": "L10n Fr Partner Company",
-    "description": """
+    "summary": """
         Move SIRET fields in new res.partner's Company page from module partner_company
     """,
     "version": "14.0.1.0.0",

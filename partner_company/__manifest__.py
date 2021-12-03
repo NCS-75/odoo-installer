@@ -3,7 +3,7 @@
 
 {
     "name": "Partner Share Capital",
-    "description": """
+    "summary": """
         - Add 'Share Capital' field in res.partner and res.company
         - New page for company specific res.partner's fields
         - New page for Coworkers if any

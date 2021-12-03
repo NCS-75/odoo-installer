@@ -3,7 +3,7 @@
 
 {
     "name": "Partner Default Lang",
-    "description": """
+    "summary": """
         Define res.partner's lang as user's company's.""",
     "version": "14.0.1.0.0",
     "license": "AGPL-3",

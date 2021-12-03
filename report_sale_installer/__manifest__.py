@@ -3,7 +3,7 @@
 
 {
     "name": "Sale Report Installer",
-    "description": """
+    "summary": """
         Report for Sale Orders""",
     "version": "14.0.1.0.0",
     "license": "AGPL-3",

@@ -3,7 +3,7 @@
 
 {
     "name": "Partner Role",
-    "description": """
+    "summary": """
         Add a "Role" field on Partners and Partners Categories, allowing to relate to
         the Partner one specific info from one specific Category.
 

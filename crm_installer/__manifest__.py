@@ -3,7 +3,7 @@
 
 {
     "name": "Crm Installer",
-    "description": """
+    "summary": """
         Specific fields and stages for a perfect CRM for DualSun's installers""",
     "version": "14.0.1.0.0",
     "license": "AGPL-3",

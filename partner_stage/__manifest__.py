@@ -3,7 +3,7 @@
 
 {
     "name": "Partner Stage",
-    "description": """
+    "summary": """
         res.partner stage model and fields for MyDS connection. No views.
         """,
     "version": "14.0.1.0.0",

@@ -3,7 +3,7 @@
 
 {
     "name": "Crm Installer Maps",
-    "description": """
+    "summary": """
         Google maps tools for Isntaller's CRM""",
     "version": "14.0.1.0.0",
     "license": "AGPL-3",

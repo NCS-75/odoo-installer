@@ -3,7 +3,7 @@
 
 {
     "name": "Partner Address",
-    "description": """
+    "summary": """
         - Split partner's child_ids between contact and addresses
         - Add coworkers to individuals
         - New field 'Address type'

@@ -3,7 +3,7 @@
 
 {
     "name": "Report Tools",
-    "description": """
+    "summary": """
         Useful mixin model providing methods to display custom numbers formats on reports""",
     "version": "14.0.1.0.0",
     "license": "AGPL-3",

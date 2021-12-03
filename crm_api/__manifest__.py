@@ -3,7 +3,7 @@
 
 {
     "name": "Crm Api",
-    "description": """
+    "summary": """
         Exposes Partners and Opportunities as REST API""",
     "version": "14.0.1.0.0",
     "license": "AGPL-3",

@@ -3,7 +3,7 @@
 
 {
     "name": "Crm Aftersale",
-    "description": """Add CRM After-Sales menu""",
+    "summary": """Add CRM After-Sales menu""",
     "version": "14.0.1.0.0",
     "license": "AGPL-3",
     "author": "Akretion",

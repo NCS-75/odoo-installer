@@ -97,7 +97,7 @@ CRM LEADS
       -H "API-KEY: 123456789" \
       -H  "accept: application/json" \
       -H  "Content-Type: application/json" \
-      --data '{"description": "Updated description from API in lead (id=18)"}'
+      --data '{"summary": "Updated description from API in lead (id=18)"}'
 
 **CREATE**
 

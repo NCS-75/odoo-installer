@@ -3,7 +3,7 @@
 
 {
     "name": "Sql Tools",
-    "description": """
+    "summary": """
         Tools for SQL IDs settings""",
     "version": "14.0.1.0.0",
     "license": "AGPL-3",
