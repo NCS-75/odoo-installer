@@ -149,9 +149,6 @@
               </group>
           </page>
       </xpath>
-      <xpath expr="//page[@name='lead']" position="attributes">
-          <attribute name="invisible">True</attribute>
-      </xpath>
       <!-- Studies Results -->
       <xpath expr="//page[@name='internal_notes']" position="after">
           <page string="Studies Results" name="studies">
