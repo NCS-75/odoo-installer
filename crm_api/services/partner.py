@@ -3,7 +3,7 @@ from odoo.addons.base_rest_datamodel.restapi import Datamodel
 from odoo.addons.component.core import Component
 
 # 'api_key' or 'user'
-AUTH = "user"
+AUTH = "api_key"
 
 M2O_UPD_PARAM = [
     # [model, param_field, odoo_field, match]
