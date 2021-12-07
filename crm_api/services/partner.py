@@ -3,7 +3,7 @@ from odoo.addons.base_rest_datamodel.restapi import Datamodel
 from odoo.addons.component.core import Component
 
 # 'api_key' or 'user'
-AUTH = "api_key"
+AUTH = "user"
 
 M2O_UPD_PARAM = [
     # [model, param_field, odoo_field, match]
@@ -153,6 +153,10 @@ class PartnerService(Component):
 
         for m2m_args in M2M_UPD_PARAM:
             self._match_m2m(write_dict, param, *m2m_args)
+
+        # {'is_company': True} not enough on company creation (but enough for update)
+        if write_dict.get("is_company"):
+            write_dict["company_type"] = "company"
 
         return write_dict
 
