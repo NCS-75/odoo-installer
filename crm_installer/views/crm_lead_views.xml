@@ -55,7 +55,6 @@
       </xpath>
       <xpath expr="//field[@name='partner_id']" position="attributes">
           <attribute name="groups"></attribute>
-          <attribute name="options">{'no_create': True}</attribute>
       </xpath>
       <!-- Management -->
       <xpath expr="//field[@name='date_deadline']/.." position="inside">
@@ -65,7 +64,6 @@
       </xpath>
       <xpath expr="//field[@name='user_id']" position="attributes">
           <attribute name="string">Manager</attribute>
-          <attribute name="options">{'no_create': True}</attribute>
       </xpath>
       <xpath expr="//field[@name='referred']" position="attributes">
           <attribute name="invisible">True</attribute>
@@ -91,6 +89,39 @@
           <field name="worksite_completed" invisible="1"/>
       </xpath>
 
+      <!-- Marketing -->
+      <xpath expr="//page[@name='internal_notes']" position="before">
+          <page string="Marketing" name="marketing">
+              <group class="col-12 col-lg-6">
+                  <field name="public_name"/>
+                  <field name="url_monitoring_th" widget="url"/>
+                  <field name="url_monitoring_th_2" widget="url"/>
+                  <field name="url_monitoring_pv" widget="url"/>
+                  <field name="url_video" string="Video"/>
+              </group>
+              <group class="col-12 col-lg-6">
+                <field name="url_photos" string="Photos"/>
+                <field name="is_photogenic" widget="boolean_toggle"/>
+                <field name="is_photos_public" widget="boolean_toggle"/>
+                <field name="is_photos_publishable" widget="boolean_toggle"/>
+                <field name="is_visit_ok"  widget="boolean_toggle"/>
+              </group>
+              <group string="Description" name="description" class="col-12 col-lg-6"/>
+              <group string="Photos" name="photos" class="col-12 col-lg-6">
+                  <field name="photos" nolabel="1" widget="many2many_binary" />
+              </group>
+          </page>
+      </xpath>
+      <xpath expr="//group[@name='description']" position="inside">
+          <xpath expr="//field[@name='description']" position="move" />
+      </xpath>
+      <xpath expr="//field[@name='description']" position="attributes">
+          <attribute name="nolabel">1</attribute>
+      </xpath>
+      <xpath expr="//page[@name='internal_notes']" position="attributes">
+          <attribute name="invisible">True</attribute>
+      </xpath>
+
       <!-- Partners list -->
       <xpath expr="//page[@name='internal_notes']" position="before">
           <page string="Contacts" name="contacts">
@@ -109,13 +140,14 @@
               </field>
           </page>
       </xpath>
-      <!-- Installation -->
+      <!-- Tecnical -->
       <xpath expr="//page[@name='internal_notes']" position="before">
-          <page string="Installation" name="installation">
+          <page string="Technical" name="technical">
               <group name="installation_files"  class="col-12 col-lg-6">
                   <field name="commission_file" />
                   <field name="guarantees_file" />
-                  <field name="is_photogenic" widget="boolean_toggle"/>
+                  <field name="commission_files" widget="many2many_binary" />
+                  <field name="guarantees_files" widget="many2many_binary" />
               </group>
           </page>
       </xpath>

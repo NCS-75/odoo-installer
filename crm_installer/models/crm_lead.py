@@ -73,6 +73,31 @@ class CrmLead(models.Model):
     )
     referrent_id = fields.Many2one(string="Referred by", comodel_name="res.partner")
 
+    # Marketing
+    photos = fields.Many2many(
+        comodel_name="ir.attachment",
+        relation="crm_lead_photos",
+        column1="crm_lead",
+        column2="photo",
+        string="Photos",
+    )
+    public_name = fields.Char("Public Name")
+    url_photos = fields.Char("Photos URL")
+    url_video = fields.Char(
+        "Video URL",
+        help="Installation's YouTube link. If more than one, create a Youtube playlist",
+    )
+
+    is_photogenic = fields.Boolean("Photogenic Installation")
+    is_photos_public = fields.Boolean("Public photos")
+    is_photos_publishable = fields.Boolean("Publishable photos")
+    is_visit_ok = fields.Boolean("Accept visits")
+
+    url_monitoring_th = fields.Char("Thermal Monitoring graph")
+    url_monitoring_th_2 = fields.Char("Thermal Monitoring scheme")
+    url_monitoring_pv = fields.Char("PV Monitoring")
+
+    # Tecnical
     regulatory_calcul_ok = fields.Boolean("Regularoty Calcultation")
     worksite_request_ok = fields.Boolean("Worksite Request")
     purchase_obligation_ok = fields.Boolean("Purchase Obligation")
@@ -95,14 +120,24 @@ class CrmLead(models.Model):
 
     url_study = fields.Char("Study MyDS")
     dropbox_folder = fields.Char("Dropbox folder")
-    url_monitoring_th = fields.Char("Thermal Monitoring graph")
-    url_monitoring_th_2 = fields.Char("Thermal Monitoring scheme")
-    url_monitoring_pv = fields.Char("PV Monitoring")
     url_specifications = fields.Char("Specifications")
 
     commission_file = fields.Binary("Commission")
     guarantees_file = fields.Binary("Guarantees")
-    is_photogenic = fields.Boolean("Photogenic Installation")
+    commission_files = fields.Many2many(
+        comodel_name="ir.attachment",
+        relation="crm_lead_commission_files",
+        column1="crm_lead",
+        column2="commission_file",
+        string="Commission Files",
+    )
+    guarantees_files = fields.Many2many(
+        comodel_name="ir.attachment",
+        relation="crm_lead_guarantees_files",
+        column1="crm_lead",
+        column2="guarantees_file",
+        string="Guarantees Files",
+    )
 
     generator_power = fields.Float("Generator Power")
     tank_volume = fields.Float("Tank volume")
