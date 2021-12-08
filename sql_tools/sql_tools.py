@@ -46,7 +46,7 @@ def insert_sql_datas_from_vals_list(cr, model, vals_list):
             VALUES ('{xmlid}', '__installer__', '{model}', True, {vals["id"]});
 
         SELECT
-            SETVAL('{table_name}_id_seq', {vals["id"]});
+            SETVAL('{table_name}_id_seq', (SELECT MAX(id) FROM {table_name}));
         """
 
     _logger.info(_("Creating SQL datas for %s...") % model)

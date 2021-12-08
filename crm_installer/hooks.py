@@ -10,15 +10,6 @@ from odoo.addons.sql_tools.sql_tools import insert_sql_datas
 
 _logger = logging.getLogger(__name__)
 
-CURRENT_DIR = pathlib.Path(__file__).resolve().parent
-MODULE = CURRENT_DIR.stem
-STAGE_CONVERT = {
-    "New": MODULE + ".relation_established",
-    "Qualified": MODULE + ".qualified_project",
-    "Proposition": MODULE + ".proposition_made",
-    "Won": MODULE + ".installation_started",
-}
-
 SQL_DATAS = [
     ("crm.building", "crm_building_data.csv"),
     ("crm.heater", "crm_heater_data.csv"),
@@ -33,6 +24,6 @@ SQL_DATAS = [
 def post_init_hook(cr, registry):
     env = api.Environment(cr, SUPERUSER_ID, {})
 
-    _logger.info(_("Loading %s SQL datas...") % MODULE)
+    _logger.info(_("Loading crm_installer SQL datas..."))
     for model, file in SQL_DATAS:
-        insert_sql_datas(cr, MODULE, model, file)
+        insert_sql_datas(cr, "crm_installer", model, file)
