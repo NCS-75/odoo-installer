@@ -8,10 +8,10 @@ class TestPartnerRole(TransactionCase):
     def setUp(self):
         super(TestPartnerRole, self).setUp()
         self.partner = self.env["res.partner"].create({"name": "Partner"})
-        self.role_1 = self.env.ref("partner_role.role_installer")
-        self.categ_1 = self.env.ref("partner_role.installer")
-        self.role_2 = self.env.ref("partner_role.role_distributor")
-        self.categ_2 = self.env.ref("partner_role.distributor")
+        self.role_1 = self.env.ref("__installer__.role_installer")
+        self.categ_1 = self.env.ref("__installer__.installer")
+        self.role_2 = self.env.ref("__installer__.role_distributor")
+        self.categ_2 = self.env.ref("__installer__.distributor")
 
     def test_categ_to_role(self):
         self.partner.write({"category_id": [(4, self.categ_1.id)]})
