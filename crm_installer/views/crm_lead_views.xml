@@ -188,6 +188,14 @@
           </page>
       </xpath>
 
+      <!-- Hide native Extra Info -->
+      <xpath expr="//page[@name='lead']" position="attributes">
+          <attribute name="invisible">True</attribute>
+      </xpath>
+      <xpath expr="//page[@name='extra']" position="attributes">
+          <attribute name="invisible">True</attribute>
+      </xpath>
+
     </field>
   </record>
 
