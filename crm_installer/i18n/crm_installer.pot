@@ -111,11 +111,6 @@ msgid "Color"
 msgstr ""
 
 #. module: crm_installer
-#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__commission_file
-msgid "Commission"
-msgstr ""
-
-#. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__commission_files
 msgid "Commission Files"
 msgstr ""
@@ -215,6 +210,11 @@ msgid "Expected worksite date"
 msgstr ""
 
 #. module: crm_installer
+#: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
+msgid "Files"
+msgstr ""
+
+#. module: crm_installer
 #: model:ir.model.fields,help:crm_installer.field_crm_lead__studies_results
 msgid "Filled by the MyDS API when a new study is made around this lead"
 msgstr ""
@@ -222,11 +222,6 @@ msgstr ""
 #. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__generator_power
 msgid "Generator Power"
-msgstr ""
-
-#. module: crm_installer
-#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__guarantees_file
-msgid "Guarantees"
 msgstr ""
 
 #. module: crm_installer

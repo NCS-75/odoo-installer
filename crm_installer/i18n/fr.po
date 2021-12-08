@@ -112,11 +112,6 @@ msgid "Color"
 msgstr "Couleur"
 
 #. module: crm_installer
-#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__commission_file
-msgid "Commission"
-msgstr "PV de Mise en Service"
-
-#. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__commission_files
 #, fuzzy
 msgid "Commission Files"
@@ -217,6 +212,11 @@ msgid "Expected worksite date"
 msgstr "Date de chantier prévue"
 
 #. module: crm_installer
+#: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
+msgid "Files"
+msgstr "Fichiers"
+
+#. module: crm_installer
 #: model:ir.model.fields,help:crm_installer.field_crm_lead__studies_results
 msgid "Filled by the MyDS API when a new study is made around this lead"
 msgstr ""
@@ -227,11 +227,6 @@ msgstr ""
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__generator_power
 msgid "Generator Power"
 msgstr "Puissance générateur"
-
-#. module: crm_installer
-#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__guarantees_file
-msgid "Guarantees"
-msgstr "Garanties"
 
 #. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__guarantees_files
@@ -279,7 +274,9 @@ msgstr "Adresse de l'installation"
 #: model:ir.model.fields,help:crm_installer.field_crm_lead__url_video
 msgid ""
 "Installation's YouTube link. If more than one, create a Youtube playlist"
-msgstr "Lien Youtube d'une vidéo de l'installation. Si il y a plus d'une vidéo, penser à créer une playlist youtube."
+msgstr ""
+"Lien Youtube d'une vidéo de l'installation. Si il y a plus d'une vidéo, "
+"penser à créer une playlist youtube."
 
 #. module: crm_installer
 #: model:ir.ui.menu,name:crm_installer.crm_installations_menu
@@ -582,7 +579,9 @@ msgstr "Le %s choisi '%s' n'est pas enregistré comme un %s"
 #. module: crm_installer
 #: model:ir.model.fields,help:crm_installer.field_crm_lead__is_photos_authorized
 msgid "The customer authorized DualSun to publish Installation photos"
-msgstr "Le client final a donné son autorisation pour diffuser les photos de son installation"
+msgstr ""
+"Le client final a donné son autorisation pour diffuser les photos de son "
+"installation"
 
 #. module: crm_installer
 #: model:ir.model.fields,help:crm_installer.field_crm_lead__is_photos_publishable
