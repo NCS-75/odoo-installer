@@ -9,7 +9,7 @@ from pprint import pprint
 _logger = logging.getLogger(__name__)
 
 
-def insert_sql_datas_from_vals_list(cr, module, model, vals_list):
+def insert_sql_datas_from_vals_list(cr, model, vals_list):
     """Create new lines directly in SQL model's table in order to control lines IDs
     (and other columns values) in database.
 
@@ -43,10 +43,10 @@ def insert_sql_datas_from_vals_list(cr, module, model, vals_list):
             VALUES ({", ".join(datas)});
 
         INSERT INTO ir_model_data (name, module, model, noupdate, res_id)
-            VALUES ('{xmlid}', '{module}', '{model}', True, {vals["id"]});
+            VALUES ('{xmlid}', '__installer__', '{model}', True, {vals["id"]});
 
         SELECT
-            SETVAL('{table_name}_id_seq', 1);
+            SETVAL('{table_name}_id_seq', {vals["id"]});
         """
 
     _logger.info(_("Creating SQL datas for %s...") % model)
@@ -61,4 +61,4 @@ def insert_sql_datas(cr, module, model, data_file):
         raise IOError(m)
 
     vals_list = pyexcel.get_records(file_name=str(file))
-    insert_sql_datas_from_vals_list(cr, module, model, vals_list)
+    insert_sql_datas_from_vals_list(cr, model, vals_list)
