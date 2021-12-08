@@ -39,8 +39,8 @@ msgid "APS Validated"
 msgstr ""
 
 #. module: crm_installer
-#: model:crm.building,name:crm_installer.agricultural_exploitation
-msgid "Agricultural exploitation"
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__is_visit_ok
+msgid "Accept visits"
 msgstr ""
 
 #. module: crm_installer
@@ -49,18 +49,13 @@ msgid "All the contacts related to the lead"
 msgstr ""
 
 #. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__is_photos_authorized
+msgid "Authorized photos"
+msgstr ""
+
+#. module: crm_installer
 #: model:ir.model.fields,help:crm_installer.field_crm_lead__heater_ids
 msgid "Auxiliary Heaters selected for this lead."
-msgstr ""
-
-#. module: crm_installer
-#: model:crm.roof.covering,name:crm_installer.bituminous_waterproof_membrane
-msgid "Bituminous Waterproof Membrane"
-msgstr ""
-
-#. module: crm_installer
-#: model:crm.building,name:crm_installer.boarding_school
-msgid "Boarding school"
 msgstr ""
 
 #. module: crm_installer
@@ -105,18 +100,8 @@ msgid "CRM Use"
 msgstr ""
 
 #. module: crm_installer
-#: model:crm.building,name:crm_installer.camping
-msgid "Camping"
-msgstr ""
-
-#. module: crm_installer
 #: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
 msgid "Categories"
-msgstr ""
-
-#. module: crm_installer
-#: model:crm.building,name:crm_installer.collective_housing
-msgid "Collective housing"
 msgstr ""
 
 #. module: crm_installer
@@ -126,13 +111,13 @@ msgid "Color"
 msgstr ""
 
 #. module: crm_installer
-#: model:crm.building,name:crm_installer.commercial_building
-msgid "Commercial building"
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__commission_file
+msgid "Commission"
 msgstr ""
 
 #. module: crm_installer
-#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__commission_file
-msgid "Commission"
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__commission_files
+msgid "Commission Files"
 msgstr ""
 
 #. module: crm_installer
@@ -141,14 +126,8 @@ msgid "Commission date"
 msgstr ""
 
 #. module: crm_installer
-#: model:crm.stage,name:crm_installer.commissioned
 #: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
 msgid "Commissioned"
-msgstr ""
-
-#. module: crm_installer
-#: model:crm.lost.reason,name:crm_installer.competing_offer_selected
-msgid "Competing offer selected"
 msgstr ""
 
 #. module: crm_installer
@@ -159,11 +138,6 @@ msgstr ""
 #. module: crm_installer
 #: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
 msgid "Contacts"
-msgstr ""
-
-#. module: crm_installer
-#: model:crm.roof.covering,name:crm_installer.corrugated_metal_sheet
-msgid "Corrugated Metal Sheet"
 msgstr ""
 
 #. module: crm_installer
@@ -205,8 +179,8 @@ msgid "Dates"
 msgstr ""
 
 #. module: crm_installer
-#: model:crm.stage,name:crm_installer.deal_signed
-msgid "Deal signed"
+#: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
+msgid "Description"
 msgstr ""
 
 #. module: crm_installer
@@ -231,28 +205,8 @@ msgid "Distributor Order date"
 msgstr ""
 
 #. module: crm_installer
-#: model:crm.heater,name:crm_installer.district_heating
-msgid "District Heating"
-msgstr ""
-
-#. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__dropbox_folder
 msgid "Dropbox folder"
-msgstr ""
-
-#. module: crm_installer
-#: model:crm.lost.reason,name:crm_installer.duplicated_lead
-msgid "Duplicated Lead"
-msgstr ""
-
-#. module: crm_installer
-#: model:crm.building,name:crm_installer.ehpad
-msgid "EHPAD"
-msgstr ""
-
-#. module: crm_installer
-#: model:crm.heater,name:crm_installer.elec_resistance
-msgid "Electrical Resistance"
 msgstr ""
 
 #. module: crm_installer
@@ -261,23 +215,8 @@ msgid "Expected worksite date"
 msgstr ""
 
 #. module: crm_installer
-#: model:crm.roof.covering,name:crm_installer.fibrocement
-msgid "Fibrocement"
-msgstr ""
-
-#. module: crm_installer
 #: model:ir.model.fields,help:crm_installer.field_crm_lead__studies_results
 msgid "Filled by the MyDS API when a new study is made around this lead"
-msgstr ""
-
-#. module: crm_installer
-#: model:crm.roof,name:crm_installer.flat
-msgid "Flat"
-msgstr ""
-
-#. module: crm_installer
-#: model:crm.heater,name:crm_installer.gas_boiler
-msgid "Gas boiler"
 msgstr ""
 
 #. module: crm_installer
@@ -286,27 +225,16 @@ msgid "Generator Power"
 msgstr ""
 
 #. module: crm_installer
-#: model:crm.roof.covering,name:crm_installer.gravelled_waterproof_membrane
-msgid "Gravelled Waterproof Membrane"
-msgstr ""
-
-#. module: crm_installer
-#: model:crm.roof.covering,name:crm_installer.green_roof
-msgid "Green Roof"
-msgstr ""
-
-#. module: crm_installer
-#: model:crm.roof,name:crm_installer.ground
-msgid "Ground"
-msgstr ""
-
-#. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__guarantees_file
 msgid "Guarantees"
 msgstr ""
 
 #. module: crm_installer
-#: model:crm.stage,name:crm_installer.guarantees_granted
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__guarantees_files
+msgid "Guarantees Files"
+msgstr ""
+
+#. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__guarantees_granted
 #: model:ir.model.fields,field_description:crm_installer.field_crm_stage__guarantees_granted
 #: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
@@ -319,41 +247,11 @@ msgid "HP qualification"
 msgstr ""
 
 #. module: crm_installer
-#: model:crm.building,name:crm_installer.half_board
-msgid "Half board"
-msgstr ""
-
-#. module: crm_installer
-#: model:crm.heater,name:crm_installer.heat_pump_air
-msgid "Heat Pump air/water"
-msgstr ""
-
-#. module: crm_installer
-#: model:crm.heater,name:crm_installer.heat_pump_water
-msgid "Heat Pump water/water"
-msgstr ""
-
-#. module: crm_installer
 #: model:ir.actions.act_window,name:crm_installer.crm_heater_act_window
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__heater_ids
 #: model:ir.ui.menu,name:crm_installer.crm_heater_menu_contacts
 #: model:ir.ui.menu,name:crm_installer.crm_heater_menu_crm
 msgid "Heaters"
-msgstr ""
-
-#. module: crm_installer
-#: model:crm.use,name:crm_installer.heating
-msgid "Heating"
-msgstr ""
-
-#. module: crm_installer
-#: model:crm.building,name:crm_installer.hospital
-msgid "Hospital"
-msgstr ""
-
-#. module: crm_installer
-#: model:crm.building,name:crm_installer.hotel
-msgid "Hotel"
 msgstr ""
 
 #. module: crm_installer
@@ -368,28 +266,14 @@ msgid "ID"
 msgstr ""
 
 #. module: crm_installer
-#: model:crm.building,name:crm_installer.individual_house
-msgid "Individual house"
-msgstr ""
-
-#. module: crm_installer
-#: model:crm.building,name:crm_installer.industrial_building
-msgid "Industrial building"
-msgstr ""
-
-#. module: crm_installer
-#: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
-msgid "Installation"
-msgstr ""
-
-#. module: crm_installer
 #: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
 msgid "Installation Address"
 msgstr ""
 
 #. module: crm_installer
-#: model:crm.stage,name:crm_installer.installation_started
-msgid "Installation started"
+#: model:ir.model.fields,help:crm_installer.field_crm_lead__url_video
+msgid ""
+"Installation's YouTube link. If more than one, create a Youtube playlist"
 msgstr ""
 
 #. module: crm_installer
@@ -447,24 +331,14 @@ msgid "Last Updated on"
 msgstr ""
 
 #. module: crm_installer
-#: model:crm.lost.reason,name:crm_installer.lead_out
-msgid "Lead out-of-zone"
-msgstr ""
-
-#. module: crm_installer
 #: model:ir.model,name:crm_installer.model_crm_lead
 msgid "Lead/Opportunity"
 msgstr ""
 
 #. module: crm_installer
-#: model:crm.lost.reason,name:crm_installer.listed_building
-msgid "Listed building"
-msgstr ""
-
-#. module: crm_installer
 #: code:addons/crm_installer/hooks.py:0
 #, python-format
-msgid "Loading %s SQL datas..."
+msgid "Loading crm_installer SQL datas..."
 msgstr ""
 
 #. module: crm_installer
@@ -473,8 +347,8 @@ msgid "Manager"
 msgstr ""
 
 #. module: crm_installer
-#: model:crm.lost.reason,name:crm_installer.meeting_cancelled
-msgid "Meeting cancelled"
+#: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
+msgid "Marketing"
 msgstr ""
 
 #. module: crm_installer
@@ -485,31 +359,6 @@ msgstr ""
 #: model:ir.model.fields,field_description:crm_installer.field_crm_use__name
 #: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
 msgid "Name"
-msgstr ""
-
-#. module: crm_installer
-#: model:crm.lost.reason,name:crm_installer.no_answer
-msgid "No answer"
-msgstr ""
-
-#. module: crm_installer
-#: model:crm.lost.reason,name:crm_installer.no_certified_installer
-msgid "No certified or boosted installer in zone"
-msgstr ""
-
-#. module: crm_installer
-#: model:crm.lost.reason,name:crm_installer.no_installer_in_zone
-msgid "No installer in zone"
-msgstr ""
-
-#. module: crm_installer
-#: model:crm.lost.reason,name:crm_installer.not_owner
-msgid "Not owner"
-msgstr ""
-
-#. module: crm_installer
-#: model:crm.heater,name:crm_installer.oil_boiler
-msgid "Oil boiler"
 msgstr ""
 
 #. module: crm_installer
@@ -563,8 +412,14 @@ msgid "Photogenic Installation"
 msgstr ""
 
 #. module: crm_installer
-#: model:crm.roof.covering,name:crm_installer.polymer_waterproof_membrane
-msgid "Polymer Waterproof Membrane"
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__photos
+#: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
+msgid "Photos"
+msgstr ""
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__url_photos
+msgid "Photos URL"
 msgstr ""
 
 #. module: crm_installer
@@ -598,18 +453,18 @@ msgid "Project Manager"
 msgstr ""
 
 #. module: crm_installer
-#: model:crm.lost.reason,name:crm_installer.project_aborted
-msgid "Project aborted"
-msgstr ""
-
-#. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__date_proposition_made
 msgid "Proposition Made date"
 msgstr ""
 
 #. module: crm_installer
-#: model:crm.stage,name:crm_installer.proposition_made
-msgid "Proposition made"
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__public_name
+msgid "Public Name"
+msgstr ""
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__is_photos_publishable
+msgid "Publishable photos"
 msgstr ""
 
 #. module: crm_installer
@@ -618,23 +473,8 @@ msgid "Purchase Obligation"
 msgstr ""
 
 #. module: crm_installer
-#: model:crm.lost.reason,name:crm_installer.standby_customer
-msgid "Put on stand-by by the customer"
-msgstr ""
-
-#. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__date_qualified_project
 msgid "Qualfied Project date"
-msgstr ""
-
-#. module: crm_installer
-#: model:crm.stage,name:crm_installer.qualified_project
-msgid "Qualified project"
-msgstr ""
-
-#. module: crm_installer
-#: model:crm.lost.reason,name:crm_installer.quotation_cancelled
-msgid "Quotation cancelled"
 msgstr ""
 
 #. module: crm_installer
@@ -660,11 +500,6 @@ msgstr ""
 #. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__regulatory_calcul_ok
 msgid "Regularoty Calcultation"
-msgstr ""
-
-#. module: crm_installer
-#: model:crm.stage,name:crm_installer.relation_established
-msgid "Relation established"
 msgstr ""
 
 #. module: crm_installer
@@ -695,11 +530,6 @@ msgid "Roofs"
 msgstr ""
 
 #. module: crm_installer
-#: model:crm.roof.covering,name:crm_installer.sandwich_panel
-msgid "Sandwich Panel"
-msgstr ""
-
-#. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__security_ok
 msgid "Security"
 msgstr ""
@@ -711,28 +541,8 @@ msgid "Sequence"
 msgstr ""
 
 #. module: crm_installer
-#: model:crm.roof,name:crm_installer.shade_house
-msgid "Shade House"
-msgstr ""
-
-#. module: crm_installer
-#: model:crm.roof.covering,name:crm_installer.slate
-msgid "Slate"
-msgstr ""
-
-#. module: crm_installer
-#: model:crm.roof,name:crm_installer.sloped
-msgid "Sloped"
-msgstr ""
-
-#. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__url_specifications
 msgid "Specifications"
-msgstr ""
-
-#. module: crm_installer
-#: model:crm.building,name:crm_installer.sports_complex
-msgid "Sports Complex"
 msgstr ""
 
 #. module: crm_installer
@@ -747,24 +557,29 @@ msgid "Study MyDS"
 msgstr ""
 
 #. module: crm_installer
-#: model:crm.use,name:crm_installer.pool
-msgid "Swiming-pool"
-msgstr ""
-
-#. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__tank_volume
 msgid "Tank volume"
 msgstr ""
 
 #. module: crm_installer
-#: model:crm.lost.reason,name:crm_installer.technical_infeasibility
-msgid "Technical infeasibility"
+#: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
+msgid "Technical"
 msgstr ""
 
 #. module: crm_installer
 #: code:addons/crm_installer/models/crm_lead.py:0
 #, python-format
 msgid "The choosen %s '%s' is not recorded as a %s"
+msgstr ""
+
+#. module: crm_installer
+#: model:ir.model.fields,help:crm_installer.field_crm_lead__is_photos_authorized
+msgid "The customer authorized DualSun to publish Installation photos"
+msgstr ""
+
+#. module: crm_installer
+#: model:ir.model.fields,help:crm_installer.field_crm_lead__is_photos_publishable
+msgid "The photos are good enough to be published"
 msgstr ""
 
 #. module: crm_installer
@@ -775,26 +590,6 @@ msgstr ""
 #. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__url_monitoring_th_2
 msgid "Thermal Monitoring scheme"
-msgstr ""
-
-#. module: crm_installer
-#: model:crm.heater,name:crm_installer.thermodynamic_water_heater
-msgid "Thermodynamic Water Heater"
-msgstr ""
-
-#. module: crm_installer
-#: model:crm.roof.covering,name:crm_installer.tiles
-msgid "Tiles"
-msgstr ""
-
-#. module: crm_installer
-#: model:crm.lost.reason,name:crm_installer.too_long_term
-msgid "Too long term"
-msgstr ""
-
-#. module: crm_installer
-#: model:crm.roof.covering,name:crm_installer.trapezoidal_sheet
-msgid "Trapezoidal Sheet"
 msgstr ""
 
 #. module: crm_installer
@@ -818,13 +613,8 @@ msgid "Uses selected for this lead"
 msgstr ""
 
 #. module: crm_installer
-#: model:crm.use,name:crm_installer.water_heater
-msgid "Water Heater"
-msgstr ""
-
-#. module: crm_installer
-#: model:crm.heater,name:crm_installer.wood_boiler
-msgid "Wood boiler"
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__url_video
+msgid "Video URL"
 msgstr ""
 
 #. module: crm_installer
@@ -847,19 +637,4 @@ msgstr ""
 #. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__date_deadline
 msgid "Worksite date"
-msgstr ""
-
-#. module: crm_installer
-#: model:crm.lost.reason,name:crm_installer.wrong_email
-msgid "Wrong email"
-msgstr ""
-
-#. module: crm_installer
-#: model:crm.lost.reason,name:crm_installer.wrong_number
-msgid "Wrong number"
-msgstr ""
-
-#. module: crm_installer
-#: model:crm.roof.covering,name:crm_installer.zinc
-msgid "Zinc"
 msgstr ""

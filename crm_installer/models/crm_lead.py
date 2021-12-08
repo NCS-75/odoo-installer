@@ -89,8 +89,18 @@ class CrmLead(models.Model):
     )
 
     is_photogenic = fields.Boolean("Photogenic Installation")
-    is_photos_public = fields.Boolean("Public photos")
-    is_photos_publishable = fields.Boolean("Publishable photos")
+    is_photos_authorized = fields.Boolean(
+        "Authorized photos",
+        help="The customer authorized DualSun to publish Installation photos",
+    )
+    is_photos_publishable = fields.Boolean(
+        "Publishable photos",
+        compute="_compute_is_photos_publishable",
+        inverse="_inverse_is_photo_publishable",
+        readonly=False,
+        store=True,
+        help="The photos are good enough to be published",
+    )
     is_visit_ok = fields.Boolean("Accept visits")
 
     url_monitoring_th = fields.Char("Thermal Monitoring graph")
@@ -247,6 +257,18 @@ class CrmLead(models.Model):
             if not lead.distributor_id:
                 dist_id = part_ids.filtered(lambda p: p.is_company and p.is_distributor)
                 lead.distributor_id = dist_id[0] if dist_id else ResPartner
+
+    @api.depends("is_photos_authorized")
+    def _compute_is_photos_publishable(self):
+        for rec in self:
+            rec.is_photos_publishable = (
+                False if not rec.is_photos_authorized else rec.is_photos_publishable
+            )
+
+    def _inverse_is_photo_publishable(self):
+        for rec in self:
+            if rec.is_photos_publishable:
+                rec.is_photos_authorized = True
 
     @api.model
     def default_get(self, fields):

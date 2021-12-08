@@ -94,15 +94,15 @@
           <page string="Marketing" name="marketing">
               <group class="col-12 col-lg-6">
                   <field name="public_name"/>
-                  <field name="url_monitoring_th" widget="url"/>
-                  <field name="url_monitoring_th_2" widget="url"/>
-                  <field name="url_monitoring_pv" widget="url"/>
-                  <field name="url_video" string="Video"/>
+                  <field name="url_monitoring_th" widget="url" attrs="{'readonly': [('is_installer_company', '=', True)]}"/>
+                  <field name="url_monitoring_th_2" widget="url" attrs="{'readonly': [('is_installer_company', '=', True)]}"/>
+                  <field name="url_monitoring_pv" widget="url" attrs="{'readonly': [('is_installer_company', '=', True)]}"/>
+                  <field name="url_video" />
               </group>
               <group class="col-12 col-lg-6">
-                <field name="url_photos" string="Photos"/>
+                <field name="url_photos" />
                 <field name="is_photogenic" widget="boolean_toggle"/>
-                <field name="is_photos_public" widget="boolean_toggle"/>
+                <field name="is_photos_authorized" widget="boolean_toggle"/>
                 <field name="is_photos_publishable" widget="boolean_toggle"/>
                 <field name="is_visit_ok"  widget="boolean_toggle"/>
               </group>

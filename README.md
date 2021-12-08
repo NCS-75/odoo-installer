@@ -1,6 +1,6 @@
 # odoo-installer
 
-These modules contain hard datas with hard coded SQL IDs for the following models :
+These modules contain hard data with hard coded SQL IDs for the following models :
 
 - crm.building
 - crm.heater
@@ -15,13 +15,13 @@ These modules contain hard datas with hard coded SQL IDs for the following model
 - res.partner.role
 - res.partner.stage
 
-To update any of these datas, you need to :
+To update any of these data, you need to :
 
 1. Inform the **MyDualSun admin** about the future update
-2. Update the datas (by SQL command or python script) on **all the databases** using these datas
-3. Update the API points for these datas in **module crm_api** (if some fields names changed)
+2. Update the data (by SQL command or python script) on **all the databases** using these data
+3. Update the API points for these data in **module crm_api** (if some fields names changed)
 4. Update the SQL IDs used in DualSun **website's forms** (if the SQL IDs changed)
-5. Update the basic **CSV files** used to load these datas (on new databases) in their respective modules (here in this repository)
+5. Update the basic **CSV files** used to load these data (on new databases) in their respective modules (here in this repository)
 
 
 
@@ -46,7 +46,7 @@ addon | version | summary
 [partner_company](partner_company/) | 14.0.1.0.0 | - Add 'Share Capital' field in res.partner and res.company - New page for company specific res.partner's fields - New page for Coworkers if any
 [partner_company_l10n_fr](partner_company_l10n_fr/) | 14.0.1.0.0 | Move SIRET fields in new res.partner's Company page from module partner_company
 [partner_default_lang](partner_default_lang/) | 14.0.1.0.0 | Define res.partner's lang as user's company's.
-[partner_installer](partner_installer/) | 14.0.1.0.0 | Minimum installer's fields on res.partner for connection with MyDS, with datas but no views.
+[partner_installer](partner_installer/) | 14.0.1.0.0 | Minimum installer's fields on res.partner for connection with MyDS, with data but no views.
 [partner_relation](partner_relation/) | 14.0.1.0.0 | We separate this model's creation from `dualsun_base` because we need the model to exist before loading "dualsun_base/data/partner_extra_data.xml" in pre_init_hook.
 [partner_role](partner_role/) | 14.0.1.0.0 | Add a "Role" field on Partners and Partners Categories, allowing to relate to the Partner one specific info from one specific Category. We separate this model's creation from `partner_role` because we need the model to exist before loading "partner_role/data/partner_extra_data.xml" in pre_init_hook.
 [partner_stage](partner_stage/) | 14.0.1.0.0 | res.partner stage model and fields for MyDS connection. No views.
