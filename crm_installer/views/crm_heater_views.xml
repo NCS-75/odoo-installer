@@ -47,7 +47,7 @@
         <field name="name">Heaters</field>
         <field name="parent_id" ref="contacts.res_partner_menu_config"/>
         <field name="action" ref="crm_heater_act_window"/>
-        <field name="sequence" eval="2"/>
+        <field name="sequence" eval="3"/>
     </record>
 
     <record model="ir.ui.menu" id="crm_heater_menu_crm">

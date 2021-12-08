@@ -15,7 +15,6 @@
                         <field name="color" widget="color_picker"/>
                     </group>
                 </sheet>
-                <div class="oe_chatter"></div>
             </form>
         </field>
     </record>
@@ -43,7 +42,7 @@
         <field name="name">Uses</field>
         <field name="parent_id" ref="contacts.res_partner_menu_config"/>
         <field name="action" ref="crm_use_act_window"/>
-        <field name="sequence" eval="2"/>
+        <field name="sequence" eval="3"/>
     </record>
 
     <record model="ir.ui.menu" id="crm_use_menu_crm">
