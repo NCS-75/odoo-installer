@@ -144,8 +144,6 @@
       <xpath expr="//page[@name='internal_notes']" position="before">
           <page string="Technical" name="technical">
               <group name="installation_files"  class="col-12 col-lg-6">
-                  <field name="commission_file" />
-                  <field name="guarantees_file" />
                   <field name="commission_files" widget="many2many_binary" />
                   <field name="guarantees_files" widget="many2many_binary" />
               </group>

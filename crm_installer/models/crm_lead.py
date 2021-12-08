@@ -132,8 +132,6 @@ class CrmLead(models.Model):
     dropbox_folder = fields.Char("Dropbox folder")
     url_specifications = fields.Char("Specifications")
 
-    commission_file = fields.Binary("Commission")
-    guarantees_file = fields.Binary("Guarantees")
     commission_files = fields.Many2many(
         comodel_name="ir.attachment",
         relation="crm_lead_commission_files",
