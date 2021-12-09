@@ -89,39 +89,6 @@
           <field name="worksite_completed" invisible="1"/>
       </xpath>
 
-      <!-- Marketing -->
-      <xpath expr="//page[@name='internal_notes']" position="before">
-          <page string="Marketing" name="marketing">
-              <group class="col-12 col-lg-6">
-                  <field name="public_name"/>
-                  <field name="url_monitoring_th" widget="url" attrs="{'readonly': [('is_installer_company', '=', True)]}"/>
-                  <field name="url_monitoring_th_2" widget="url" attrs="{'readonly': [('is_installer_company', '=', True)]}"/>
-                  <field name="url_monitoring_pv" widget="url" attrs="{'readonly': [('is_installer_company', '=', True)]}"/>
-                  <field name="url_video" />
-              </group>
-              <group class="col-12 col-lg-6">
-                <field name="url_photos" />
-                <field name="is_photogenic" widget="boolean_toggle"/>
-                <field name="is_photos_authorized" widget="boolean_toggle"/>
-                <field name="is_photos_publishable" widget="boolean_toggle"/>
-                <field name="is_visit_ok"  widget="boolean_toggle"/>
-              </group>
-              <group string="Description" name="description" class="col-12 col-lg-6"/>
-              <group string="Photos" name="photos" class="col-12 col-lg-6">
-                  <field name="photos" nolabel="1" widget="many2many_binary" />
-              </group>
-          </page>
-      </xpath>
-      <xpath expr="//group[@name='description']" position="inside">
-          <xpath expr="//field[@name='description']" position="move" />
-      </xpath>
-      <xpath expr="//field[@name='description']" position="attributes">
-          <attribute name="nolabel">1</attribute>
-      </xpath>
-      <xpath expr="//page[@name='internal_notes']" position="attributes">
-          <attribute name="invisible">True</attribute>
-      </xpath>
-
       <!-- Partners list -->
       <xpath expr="//page[@name='internal_notes']" position="before">
           <page string="Contacts" name="contacts">
@@ -146,6 +113,31 @@
               <group name="installation_files"  class="col-12 col-lg-6" string="Files">
                   <field name="commission_files" widget="many2many_binary" />
                   <field name="guarantees_files" widget="many2many_binary" />
+              </group>
+          </page>
+      </xpath>
+      <!-- Marketing -->
+      <xpath expr="//page[@name='internal_notes']" position="before">
+          <page string="Marketing" name="marketing">
+              <group class="col-12 col-lg-6">
+                  <field name="public_name"/>
+                  <field name="url_monitoring_th" widget="url" attrs="{'readonly': [('is_installer_company', '=', True)]}"/>
+                  <field name="url_monitoring_th_2" widget="url" attrs="{'readonly': [('is_installer_company', '=', True)]}"/>
+                  <field name="url_monitoring_pv" widget="url" attrs="{'readonly': [('is_installer_company', '=', True)]}"/>
+                  <field name="url_video" />
+              </group>
+              <group class="col-12 col-lg-6">
+                <field name="url_photos" />
+                <field name="is_photogenic" widget="boolean_toggle"/>
+                <field name="is_photos_authorized" widget="boolean_toggle"/>
+                <field name="is_photos_publishable" widget="boolean_toggle"/>
+                <field name="is_visit_ok"  widget="boolean_toggle"/>
+              </group>
+              <group string="Public Description" name="public_description" class="col-12 col-lg-6">
+                  <field name="public_description" />
+              </group>
+              <group string="Public Photos" name="public_photos" class="col-12 col-lg-6">
+                  <field name="public_photos" nolabel="1" widget="many2many_binary" />
               </group>
           </page>
       </xpath>

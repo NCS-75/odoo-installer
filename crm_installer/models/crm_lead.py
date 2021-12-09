@@ -74,14 +74,15 @@ class CrmLead(models.Model):
     referrent_id = fields.Many2one(string="Referred by", comodel_name="res.partner")
 
     # Marketing
-    photos = fields.Many2many(
+    public_photos = fields.Many2many(
         comodel_name="ir.attachment",
         relation="crm_lead_photos",
         column1="crm_lead",
         column2="photo",
-        string="Photos",
+        string="Public Photos",
     )
     public_name = fields.Char("Public Name")
+    public_description = fields.Text("Public Description")
     url_photos = fields.Char("Photos URL")
     url_video = fields.Char(
         "Video URL",

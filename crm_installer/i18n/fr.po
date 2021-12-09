@@ -176,11 +176,6 @@ msgid "Dates"
 msgstr ""
 
 #. module: crm_installer
-#: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
-msgid "Description"
-msgstr "Description"
-
-#. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_building__display_name
 #: model:ir.model.fields,field_description:crm_installer.field_crm_heater__display_name
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__display_name
@@ -416,12 +411,6 @@ msgid "Photogenic Installation"
 msgstr "Installation photogénique"
 
 #. module: crm_installer
-#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__photos
-#: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
-msgid "Photos"
-msgstr ""
-
-#. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__url_photos
 msgid "Photos URL"
 msgstr "Lien Photos"
@@ -462,9 +451,23 @@ msgid "Proposition Made date"
 msgstr "Date Proposition faite"
 
 #. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__public_description
+#: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
+#, fuzzy
+msgid "Public Description"
+msgstr "Description Publique"
+
+#. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__public_name
 msgid "Public Name"
 msgstr "Nom public"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__public_photos
+#: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
+#, fuzzy
+msgid "Public Photos"
+msgstr "Photos Publiques"
 
 #. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__is_photos_publishable
