@@ -266,7 +266,8 @@ msgid "Installation Address"
 msgstr "Adresse de l'installation"
 
 #. module: crm_installer
-#: model:ir.model.fields,help:crm_installer.field_crm_lead__url_video
+#: model:ir.model.fields,help:crm_installer.field_crm_lead__url_video_public
+#: model:ir.model.fields,help:crm_installer.field_crm_lead__url_video_rush
 msgid ""
 "Installation's YouTube link. If more than one, create a Youtube playlist"
 msgstr ""
@@ -411,11 +412,6 @@ msgid "Photogenic Installation"
 msgstr "Installation photogénique"
 
 #. module: crm_installer
-#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__url_photos
-msgid "Photos URL"
-msgstr "Lien Photos"
-
-#. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__pool_area
 msgid "Pool Size"
 msgstr "Taille piscine"
@@ -470,6 +466,12 @@ msgid "Public Photos"
 msgstr "Photos Publiques"
 
 #. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__url_video_public
+#, fuzzy
+msgid "Public Video URL"
+msgstr "Lien Vidéo Publique"
+
+#. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__is_photos_publishable
 msgid "Publishable photos"
 msgstr "Photos diffusables"
@@ -493,6 +495,12 @@ msgstr "Devis remis"
 #: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
 msgid "Quotation signed"
 msgstr "Devis signé"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__url_photos_raw
+#, fuzzy
+msgid "Raw Photos URL"
+msgstr "Lien Photos Brutes"
 
 #. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__referrent_id
@@ -622,9 +630,10 @@ msgid "Uses selected for this lead"
 msgstr "Usages choisis pour cette affaire"
 
 #. module: crm_installer
-#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__url_video
-msgid "Video URL"
-msgstr "Lien Vidéo"
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__url_video_rush
+#, fuzzy
+msgid "Videos Rushes URL"
+msgstr "Lien Rushes Vidéo"
 
 #. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__worksite_request_ok

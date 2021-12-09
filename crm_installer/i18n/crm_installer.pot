@@ -261,7 +261,8 @@ msgid "Installation Address"
 msgstr ""
 
 #. module: crm_installer
-#: model:ir.model.fields,help:crm_installer.field_crm_lead__url_video
+#: model:ir.model.fields,help:crm_installer.field_crm_lead__url_video_public
+#: model:ir.model.fields,help:crm_installer.field_crm_lead__url_video_rush
 msgid ""
 "Installation's YouTube link. If more than one, create a Youtube playlist"
 msgstr ""
@@ -402,11 +403,6 @@ msgid "Photogenic Installation"
 msgstr ""
 
 #. module: crm_installer
-#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__url_photos
-msgid "Photos URL"
-msgstr ""
-
-#. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__pool_area
 msgid "Pool Size"
 msgstr ""
@@ -459,6 +455,11 @@ msgid "Public Photos"
 msgstr ""
 
 #. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__url_video_public
+msgid "Public Video URL"
+msgstr ""
+
+#. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__is_photos_publishable
 msgid "Publishable photos"
 msgstr ""
@@ -481,6 +482,11 @@ msgstr ""
 #. module: crm_installer
 #: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
 msgid "Quotation signed"
+msgstr ""
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__url_photos_raw
+msgid "Raw Photos URL"
 msgstr ""
 
 #. module: crm_installer
@@ -609,8 +615,8 @@ msgid "Uses selected for this lead"
 msgstr ""
 
 #. module: crm_installer
-#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__url_video
-msgid "Video URL"
+#: model:ir.model.fields,field_description:crm_installer.field_crm_lead__url_video_rush
+msgid "Videos Rushes URL"
 msgstr ""
 
 #. module: crm_installer

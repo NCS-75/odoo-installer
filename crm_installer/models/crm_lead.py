@@ -83,9 +83,13 @@ class CrmLead(models.Model):
     )
     public_name = fields.Char("Public Name")
     public_description = fields.Text("Public Description")
-    url_photos = fields.Char("Photos URL")
-    url_video = fields.Char(
-        "Video URL",
+    url_photos_raw = fields.Char("Raw Photos URL")
+    url_video_public = fields.Char(
+        "Public Video URL",
+        help="Installation's YouTube link. If more than one, create a Youtube playlist",
+    )
+    url_video_rush = fields.Char(
+        "Videos Rushes URL",
         help="Installation's YouTube link. If more than one, create a Youtube playlist",
     )
 
