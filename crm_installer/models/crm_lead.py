@@ -234,7 +234,7 @@ class CrmLead(models.Model):
             part_ids = lead.partner_ids
             if not lead.partner_id and not lead.is_with_pm:
                 part_id = part_ids.filtered(
-                    lambda p: p.is_company and cust_categ_id in p.category_id
+                    lambda p: not p.is_company and cust_categ_id in p.category_id
                 )
                 lead.partner_id = part_id[0] if part_id else ResPartner
             if not lead.partner_id and lead.is_with_pm:
