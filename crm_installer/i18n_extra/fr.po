@@ -1,0 +1,34 @@
+#. module: crm_installer
+#: model:crm.stage,name:__installer__.relation_established
+msgid "Relation established"
+msgstr "Relation établie"
+
+#. module: crm_installer
+#: model:crm.stage,name:__installer__.qualified_project
+msgid "Qualified project"
+msgstr "Projet qualifié"
+
+#. module: crm_installer
+#: model:crm.stage,name:__installer__.proposition_made
+msgid "Proposition made"
+msgstr "Proposition faite"
+
+#. module: crm_installer
+#: model:crm.stage,name:__installer__.deal_signed
+msgid "Deal signed"
+msgstr "Affaire signée"
+
+#. module: crm_installer
+#: model:crm.stage,name:__installer__.installation_started
+msgid "Installation started"
+msgstr "Installation démarrée"
+
+#. module: crm_installer
+#: model:crm.stage,name:__installer__.commissioned
+msgid "Commissioned"
+msgstr "Mis en service"
+
+#. module: crm_installer
+#: model:crm.stage,name:__installer__.guarantees_granted
+msgid "Guarantees granted"
+msgstr "Garanties émises"
