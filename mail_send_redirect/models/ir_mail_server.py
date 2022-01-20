@@ -21,12 +21,15 @@ class IrMailServer(models.Model):
         smtp_session=None,
     ):
 
-        print("send_email mail_send_redirect")
-        original_to = message["To"]
         del message["To"]
         del message["Cc"]
         del message["Bcc"]
-        message["To"] = '"Adresse détournée" <banda.technobrass@gmail.com>'
+
+        redirect_email = (
+            self.env["ir.config_parameter"].sudo().get_param("mail.redirect")
+        )
+        if redirect_email:
+            message["To"] = "Adresse de détournement <" + redirect_email + ">"
 
         return super().send_email(
             message,
