@@ -5,7 +5,15 @@ from odoo import api, fields, models, _
 
 
 class SaleOrder(models.Model):
-    _inherit = 'sale.order'
+    _inherit = "sale.order"
+
+    date_order = fields.Datetime(
+        states={
+            "draft": [("readonly", False)],
+            "sent": [("readonly", False)],
+            "sale": [("readonly", False)],
+        }
+    )
 
     def _prepare_confirmation_values(self):
         date_order = self.date_order
