@@ -26,12 +26,10 @@ class CrmLead(models.Model):
             instance_url = self.env['ir.config_parameter'].sudo().get_param('web.base.url')
             for rec in self:
                 r = requests.get(
-                    "%s/odoo/update_entity/%s?entity_type=%s&instance_url=%s" % (
-                    environ.get("MYDS_API"), rec.id, rec._name, instance_url,
-                ))
-                logger.info("notified %s about %s id %s update. Response code: %s" % (
-                    environ.get("MYDS_API"),
-                    rec._name,
-                    rec.id,
+                    environ.get("MYDS_API") + "/odoo/update_entity/%s" % (rec.id,),
+                    params={'entity_type': rec._name, 'instance_url': instance_url}
+                )
+                logger.info("MyDS notification %s. Response code: %s" % (
+                    r.url,
                     r,
                 ))
