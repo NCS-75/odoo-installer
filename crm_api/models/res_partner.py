@@ -1,10 +1,13 @@
 # Copyright 2021 Akretion
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
+import logging
 from os import environ
 import requests
 
 from odoo import _, api, fields, models
+
+logger = logging.getLogger(__name__)
 
 
 class ResPartner(models.Model):
@@ -18,9 +21,17 @@ class ResPartner(models.Model):
         "modified through the MyDS-Odoo API exclusively.",
     )
 
-    def _notify_partner_update(self):
-        for rec in self:
-            r = requests.get("%s/odoo/update_entity/%s?entity_type=%s" % (
-                environ.get("MYDS_API"), rec.id, rec._name
-            ))
-            print(r)
+    def _notify_myds_update(self):
+        if environ.get("MYDS_API"):
+            instance_url = self.env['ir.config_parameter'].sudo().get_param('web.base.url')
+            for rec in self:
+                r = requests.get(
+                    "%s/odoo/update_entity/%s?entity_type=%s&instance_url=%s" % (
+                    environ.get("MYDS_API"), rec.id, rec._name, instance_url,
+                ))
+                logger.info("notified %s about %s id %s update. Response code: %s" % (
+                    environ.get("MYDS_API"),
+                    rec._name,
+                    rec.id,
+                    r,
+                ))
