@@ -16,6 +16,10 @@
         "base_rest_datamodel",
         # https://github.com/OCA/server-auth
         "auth_api_key",
+        # https://github.com/OCA/queue
+        "queue_job",
+        # https://github.com/OCA/connector
+        "component_event",
         # https://github.com/OCA/partner-contact
         "partner_firstname",
         # https://github.com/akretion/odoo-installer
