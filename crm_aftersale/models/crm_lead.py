@@ -7,6 +7,8 @@ from odoo import api, fields, models
 class CrmLead(models.Model):
     _inherit = "crm.lead"
 
+    is_aftersale = fields.Boolean(related="stage_id.is_aftersale")
+
     @api.model
     def _read_group_stage_ids(self, stages, domain, order):
         """Override native '_read_group_stage_ids' to display and fold columns depending
@@ -37,3 +39,8 @@ class CrmStage(models.Model):
 
     fold_pipeline = fields.Boolean("Folded in main Pipeline")
     fold_aftersales = fields.Boolean("Folded in After-Sales")
+    is_aftersale = fields.Boolean(
+        "After-Sale stage ?",
+        help="Used to distinguish AfterSales stages in security groups (e.g. if some "
+        " groups are not allowed to modify leads in After-Sale stage)",
+    )

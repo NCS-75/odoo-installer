@@ -8,6 +8,7 @@
       <field name="inherit_id" ref="crm.crm_stage_form"/>
       <field name="arch" type="xml">
           <xpath expr="//field[@name='is_won']" position="after">
+              <field name="is_aftersale" />
               <field name="fold_pipeline" string="Folded in Pipeline"/>
               <field name="fold_aftersales" />
           </xpath>
@@ -16,5 +17,16 @@
           </xpath>
       </field>
     </record>
-    
+
+    <record id="crm_stage_tree" model="ir.ui.view">
+      <field name="name">crm.stage.tree (in crm_aftersale)</field>
+      <field name="model">crm.stage</field>
+      <field name="inherit_id" ref="crm.crm_stage_tree"/>
+      <field name="arch" type="xml">
+          <xpath expr="//field[@name='is_won']" position="after">
+              <field name="is_aftersale"/>
+          </xpath>
+      </field>
+    </record>
+
 </odoo>
