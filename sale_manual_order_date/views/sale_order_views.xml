@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Inherit Form view -->
+    <record id="view_order_form" model="ir.ui.view">
+        <field name="name">sale.order.form (in sale_manual_order_date)</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <!-- Make first date_order in native view visible for Sale Manager and not only debug mode -->
+            <xpath expr="//field[@name='date_order'][1]" position="attributes">
+                <attribute name="groups">sales_team.group_sale_manager</attribute>
+            </xpath>
+            <xpath expr="//label[@for='date_order'][1]/.." position="attributes">
+                <attribute name="groups">sales_team.group_sale_manager</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

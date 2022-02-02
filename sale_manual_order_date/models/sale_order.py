@@ -14,9 +14,3 @@ class SaleOrder(models.Model):
             "sale": [("readonly", False)],
         }
     )
-
-    def _prepare_confirmation_values(self):
-        date_order = self.date_order
-        res = super()._prepare_confirmation_values()
-        res["date_order"] = date_order
-        return res

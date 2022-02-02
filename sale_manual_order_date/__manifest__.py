@@ -10,6 +10,6 @@
     "author": "Akretion",
     "website": "http://akretion.com",
     "depends": ["sale"],
-    "data": [],
+    "data": ["views/sale_order_views.xml"],
     "demo": [],
 }
