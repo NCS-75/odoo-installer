@@ -4,12 +4,17 @@
 {
     "name": "Crm Aftersale Restrict",
     "description": """
-        Restrict security group "Sales/Own Documents Only" to edit Leads only if not in After-Sale stage.""",
+        Restrict security group "Sales/Own Documents Only" to edit Leads only if not in After-Sale stage.
+
+        /!\\ WARNING : this module change the domain of native ir.rule "Personal Leads"
+        When uninstalling this module the domain must be set back manually to native value :
+        `['|',('user_id','=',user.id),('user_id','=',False)]`
+        """,
     "version": "14.0.1.0.0",
     "license": "AGPL-3",
     "author": "Akretion",
     "website": "http://akretion.com",
-    "depends": [],
+    "depends": ["crm_aftersale"],
     "data": ["security/crm_aftersale_security.xml"],
     "demo": [],
 }
