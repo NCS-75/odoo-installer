@@ -1,3 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 1access_lead_readonly,access_lead_readonly,crm.model_crm_lead,crm_readonly.group_lead_readonly,1,0,0,0
 1access_sale_readonly,access_sale_readonly,sale.model_sale_order,crm_readonly.group_lead_readonly,1,0,0,0
+1access_saletag_readonly,access_saletag_readonly,sales_team.model_crm_tag,crm_readonly.group_lead_readonly,1,0,0,0
