@@ -2,6 +2,5 @@
 <odoo>
     <record id="group_lead_readonly" model="res.groups">
         <field name="name">Show Leads Readonly</field>
-        <field name="category_id" ref="base.module_category_sales_sales" />
     </record>
 </odoo>
