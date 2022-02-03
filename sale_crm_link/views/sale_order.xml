@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2022 Akretion
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+    <record id="sale_order_form_view" model="ir.ui.view">
+        <field name="name">sale.order.form (in sale_crm_link)</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='']" position="after">
+                <button class="oe_stat_button" type="object"
+                        name="action_view_lead" icon="fa-star"
+                        attrs="{'invisible': [('opportunity_id', '=', False)]}" />
+
+            </xpath>
+        </field>
+    </record>
+
+
+
+</odoo>

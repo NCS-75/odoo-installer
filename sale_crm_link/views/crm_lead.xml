@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2022 Akretion
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+
+    <!-- <record model="ir.ui.view" id="crm_lead_search_view">
+        <field name="name">crm.lead.search (in sale_crm_link)</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="TODO othermodule.search_view"/>
+        <field name="arch" type="xml">
+
+        </field>
+    </record> -->
+
+
+</odoo>
