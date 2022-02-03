@@ -3,8 +3,9 @@
 
 {
     "name": "Sale Crm Link",
-    "description": """
-        Smartbutton to go from Sale Order to related Lead""",
+    "summary": """
+        Smartbutton to go from Sale Order to related Lead and filters on Leads to
+        find Lead quoted and ordered""",
     "version": "14.0.1.0.0",
     "license": "AGPL-3",
     "author": "Akretion",

@@ -9,10 +9,11 @@
         <field name="model">sale.order</field>
         <field name="inherit_id" ref="sale.view_order_form" />
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='']" position="after">
+            <xpath expr="//button[@name='preview_sale_order']" position="before">
                 <button class="oe_stat_button" type="object"
                         name="action_view_lead" icon="fa-star"
-                        attrs="{'invisible': [('opportunity_id', '=', False)]}" />
+                        attrs="{'invisible': [('opportunity_id', '=', False)]}"
+                        string="Opportunity"/>
 
             </xpath>
         </field>

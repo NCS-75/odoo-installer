@@ -10,9 +10,9 @@ class SaleOrder(models.Model):
     def action_view_lead(self):
         self.ensure_one()
         if self.opportunity_id:
-            action_xmlid = "sale.action_quotations_with_onboarding"
+            action_xmlid = "crm.crm_lead_action_pipeline"
             action = self.env["ir.actions.actions"]._for_xml_id(action_xmlid)
-            form = self.env.ref("sale.view_order_form")
+            form = self.env.ref("crm.crm_lead_view_form")
             action.update(
                 {"views": [(form.id, "form")], "res_id": self.opportunity_id.id}
             )
