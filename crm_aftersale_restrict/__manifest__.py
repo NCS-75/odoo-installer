@@ -3,9 +3,9 @@
 
 {
     "name": "Crm Aftersale Restrict",
+    "summary": """
+        Restrict security group "Sales/Own Documents Only" to edit Leads only if not in After-Sale stage.""",
     "description": """
-        Restrict security group "Sales/Own Documents Only" to edit Leads only if not in After-Sale stage.
-
         /!\\ WARNING : this module change the domain of native ir.rule "Personal Leads"
         When uninstalling this module the domain must be set back manually to native value :
         `['|',('user_id','=',user.id),('user_id','=',False)]`

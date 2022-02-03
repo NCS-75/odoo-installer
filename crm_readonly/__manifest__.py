@@ -3,8 +3,7 @@
 
 {
     "name": "Crm Readonly",
-    "description": """
-        Add security group displaying CRM leads in readonly mode""",
+    "summary": """Add security group displaying CRM leads in readonly mode""",
     "version": "14.0.1.0.0",
     "license": "AGPL-3",
     "author": "Akretion",
