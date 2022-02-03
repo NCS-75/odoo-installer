@@ -14,6 +14,12 @@
               <field name="worksite_completed"/>
               <field name="guarantees_granted"/>
           </xpath>
+          <xpath expr="//field[@name='is_won']/../.." position="inside">
+              <group>
+                  <field name="myds_stage_id" attrs="{'required': [('is_myds', '=', False)], 'invisible': [('is_myds', '=', True)]}"/>
+                  <field name="is_myds" invisible="1"/>
+              </group>
+          </xpath>
       </field>
     </record>
 

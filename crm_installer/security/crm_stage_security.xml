@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Rules to avoid create,update,delete on MyDS Stages -->
+    <record id="crm_stage_not_myds" model="ir.rule">
+        <field name="name">CRM Stages readonly</field>
+        <field name="model_id" ref="crm.model_crm_stage" />
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="perm_create" eval="0" />
+        <field name="perm_read" eval="1" />
+        <field name="perm_write" eval="0" />
+        <field name="perm_unlink" eval="0" />
+        <!-- Need o group rule to call OR operator-->
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+    <record id="crm_stage_myds" model="ir.rule">
+        <field name="name">Allow CRUD on non-MyDS Stages</field>
+        <field name="model_id" ref="crm.model_crm_stage" />
+        <field name="domain_force">[('is_myds','=',False)]</field>
+        <!-- Need o group to call OR operator in resulting domain -->
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+</odoo>

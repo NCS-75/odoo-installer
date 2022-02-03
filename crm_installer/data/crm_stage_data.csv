@@ -1,8 +1,8 @@
-id,xmlid,name,fold_pipeline,fold_aftersales,sequence,on_change,probability,worksite_completed,guarantees_granted,is_aftersale,is_won
-5,relation_established,Relation established,False,True,0,True,5,,,,
-6,qualified_project,Qualified project,False,True,1,True,20,,,,
-7,proposition_made,Proposition made,False,True,2,True,50,,,,
-8,deal_signed,Deal signed,False,True,3,True,80,,,,
-9,installation_started,Installation started,False,False,4,True,100,,,True,True
-10,commissioned,Commissioned,True,False,5,True,100,True,,True,True
-11,guarantees_granted,Guarantees granted,True,False,6,True,100,True,True,True,True
+id,xmlid,name,fold_pipeline,fold_aftersales,sequence,on_change,probability,worksite_completed,guarantees_granted,is_aftersale,is_won,is_myds
+5,relation_established,Relation established,False,True,0,True,5,,,,,True
+6,qualified_project,Qualified project,False,True,1,True,20,,,,,True
+7,proposition_made,Proposition made,False,True,2,True,50,,,,,True
+8,deal_signed,Deal signed,False,True,3,True,80,,,,,True
+9,installation_started,Installation started,False,False,4,True,100,,,True,True,True
+10,commissioned,Commissioned,True,False,5,True,100,True,,True,True,True
+11,guarantees_granted,Guarantees granted,True,False,6,True,100,True,True,True,True,True
