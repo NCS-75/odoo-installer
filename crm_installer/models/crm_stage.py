@@ -30,7 +30,9 @@ class CrmStage(models.Model):
 
     def write(self, vals):
         # Avoid modifying MyDS stages
-        if vals.get("name"):
+        if vals.get("name") and "tracking_disable" not in self.env.context:
+            # Hack `"tracking_disable" not in self.env.context` used to
+            # avoid raise when loading from anthem song
             myds_ids = self.filtered(lambda s: s.is_myds)
             if myds_ids:
                 raise ValidationError(
