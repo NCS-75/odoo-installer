@@ -45,9 +45,19 @@ msgid "Accept visits"
 msgstr "Accepte visites"
 
 #. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_stage__active
+msgid "Active"
+msgstr "Actif"
+
+#. module: crm_installer
 #: model:ir.model.fields,help:crm_installer.field_crm_lead__partner_ids
 msgid "All the contacts related to the lead"
 msgstr "Tous les contacts liés à l'affaire"
+
+#. module: crm_installer
+#: model_terms:ir.ui.view,arch_db:crm_installer.crm_stage_form
+msgid "Archived"
+msgstr "Archivé"
 
 #. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__is_photos_authorized
@@ -104,6 +114,11 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
 msgid "Categories"
 msgstr "Catégories"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_stage__on_change
+msgid "Change Probability Automatically"
+msgstr ""
 
 #. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_heater__color
@@ -299,6 +314,23 @@ msgstr "Installateur"
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__is_with_pm
 msgid "Is With Pm"
 msgstr "Est avec MOE"
+
+#. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_stage__is_myds
+msgid "Is a MyDS stage?"
+msgstr ""
+
+#. module: crm_installer
+#: code:addons/crm_installer/models/crm_stage.py:0
+#, python-format
+msgid ""
+"It is not possible to archive the stage '%s' as it still contains the "
+"following leads :\n"
+" - %s"
+msgstr ""
+"Il n'est pas possible d'archivé l'étape '%s' car elle contient encore les affaires "
+"suivantes :\n"
+" - %s"
 
 #. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_building____last_update
@@ -518,9 +550,19 @@ msgid "Regularoty Calcultation"
 msgstr "Calcul Réglementaire validé"
 
 #. module: crm_installer
+#: model:ir.model.fields,field_description:crm_installer.field_crm_stage__myds_stage_id
+msgid "Related MyDS Stage"
+msgstr "Étape MyDS correspondante"
+
+#. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_building__is_with_pm
 msgid "Require a Project Manager"
 msgstr "Nécessite un MOE"
+
+#. module: crm_installer
+#: model:ir.model.fields,help:crm_installer.field_crm_stage__myds_stage_id
+msgid "Required to connect leads with MyDS API"
+msgstr "Recquis afin de connecter les affaire via l'API MyDualSun"
 
 #. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__roof_id
@@ -556,6 +598,13 @@ msgid "Sequence"
 msgstr ""
 
 #. module: crm_installer
+#: model:ir.model.fields,help:crm_installer.field_crm_stage__on_change
+msgid ""
+"Setting this stage will change the probability automatically on the "
+"opportunity."
+msgstr ""
+
+#. module: crm_installer
 #: model:ir.model.fields,field_description:crm_installer.field_crm_lead__url_specifications
 msgid "Specifications"
 msgstr "Cahier des charges"
@@ -580,6 +629,11 @@ msgstr "Volume ballon"
 #: model_terms:ir.ui.view,arch_db:crm_installer.crm_lead_view_form
 msgid "Technical"
 msgstr "Technique"
+
+#. module: crm_installer
+#: model:ir.model.fields,help:crm_installer.field_crm_stage__is_myds
+msgid "Technical field only True for hard-coded SQL stages related to MyDS API"
+msgstr ""
 
 #. module: crm_installer
 #: code:addons/crm_installer/models/crm_lead.py:0
