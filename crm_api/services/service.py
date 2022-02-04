@@ -19,6 +19,17 @@ class CrmApiService(AbstractComponent):
                 .with_context(lang="en_US")
                 .search([(match, "=", value)], limit=1)
             )
+            # TODO: special translation for crm.stage (test this code)
+            # if model == "crm.stage":
+            #     rec = (
+            #         self.env[model]
+            #         .with_context(lang="en_US")
+            #         .search(
+            #             ["|", (match, "=", value), ("myds_id.name", "=", value)],
+            #             limit=1,
+            #         )
+            #     )
+
             # We write False is value is False
             if rec or not value:
                 vals[odoo_field] = rec.id
