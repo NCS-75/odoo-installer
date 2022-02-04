@@ -13,7 +13,6 @@
     "data": [
         # Security
         "security/ir.model.access.csv",
-        "security/crm_stage_security.xml",
         # Views
         "views/crm_building_views.xml",
         "views/crm_heater_views.xml",

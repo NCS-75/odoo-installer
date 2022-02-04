@@ -24,12 +24,22 @@ class CrmStage(models.Model):
     myds_stage_id = fields.Many2one(
         string="Related MyDS Stage",
         comodel_name="crm.stage",
-        domain="[('is_myds', '=', True)]",
+        domain="[('is_myds', '=', True), ('active', 'in', [True, False])]",
         help="Required to connect leads with MyDS API",
     )
 
     def write(self, vals):
-        """Avoid archive stages with leads"""
+        # Avoid modifying MyDS stages
+        if vals.get("name"):
+            myds_ids = self.filtered(lambda s: s.is_myds)
+            if myds_ids:
+                raise ValidationError(
+                    _(
+                        "It is not possible to modify the name of a stage related to "
+                        "MyDS API"
+                    )
+                )
+        # Avoid archive stages with leads
         if vals.get("active") is False:
             for rec in self:
                 lead_ids = self.env["crm.lead"].search(
@@ -45,3 +55,13 @@ class CrmStage(models.Model):
                         % (rec.name, list)
                     )
         return super().write(vals)
+
+    def unlink(self):
+        # Avoid deleting MyDS stages
+        myds_ids = self.filtered(lambda s: s.is_myds)
+        if myds_ids:
+            raise ValidationError(
+                _(
+                    "It is not possible to delete a stage related to MyDS API"
+                )
+            )
