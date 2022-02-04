@@ -67,3 +67,4 @@ class CrmStage(models.Model):
                     "It is not possible to delete a stage related to MyDS API"
                 )
             )
+        return super().unlink()
