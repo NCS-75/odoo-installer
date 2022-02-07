@@ -81,7 +81,7 @@ class PartnerService(Component):
         """
         Create a new partner
         """
-        partner = self.env["res.partner"].create(
+        partner = self.env["res.partner"].with_context(connector_no_export=True).create(
             self._prepare_partner_write(partner_create_param)
         )
         return self._to_partner_info(partner)
@@ -96,7 +96,7 @@ class PartnerService(Component):
         """
         Update partner information
         """
-        partner = self.env["res.partner"].browse(_id)
+        partner = self.env["res.partner"].with_context(connector_no_export=True).browse(_id)
         partner.write(self._prepare_partner_write(partner_update_param))
         return self._to_partner_info(partner)
 

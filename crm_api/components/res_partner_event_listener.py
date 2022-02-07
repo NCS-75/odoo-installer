@@ -9,7 +9,7 @@ class ResPartnerEventListener(Component):
     _apply_on = ["res.partner"]
 
     def _get_skip_if_condition(self, record, **kwargs):
-        if not record.myds_id:
+        if not record.myds_id or self.env.context.get('connector_no_export'):
             return True
         else:
             return False
@@ -31,7 +31,6 @@ class ResPartnerEventListener(Component):
         self._export_partner_info(record, fields=fields)
 
     def _export_partner_info(self, record, fields=None):
-        print("_export_partner_info", record.id)
         record.with_delay(
             description="update partner %s" % (record.id,),
             identity_key=identity_exact, # ensure will call WS only once
