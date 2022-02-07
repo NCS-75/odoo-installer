@@ -80,7 +80,9 @@ class leadService(Component):
         """
         Create a new lead
         """
-        lead = self.env["crm.lead"].create(self._prepare_lead_write(lead_create_param))
+        lead = self.env["crm.lead"].with_context(connector_no_export=True).create(
+            self._prepare_lead_write(lead_create_param)
+        )
         return self._to_lead_info(lead)
 
     @restapi.method(
@@ -93,7 +95,7 @@ class leadService(Component):
         """
         Update lead informations
         """
-        lead = self.env["crm.lead"].browse(_id)
+        lead = self.env["crm.lead"].with_context(connector_no_export=True).browse(_id)
         write_dict = self._prepare_lead_write(lead_update_param)
         if write_dict.get("lost_reason"):
             lead.action_archive()

@@ -9,7 +9,7 @@ class CrmLeadEventListener(Component):
     _apply_on = ["crm.lead"]
 
     def _get_skip_if_condition(self, record, **kwargs):
-        if not record.myds_id:
+        if not record.myds_id or self.env.context.get('connector_no_export'):
             return True
         else:
             return False
