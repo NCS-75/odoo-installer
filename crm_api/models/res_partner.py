@@ -2,10 +2,9 @@
 # License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
 
 import logging
-from os import environ
 import requests
 
-from odoo import _, api, fields, models
+from odoo import fields, models
 
 logger = logging.getLogger(__name__)
 
@@ -22,14 +21,16 @@ class ResPartner(models.Model):
     )
 
     def _notify_myds_update(self):
-        if environ.get("MYDS_API"):
-            instance_url = self.env['ir.config_parameter'].sudo().get_param('web.base.url')
+        myds_server = self.env['ir.config_parameter'].sudo().get_param('dualsun.myds.url')
+        if myds_server:
+            odoo_server = self.env['ir.config_parameter'].sudo().get_param('web.base.url')
             for rec in self:
                 r = requests.get(
-                    environ.get("MYDS_API") + "/odoo/update_entity/%s" % (rec.id,),
-                    params={'entity_type': rec._name, 'instance_url': instance_url}
+                    "%s/odoo/update_entity/%s" % (myds_server, rec.id,),
+                    params={'entity_type': rec._name, 'odoo_server': odoo_server}
                 )
-                logger.info("MyDS notification %s. Response code: %s" % (
+                logger.info("MyDS notification %s. Response: %s" % (
                     r.url,
                     r,
                 ))
+
