@@ -8,10 +8,18 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. module: crm_aftersale
+#: model:ir.model.fields,field_description:crm_aftersale.field_crm_lead__is_aftersale
+#: model:ir.model.fields,field_description:crm_aftersale.field_crm_stage__is_aftersale
+#, fuzzy
+msgid "After-Sale stage ?"
+msgstr "Est une étape Après-Vente?"
 
 #. module: crm_aftersale
 #: model:ir.actions.act_window,name:crm_aftersale.crm_lead_action_aftersales
@@ -61,3 +69,12 @@ msgstr "Dernière modification le"
 #: model:ir.model,name:crm_aftersale.model_crm_lead
 msgid "Lead/Opportunity"
 msgstr "Piste/opportunité"
+
+#. module: crm_aftersale
+#: model:ir.model.fields,help:crm_aftersale.field_crm_lead__is_aftersale
+#: model:ir.model.fields,help:crm_aftersale.field_crm_stage__is_aftersale
+msgid ""
+"Used to distinguish AfterSales stages in security groups (e.g. if some  "
+"groups are not allowed to modify leads in After-Sale stage)"
+msgstr "Utilisé pour différencié les étapes Après-Vente dans les groupes de sécurité"
+"(p.ex. certains groupes peuvent ne pas être autorisés à modifier les étapes en Après-Vente)"

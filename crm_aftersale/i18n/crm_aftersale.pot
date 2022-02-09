@@ -14,6 +14,12 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: crm_aftersale
+#: model:ir.model.fields,field_description:crm_aftersale.field_crm_lead__is_aftersale
+#: model:ir.model.fields,field_description:crm_aftersale.field_crm_stage__is_aftersale
+msgid "After-Sale stage ?"
+msgstr ""
+
+#. module: crm_aftersale
 #: model:ir.actions.act_window,name:crm_aftersale.crm_lead_action_aftersales
 #: model:ir.ui.menu,name:crm_aftersale.menu_crm_after_sales
 msgid "After-Sales"
@@ -60,4 +66,12 @@ msgstr ""
 #. module: crm_aftersale
 #: model:ir.model,name:crm_aftersale.model_crm_lead
 msgid "Lead/Opportunity"
+msgstr ""
+
+#. module: crm_aftersale
+#: model:ir.model.fields,help:crm_aftersale.field_crm_lead__is_aftersale
+#: model:ir.model.fields,help:crm_aftersale.field_crm_stage__is_aftersale
+msgid ""
+"Used to distinguish AfterSales stages in security groups (e.g. if some  "
+"groups are not allowed to modify leads in After-Sale stage)"
 msgstr ""
