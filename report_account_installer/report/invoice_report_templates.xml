@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_invoice_document"
+              inherit_id="account.report_invoice_document">
+
+        <!-- addresses in flex containers -->
+        <xpath expr="//t[@t-set='address']" position="after">
+              <div class="d-flex" name="flex_address">
+                  <table class="table table-sm" style="width: 33%;margin-right: 33%;">
+                      <thead style="display: table-row-group">
+                          <tr>
+                              <th>Invoicing Address</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <td>
+                              <div t-field="o.partner_id"
+                                   t-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": True}' />
+                          </td>
+                      </tbody>
+                  </table>
+                  <table class="table table-sm" style="width: 33%;">
+                      <thead style="display: table-row-group">
+                          <tr>
+                              <th>Shipping Address</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <td>
+                              <!-- TODO Add mobile on delivery address -->
+                              <div t-field="o.partner_shipping_id"
+                                   t-options='{"widget": "contact", "fields": ["address", "name", "phone"], "no_marker": True, "phone_icons": True}' />
+                          </td>
+                      </tbody>
+                  </table>
+              </div>
+        </xpath>
+
+        <!-- Move TVA after new invoicing address -->
+        <xpath expr="//div[@name='flex_address']/table[2]/tbody/td/div" position="after">
+            <xpath expr="//div[@t-if='o.partner_id.vat']" position="move" />
+        </xpath>
+
+        <!-- Hide original doc.name because in report_base_installer.external_layout_boxed -->
+        <xpath expr="//h2" position="attributes">
+            <attribute name="class">d-none</attribute>
+        </xpath>
+
+        <!-- Remove duplicated Incoterm field under invoice lines (the one from module account) -->
+        <xpath expr="//p[@t-if='o.invoice_incoterm_id']" position="attributes">
+            <attribute name="class">d-none</attribute>
+        </xpath>
+
+        <!-- Add Products image -->
+        <xpath expr="//th[@name='th_description']" position="before">
+            <th t-if="o.has_product_photo" name="th_photo"></th>
+        </xpath>
+        <xpath expr="//td[@name='account_invoice_line_name']" position="before">
+            <td t-if="o.has_product_photo" name="td_photo" class="ds_td_photo">
+                <span>
+                      <img t-if="line.product_id and line.product_id.image_1920"
+                           t-att-src="image_data_uri(line.product_id.image_1920)" />
+                </span>
+            </td>
+        </xpath>
+
+        <!-- Add €HT on columns -->
+        <xpath expr="//th[@name='th_priceunit']" position="attributes">
+            <attribute name="class">text-nowrap</attribute>
+        </xpath>
+        <xpath expr="//th[@name='th_priceunit']" position="inside">
+            <div class="text-nowrap">
+                <span t-field="o.currency_id.symbol" />
+                <span groups="account.group_show_line_subtotals_tax_excluded">excl.&#160;tax</span>
+                <span groups="account.group_show_line_subtotals_tax_included">incl.&#160;tax</span>
+            </div>
+        </xpath>
+        <xpath expr="//th[@name='th_subtotal']" position="inside">
+            <div class="text-nowrap">
+                <span t-field="o.currency_id.symbol" />
+                <span groups="account.group_show_line_subtotals_tax_excluded">excl.&#160;tax</span>
+                <span groups="account.group_show_line_subtotals_tax_included">incl.&#160;tax</span>
+            </div>
+        </xpath>
+
+        <!-- Format quantity -->
+        <xpath expr="//span[@t-field='line.quantity']" position="attributes">
+            <attribute name="class">d-none</attribute>
+        </xpath>
+        <xpath expr="//span[@t-field='line.quantity']" position="after">
+            <span t-esc="o.qty_to_str(line.quantity)"/>
+        </xpath>
+        <!-- Remove Unit UoM if unecessary -->
+        <xpath expr="//span[@t-field='line.product_uom_id']" position="attributes">
+            <attribute name="t-if">o.display_uom</attribute>
+        </xpath>
+        <!-- Format Unit Price -->
+        <xpath expr="//span[@t-field='line.price_unit']" position="attributes">
+            <attribute name="class">d-none</attribute>
+        </xpath>
+        <xpath expr="//span[@t-field='line.price_unit']" position="after">
+            <span t-esc="o.price_to_str(line.price_unit)"/>
+        </xpath>
+        <!-- Remove € on subtotal -->
+        <xpath expr="//span[@t-field='line.price_subtotal']" position="attributes">
+            <attribute name="class">d-none</attribute>
+        </xpath>
+        <xpath expr="//span[@t-field='line.price_total']" position="attributes">
+            <attribute name="class">d-none</attribute>
+        </xpath>
+        <xpath expr="//span[@t-field='line.price_subtotal']/.." position="inside">
+            <span t-esc="o.price_to_str(line.price_subtotal)" groups="account.group_show_line_subtotals_tax_excluded"/>
+            <span t-esc="o.price_to_str(line.price_total)" groups="account.group_show_line_subtotals_tax_included"/>
+        </xpath>
+
+        <!-- Hide original payment term and move both payment term and general note inside new paragrap "payment_term_note" -->
+        <xpath expr="//p[@name='payment_term']" position="attributes">
+          <attribute name="class">d-none</attribute>
+        </xpath>
+        <xpath expr="//p[@name='comment']" position="attributes">
+          <attribute name="class">d-none</attribute>
+        </xpath>
+        <xpath expr="//p[@name='payment_communication']" position="after">
+            <p t-if="o.invoice_payment_term_id or o.narration" style="page-break-inside: avoid;">
+                <strong>Payment terms:</strong>
+                <br/>
+                <span t-field="o.invoice_payment_term_id.note"/>
+                <br/>
+                <span t-field="o.narration"/>
+            </p>
+        </xpath>
+
+    </template>
+
+    <!-- Bank details at the bottom (Replace bank details in report in module account_payment_partner)-->
+    <template
+        id="report_invoice_payment_mode"
+        inherit_id="account_payment_partner.report_invoice_payment_mode"
+    >
+        <xpath expr="//p[@t-if='o.payment_mode_id.note']" position="attributes">
+            <attribute name="class">d-none</attribute>
+        </xpath>
+        <xpath expr="//p[@t-as='partner_bank']" position="attributes">
+            <attribute name="class">d-none</attribute>
+        </xpath>
+        <xpath expr="//div[@id='qrcode']" position="after">
+            <p t-if="o.payment_mode_id.note">
+                <strong>Payment Mode:</strong>
+                <br/>
+                <span t-field="o.payment_mode_id.note" />
+            </p>
+            <t t-if="o.payment_mode_id and o.payment_mode_id.show_bank_account != 'no'">
+                <div t-foreach="o.partner_banks_to_show()" t-as="partner_bank">
+                    <strong>Bank details:</strong>
+                    <br/>
+                    <span>Bank:</span>
+                    <span t-field="partner_bank.bank_id.name" />
+                    <br/>
+                    <span>BIC:</span>
+                    <span t-field="partner_bank.bank_id.bic" />
+                    <br/>
+                    <span>IBAN:</span>
+                    <t t-if="o.payment_mode_id.show_bank_account == 'full'">
+                        <span t-field="partner_bank.acc_number" />
+                    </t>
+                    <t t-elif="o.payment_mode_id.show_bank_account == 'first'">
+                        <span
+                            t-esc="partner_bank.acc_number[:o.payment_mode_id.show_bank_account_chars] + '*' * (len(partner_bank.acc_number) - o.payment_mode_id.show_bank_account_chars)"
+                        />
+                    </t>
+                    <t t-elif="o.payment_mode_id.show_bank_account == 'last'">
+                        <span
+                            t-esc="'*' * (len(partner_bank.acc_number) - o.payment_mode_id.show_bank_account_chars) + partner_bank.acc_number[-o.payment_mode_id.show_bank_account_chars:]"
+                        />
+                    </t>
+                </div>
+            </t>
+        </xpath>
+    </template>
+</odoo>

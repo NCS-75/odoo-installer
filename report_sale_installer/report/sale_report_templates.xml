@@ -35,6 +35,11 @@
               </div>
         </xpath>
 
+        <!-- Hide original doc.name because in report_base_installer.external_layout_boxed -->
+        <xpath expr="//h2" position="attributes">
+            <attribute name="class">d-none</attribute>
+        </xpath>
+
         <!-- Add {"widget": "date"} to existing div dates -->
         <xpath expr="(//div[@id='informations']/div)[position() = 2]/p" position="attributes">
             <attribute name="t-options">{"widget": "date"}</attribute>

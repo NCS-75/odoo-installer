@@ -1,0 +1,11 @@
+#. module: sale
+#: model_terms:ir.ui.view,arch_db:sale.report_saleorder_document
+#: model_terms:ir.ui.view,arch_db:sale.sale_order_portal_content_totals_table
+msgid "<strong>Subtotal</strong>"
+msgstr "<strong>Total HT</strong>"
+
+#. module: sale
+#: model_terms:ir.ui.view,arch_db:sale.report_saleorder_document
+#: model_terms:ir.ui.view,arch_db:sale.sale_order_portal_content_totals_table
+msgid "<strong>Total</strong>"
+msgstr "<strong>Total TTC</strong>"
