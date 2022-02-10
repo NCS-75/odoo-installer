@@ -18,14 +18,14 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:report_account_installer.report_invoice_payment_mode
 msgid ""
 "<br/>\n"
-"                    <span>BIC:</span>"
+"                    <span>BIC :</span>"
 msgstr ""
 
 #. module: report_account_installer
 #: model_terms:ir.ui.view,arch_db:report_account_installer.report_invoice_payment_mode
 msgid ""
 "<br/>\n"
-"                    <span>IBAN:</span>"
+"                    <span>IBAN :</span>"
 msgstr ""
 
 #. module: report_account_installer
@@ -36,8 +36,7 @@ msgid ""
 "                <span groups=\"account.group_show_line_subtotals_tax_included"
 "\">incl. tax</span>"
 msgstr ""
-"<span groups=\"account.group_show_line_subtotals_tax_excluded\">HT</"
-"span>\n"
+"<span groups=\"account.group_show_line_subtotals_tax_excluded\">HT</span>\n"
 "                <span groups=\"account.group_show_line_subtotals_tax_included"
 "\">TTC</span>"
 
@@ -50,7 +49,17 @@ msgid ""
 msgstr ""
 "<strong>Bank details:</strong>\n"
 "                    <br/>\n"
-"                    <span>Banque:</span>"
+"                    <span>Banque :</span>"
+
+#. module: report_account_installer
+#: model_terms:ir.ui.view,arch_db:report_account_installer.report_invoice_document
+#, fuzzy
+msgid ""
+"<strong>Legal terms:</strong>\n"
+"                <br/>"
+msgstr ""
+"<strong>Mentions légales:</strong>\n"
+"                <br/>"
 
 #. module: report_account_installer
 #: model_terms:ir.ui.view,arch_db:report_account_installer.report_invoice_payment_mode
@@ -58,17 +67,14 @@ msgid ""
 "<strong>Payment Mode:</strong>\n"
 "                <br/>"
 msgstr ""
-"<strong>Mode de paiement:</strong>\n"
+"<strong>Mode de paiement :</strong>\n"
 "                <br/>"
 
 #. module: report_account_installer
 #: model_terms:ir.ui.view,arch_db:report_account_installer.report_invoice_document
-msgid ""
-"<strong>Payment terms:</strong>\n"
-"                <br/>"
-msgstr ""
-"<strong>Conditions de paiement:</strong>\n"
-"                <br/>"
+#, fuzzy
+msgid "<strong>Payment terms:</strong>"
+msgstr "<strong>Conditions de paiement :</strong>"
 
 #. module: report_account_installer
 #: model:ir.model.fields,field_description:report_account_installer.field_account_move__display_name

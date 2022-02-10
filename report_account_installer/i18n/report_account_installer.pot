@@ -43,6 +43,13 @@ msgid ""
 msgstr ""
 
 #. module: report_account_installer
+#: model_terms:ir.ui.view,arch_db:report_account_installer.report_invoice_document
+msgid ""
+"<strong>Legal terms:</strong>\n"
+"                <br/>"
+msgstr ""
+
+#. module: report_account_installer
 #: model_terms:ir.ui.view,arch_db:report_account_installer.report_invoice_payment_mode
 msgid ""
 "<strong>Payment Mode:</strong>\n"
@@ -51,9 +58,7 @@ msgstr ""
 
 #. module: report_account_installer
 #: model_terms:ir.ui.view,arch_db:report_account_installer.report_invoice_document
-msgid ""
-"<strong>Payment terms:</strong>\n"
-"                <br/>"
+msgid "<strong>Payment terms:</strong>"
 msgstr ""
 
 #. module: report_account_installer
