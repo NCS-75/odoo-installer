@@ -121,13 +121,24 @@
           <attribute name="class">d-none</attribute>
         </xpath>
         <xpath expr="//p[@name='payment_communication']" position="after">
-            <p t-if="o.invoice_payment_term_id or o.narration" style="page-break-inside: avoid;">
+            <p t-if="o.invoice_payment_term_id.note or o.narration" style="page-break-inside: avoid;">
                 <strong>Payment terms:</strong>
-                <br/>
-                <span t-field="o.invoice_payment_term_id.note"/>
-                <br/>
-                <span t-field="o.narration"/>
+                <span t-if="o.invoice_payment_term_id.note" >
+                  <br/>
+                  <span t-field="o.invoice_payment_term_id.note"/>
+                </span>
+                <span t-if="o.narration">
+                  <br/>
+                  <span t-field="o.narration"/>
+                </span>
             </p>
+        </xpath>
+        <xpath expr="//p[@name='payment_communication']/.." position="inside">
+            <div t-if="o.company_id.static_invoice_terms" style="page-break-inside: avoid;">
+                <strong>Legal terms:</strong>
+                <br/>
+                <span t-field="o.company_id.static_invoice_terms"/>
+            </div>
         </xpath>
 
     </template>
@@ -173,6 +184,7 @@
                             t-esc="'*' * (len(partner_bank.acc_number) - o.payment_mode_id.show_bank_account_chars) + partner_bank.acc_number[-o.payment_mode_id.show_bank_account_chars:]"
                         />
                     </t>
+                    <br/><br/>
                 </div>
             </t>
         </xpath>
