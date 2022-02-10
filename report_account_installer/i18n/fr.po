@@ -47,7 +47,7 @@ msgid ""
 "                    <br/>\n"
 "                    <span>Bank:</span>"
 msgstr ""
-"<strong>Bank details:</strong>\n"
+"<strong>Coordonnées Bancaires :</strong>\n"
 "                    <br/>\n"
 "                    <span>Banque :</span>"
 
