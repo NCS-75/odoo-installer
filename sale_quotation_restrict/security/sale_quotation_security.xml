@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="sale.sale_order_personal_rule" model="ir.rule">
+      <field name="domain_force">['|',('user_id','=',user.id),('user_id','=',False),('state','in', ['draft', 'sent'])]</field>
+  </record>
+  <record id="sale.sale_order_line_personal_rule" model="ir.rule">
+      <field name="domain_force">['|',('user_id','=',user.id),('user_id','=',False),('state','in', ['draft', 'sent'])]</field>
+  </record>
+</odoo>
