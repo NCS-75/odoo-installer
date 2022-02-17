@@ -3,7 +3,28 @@
   <record id="sale.sale_order_personal_rule" model="ir.rule">
       <field name="domain_force">['|',('user_id','=',user.id),('user_id','=',False),('state','in', ['draft', 'sent'])]</field>
   </record>
+  <record id="sale_order_personal_rule_quotation" model="ir.rule">
+      <field name="name">Personal Orders Confirmed Readonly</field>
+      <field ref="sale.model_sale_order" name="model_id"/>
+      <field name="domain_force">['|',('user_id','=',user.id),('user_id','=',False),('state','not in', ['draft', 'sent'])]</field>
+      <field name="perm_read" eval="1" />
+      <field name="perm_create" eval="0" />
+      <field name="perm_write" eval="0" />
+      <field name="perm_unlink" eval="0" />
+      <field name="groups" eval="[(4, ref('sales_team.group_sale_salesman'))]"/>
+  </record>
+
   <record id="sale.sale_order_line_personal_rule" model="ir.rule">
-      <field name="domain_force">['|',('user_id','=',user.id),('user_id','=',False),('state','in', ['draft', 'sent'])]</field>
+      <field name="domain_force">['|',('salesman_id','=',user.id),('salesman_id','=',False), ('state','in', ['draft', 'sent'])]</field>
+  </record>
+  <record id="sale_order_line_personal_rule_quotation" model="ir.rule">
+      <field name="name">Personal Orders Lines Confirmed Readonly</field>
+      <field ref="sale.model_sale_order_line" name="model_id"/>
+      <field name="domain_force">['|',('salesman_id','=',user.id),('salesman_id','=',False), ('state','not in', ['draft', 'sent'])]</field>
+      <field name="perm_read" eval="1" />
+      <field name="perm_create" eval="0" />
+      <field name="perm_write" eval="0" />
+      <field name="perm_unlink" eval="0" />
+      <field name="groups" eval="[(4, ref('sales_team.group_sale_salesman'))]"/>
   </record>
 </odoo>
