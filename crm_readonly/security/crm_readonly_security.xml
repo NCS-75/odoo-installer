@@ -3,4 +3,18 @@
     <record id="group_lead_readonly" model="res.groups">
         <field name="name">Show Leads Readonly</field>
     </record>
+
+    <!-- Extra rule to force users from group "Show Leads Readonly" to read all the non-private res.partner
+    ...even if some malicious modules like `sale_partner_restrict` change behavior for all Internal Users -->
+    <record id="res_partner_all_rule_crm_readonly" model="ir.rule">
+      <field name="name">All non-private Partners for CRM Readonly</field>
+      <field name="model_id" ref="base.model_res_partner"/>
+      <field name="domain_force">['|', ('type', '!=', 'private'), ('type', '=', False)]</field>
+      <field name="perm_read" eval="1" />
+      <field name="perm_create" eval="0" />
+      <field name="perm_write" eval="0" />
+      <field name="perm_unlink" eval="0" />
+      <field name="groups" eval="[(4, ref('crm_readonly.group_lead_readonly'))]"/>
+    </record>
+
 </odoo>
