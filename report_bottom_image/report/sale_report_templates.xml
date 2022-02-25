@@ -4,7 +4,9 @@
               inherit_id="sale.report_saleorder_document">
 
         <xpath expr="//p[@t-field='doc.note']/../.." position="after">
-            <img t-if="doc.company_id.report_bottom_image" t-att-src="image_data_uri(doc.company_id.report_bottom_image)" alt="Bottom Image" class="mt-5 mx-auto d-block"/>
+            <img t-if="doc.company_id.report_bottom_image"
+                 t-att-src="image_data_uri(doc.company_id.report_bottom_image)"
+                 alt="Bottom Image" class="mt-5 mx-auto d-block w-100" />
         </xpath>
 
     </template>
