@@ -20,7 +20,9 @@ class ResPartner(models.Model):
         help="Employees from the same company as current partner",
     )
 
-    @api.depends("parent_id", "is_company", "type")
+    @api.depends(
+        "parent_id", "parent_id.is_company", "child_ids.is_company", "child_ids.type"
+    )
     def _compute_coworker_ids(self):
         for rec in self:
             company_id = rec.parent_id.filtered("is_company")

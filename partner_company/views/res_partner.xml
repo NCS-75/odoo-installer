@@ -11,7 +11,7 @@
         <field name="arch" type="xml">
             <!-- Page for Coworkers -->
             <xpath expr="//page" position="before">
-                <page string="Coworkers" name="coworkers" attrs="{'invisible': ['|', ('coworker_ids', '=', []), ('type', '!=', 'contact')]}">
+                <page string="Coworkers" name="coworkers" attrs="{'invisible': ['|', '|', ('coworker_ids', '=', []), ('type', '!=', 'contact'), ('is_company', '=', True)]}">
                     <field name="coworker_ids">
                         <tree string="Coworkers">
                             <field name="name" />
