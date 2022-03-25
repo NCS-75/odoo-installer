@@ -1,3 +1,119 @@
+
+#. module: crm_installer
+#: model:crm.use,name:__installer__.water_heater
+msgid "Water Heater"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.use,name:__installer__.pool
+msgid "Swiming-pool"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.use,name:__installer__.heating
+msgid "Heating"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.roof,name:__installer__.flat
+msgid "Flat"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.roof,name:__installer__.sloped
+msgid "Sloped"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.roof,name:__installer__.ground
+msgid "Ground"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.roof,name:__installer__.shade_house
+msgid "Shade House"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.lost.reason,name:__installer__.no_answer
+msgid "No answer"
+msgstr "Pas de réponse"
+
+#. module: crm_installer
+#: model:crm.lost.reason,name:__installer__.meeting_cancelled
+msgid "Meeting cancelled"
+msgstr "Rendez-vous annulé"
+
+#. module: crm_installer
+#: model:crm.lost.reason,name:__installer__.project_aborted
+msgid "Project aborted"
+msgstr "Projet abandonné"
+
+#. module: crm_installer
+#: model:crm.lost.reason,name:__installer__.quotation_cancelled
+msgid "Quotation cancelled"
+msgstr "Devis annulé"
+
+#. module: crm_installer
+#: model:crm.lost.reason,name:__installer__.competing_offer_selected
+msgid "Competing offer selected"
+msgstr "Offre concurrente sélectionnée"
+
+#. module: crm_installer
+#: model:crm.lost.reason,name:__installer__.too_long_term
+msgid "Too long term"
+msgstr "Échéance trop lointaine"
+
+#. module: crm_installer
+#: model:crm.lost.reason,name:__installer__.listed_building
+msgid "Listed building"
+msgstr "Bâtiment classé"
+
+#. module: crm_installer
+#: model:crm.lost.reason,name:__installer__.technical_infeasibility
+msgid "Technical infeasibility"
+msgstr "Infaisabilité technique"
+
+#. module: crm_installer
+#: model:crm.lost.reason,name:__installer__.standby_customer
+msgid "Put on stand-by by the customer"
+msgstr "Mis en stand-by par le client"
+
+#. module: crm_installer
+#: model:crm.lost.reason,name:__installer__.wrong_number
+msgid "Wrong number"
+msgstr "Faux numéro"
+
+#. module: crm_installer
+#: model:crm.lost.reason,name:__installer__.wrong_email
+msgid "Wrong email"
+msgstr "Faux email"
+
+#. module: crm_installer
+#: model:crm.lost.reason,name:__installer__.not_owner
+msgid "Not owner"
+msgstr "Pas propriétaire"
+
+#. module: crm_installer
+#: model:crm.lost.reason,name:__installer__.lead_out
+msgid "Lead out-of-zone"
+msgstr "Affaire hors-zone"
+
+#. module: crm_installer
+#: model:crm.lost.reason,name:__installer__.no_installer_in_zone
+msgid "No installer in zone"
+msgstr "Pas d'installateur sur zone"
+
+#. module: crm_installer
+#: model:crm.lost.reason,name:__installer__.no_certified_installer
+msgid "No certified or boosted installer in zone"
+msgstr "Pas d'installateur agréé ou boosté sur zone"
+
+#. module: crm_installer
+#: model:crm.lost.reason,name:__installer__.duplicated_lead
+msgid "Duplicated Lead"
+msgstr "Affaire en doublon"
+
 #. module: crm_installer
 #: model:crm.stage,name:__installer__.relation_established
 msgid "Relation established"
@@ -32,3 +148,158 @@ msgstr "Mis en service"
 #: model:crm.stage,name:__installer__.guarantees_granted
 msgid "Guarantees granted"
 msgstr "Garanties émises"
+
+#. module: crm_installer
+#: model:crm.roof.covering,name:__installer__.slate
+msgid "Slate"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.roof.covering,name:__installer__.corrugated_metal_sheet
+msgid "Corrugated Metal Sheet"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.roof.covering,name:__installer__.trapezoidal_sheet
+msgid "Trapezoidal Sheet"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.roof.covering,name:__installer__.fibrocement
+msgid "Fibrocement"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.roof.covering,name:__installer__.tiles
+msgid "Tiles"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.roof.covering,name:__installer__.zinc
+msgid "Zinc"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.roof.covering,name:__installer__.sandwich_panel
+msgid "Sandwich Panel"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.roof.covering,name:__installer__.green_roof
+msgid "Green Roof"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.roof.covering,name:__installer__.bituminous_waterproof_membrane
+msgid "Bituminous Waterproof Membrane"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.roof.covering,name:__installer__.polymer_waterproof_membrane
+msgid "Polymer Waterproof Membrane"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.roof.covering,name:__installer__.gravelled_waterproof_membrane
+msgid "Gravelled Waterproof Membrane"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.building,name:__installer__.individual_house
+msgid "Individual house"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.building,name:__installer__.boarding_school
+msgid "Boarding school"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.building,name:__installer__.half_board
+msgid "Half board"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.building,name:__installer__.collective_housing
+msgid "Collective housing"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.building,name:__installer__.agricultural_exploitation
+msgid "Agricultural exploitation"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.building,name:__installer__.sports_complex
+msgid "Sports Complex"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.building,name:__installer__.ehpad
+msgid "EHPAD"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.building,name:__installer__.hospital
+msgid "Hospital"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.building,name:__installer__.camping
+msgid "Camping"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.building,name:__installer__.hotel
+msgid "Hotel"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.building,name:__installer__.industrial_building
+msgid "Industrial building"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.building,name:__installer__.commercial_building
+msgid "Commercial building"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.heater,name:__installer__.elec_resistance
+msgid "Electrical Resistance"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.heater,name:__installer__.heat_pump_air
+msgid "Heat Pump air/water"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.heater,name:__installer__.heat_pump_water
+msgid "Heat Pump water/water"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.heater,name:__installer__.gas_boiler
+msgid "Gas boiler"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.heater,name:__installer__.wood_boiler
+msgid "Wood boiler"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.heater,name:__installer__.oil_boiler
+msgid "Oil boiler"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.heater,name:__installer__.district_heating
+msgid "District Heating"
+msgstr ""
+
+#. module: crm_installer
+#: model:crm.heater,name:__installer__.thermodynamic_water_heater
+msgid "Thermodynamic Water Heater"
+msgstr ""
