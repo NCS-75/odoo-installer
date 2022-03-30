@@ -135,7 +135,7 @@
                 <field name="url_video_public" widget="url" />
               </group>
               <group string="Public Description" name="public_description" class="col-12 col-lg-6">
-                  <field name="public_description" />
+                  <field name="public_description" nolabel="1"/>
               </group>
               <group string="Public Photos" name="public_photos" class="col-12 col-lg-6">
                   <field name="public_photos" nolabel="1" widget="many2many_binary" />

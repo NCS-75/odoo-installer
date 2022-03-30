@@ -1,0 +1,216 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* crm_installer_fields
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: crm_installer_fields
+#: model:ir.model.fields,field_description:crm_installer_fields.field_crm_lead__additional_doc_ready
+msgid "Additional Doc. Ready"
+msgstr "Pièces Comp. prêtes"
+
+#. module: crm_installer_fields
+#: model:ir.model.fields,field_description:crm_installer_fields.field_crm_lead__date_additional_doc_sent
+msgid "Additional Doc. Sent"
+msgstr "Envoi Pièces Comp."
+
+#. module: crm_installer_fields
+#: model:ir.model.fields,field_description:crm_installer_fields.field_crm_lead__date_additional_doc_voucher
+msgid "Additional Doc. Voucher"
+msgstr "Récepissé Pièces Comp."
+
+#. module: crm_installer_fields
+#: model_terms:ir.ui.view,arch_db:crm_installer_fields.crm_lead_form_view
+msgid "Administration"
+msgstr ""
+
+#. module: crm_installer_fields
+#: model:ir.model.fields,field_description:crm_installer_fields.field_crm_lead__is_advance_pay_received
+msgid "Advance Payment Received"
+msgstr "Acompte encaissé"
+
+#. module: crm_installer_fields
+#: model:ir.model.fields,field_description:crm_installer_fields.field_crm_lead__code
+msgid "Code"
+msgstr "Numéro de dossier"
+
+#. module: crm_installer_fields
+#: model:ir.model.fields,field_description:crm_installer_fields.field_crm_lead__is_installation_file_complete
+msgid "Complete Installation File"
+msgstr "Dossier de Pose complet"
+
+#. module: crm_installer_fields
+#: model_terms:ir.ui.view,arch_db:crm_installer_fields.crm_lead_form_view
+msgid "Connection"
+msgstr "Raccordement"
+
+#. module: crm_installer_fields
+#: model:ir.model.fields,field_description:crm_installer_fields.field_crm_lead__difficulty
+msgid "Difficulty"
+msgstr "Difficulté"
+
+#. module: crm_installer_fields
+#: model:ir.model.fields,field_description:crm_installer_fields.field_crm_lead__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: crm_installer_fields
+#: model:ir.model.fields,field_description:crm_installer_fields.field_crm_lead__url_drive
+msgid "Drive Folder"
+msgstr "Dossier Drive"
+
+#. module: crm_installer_fields
+#: model:ir.model.fields.selection,name:crm_installer_fields.selection__crm_lead__difficulty__easy
+msgid "Easy"
+msgstr "Facile"
+
+#. module: crm_installer_fields
+#: model:ir.model.fields,field_description:crm_installer_fields.field_crm_lead__equipment_ordered
+msgid "Equipment Ordered"
+msgstr "Matériel Commandé"
+
+#. module: crm_installer_fields
+#: model:ir.model.fields,field_description:crm_installer_fields.field_crm_lead__mandays_estimated
+msgid "Estimated man-days"
+msgstr "Jours-hommes estimés"
+
+#. module: crm_installer_fields
+#: model:ir.model.fields.selection,name:crm_installer_fields.selection__crm_lead__difficulty__hard
+msgid "Hard"
+msgstr "Difficile"
+
+#. module: crm_installer_fields
+#: model:ir.model.fields,field_description:crm_installer_fields.field_crm_lead__id
+msgid "ID"
+msgstr ""
+
+#. module: crm_installer_fields
+#: model_terms:ir.ui.view,arch_db:crm_installer_fields.crm_lead_form_view
+msgid "Installation"
+msgstr "Installation"
+
+#. module: crm_installer_fields
+#: model:ir.model.fields,field_description:crm_installer_fields.field_crm_lead__installation_user_id
+msgid "Installation Manager"
+msgstr "Chef d'Equipe"
+
+#. module: crm_installer_fields
+#: model:ir.model.fields,field_description:crm_installer_fields.field_crm_lead__date_invoice_sent
+msgid "Invoice sent"
+msgstr "Envoi facture"
+
+#. module: crm_installer_fields
+#: model_terms:ir.ui.view,arch_db:crm_installer_fields.crm_lead_form_view
+msgid "Invoicing"
+msgstr "Facturation"
+
+#. module: crm_installer_fields
+#: model:ir.model.fields,field_description:crm_installer_fields.field_crm_lead____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: crm_installer_fields
+#: model:ir.model,name:crm_installer_fields.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr ""
+
+#. module: crm_installer_fields
+#: model:ir.model.fields,field_description:crm_installer_fields.field_crm_lead__is_maintenance_contract
+msgid "Maintenance Contract"
+msgstr "Contrat d'Entretien"
+
+#. module: crm_installer_fields
+#: model:ir.model.fields,field_description:crm_installer_fields.field_crm_lead__is_monitoring_confirmed
+msgid "Monitoring Confirmed"
+msgstr "Monitoring Validé"
+
+#. module: crm_installer_fields
+#: model:ir.model.fields,field_description:crm_installer_fields.field_crm_lead__is_monitoring_sent
+msgid "Monitoring Sent"
+msgstr "Monitoring Envoyé"
+
+#. module: crm_installer_fields
+#: model:ir.model.fields.selection,name:crm_installer_fields.selection__crm_lead__difficulty__normal
+msgid "Normal"
+msgstr ""
+
+#. module: crm_installer_fields
+#: model:ir.model.fields,field_description:crm_installer_fields.field_crm_lead__is_photo_received
+msgid "Photo Received"
+msgstr "Photo reçue"
+
+#. module: crm_installer_fields
+#: model:ir.model.fields,field_description:crm_installer_fields.field_crm_lead__date_powergrid_commissioned
+msgid "Powergrid Commissioned"
+msgstr "Mise en Service ENEDIS"
+
+#. module: crm_installer_fields
+#: model:ir.model.fields,field_description:crm_installer_fields.field_crm_lead__date_powergrid_request
+msgid "Powergrid Request"
+msgstr "Demande de Mise en Service ENEDIS"
+
+#. module: crm_installer_fields
+#: model_terms:ir.ui.view,arch_db:crm_installer_fields.crm_lead_form_view
+msgid "Reception"
+msgstr "Réception"
+
+#. module: crm_installer_fields
+#: model:ir.model.fields,field_description:crm_installer_fields.field_crm_lead__date_security_ok
+msgid "Security Certificate"
+msgstr "Attestation CONSUEL"
+
+#. module: crm_installer_fields
+#: model:ir.model.fields,field_description:crm_installer_fields.field_crm_lead__date_security_visit
+msgid "Security Visit"
+msgstr "Visite CONSUEL"
+
+#. module: crm_installer_fields
+#: model:ir.model.fields,field_description:crm_installer_fields.field_crm_lead__mandays_spent
+msgid "Spent man-days"
+msgstr "Jours-hommes réalisés"
+
+#. module: crm_installer_fields
+#: model:ir.model.fields,field_description:crm_installer_fields.field_crm_lead__technical_visit_user_id
+msgid "TV Technician"
+msgstr "Technicien VT"
+
+#. module: crm_installer_fields
+#: model:ir.model.fields,field_description:crm_installer_fields.field_crm_lead__date_technical_visit
+#: model_terms:ir.ui.view,arch_db:crm_installer_fields.crm_lead_form_view
+msgid "Technical Visit"
+msgstr "Visite Technique"
+
+#. module: crm_installer_fields
+#: model:ir.model.fields,field_description:crm_installer_fields.field_crm_lead__date_worksite_end
+msgid "Worksite End date"
+msgstr "Fin de chantier"
+
+#. module: crm_installer_fields
+#: model_terms:ir.ui.view,arch_db:crm_installer_fields.crm_lead_form_view
+msgid "Worksite Request"
+msgstr "Mairie"
+
+#. module: crm_installer_fields
+#: model:ir.model.fields,field_description:crm_installer_fields.field_crm_lead__date_worksite_request_ok
+msgid "Worksite Request OK"
+msgstr "Accord Mairie"
+
+#. module: crm_installer_fields
+#: model:ir.model.fields,field_description:crm_installer_fields.field_crm_lead__date_worksite_request
+msgid "Worksite Request Sent"
+msgstr "Envoi Dossier Mairie"
+
+#. module: crm_installer_fields
+#: model:ir.model.fields,field_description:crm_installer_fields.field_crm_lead__date_worksite_request_voucher
+msgid "Worksite Request Voucher"
+msgstr "Récepissé Dossier Mairie"

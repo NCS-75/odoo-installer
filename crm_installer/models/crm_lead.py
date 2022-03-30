@@ -112,7 +112,7 @@ class CrmLead(models.Model):
     url_monitoring_th_2 = fields.Char("Thermal Monitoring scheme")
     url_monitoring_pv = fields.Char("PV Monitoring")
 
-    # Tecnical
+    # Progress
     regulatory_calcul_ok = fields.Boolean("Regularoty Calcultation")
     worksite_request_ok = fields.Boolean("Worksite Request")
     purchase_obligation_ok = fields.Boolean("Purchase Obligation")
@@ -133,6 +133,7 @@ class CrmLead(models.Model):
         help="'Expected' Worksite date if the worksite is not completed yet",
     )
 
+    # Technical
     url_study = fields.Char("Study MyDS")
     dropbox_folder = fields.Char("Dropbox folder")
     url_specifications = fields.Char("Specifications")

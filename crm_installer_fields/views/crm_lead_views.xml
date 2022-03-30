@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2022 Akretion
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl). -->
+
+<odoo>
+
+    <record id="crm_lead_form_view" model="ir.ui.view">
+        <field name="name">crm.lead.form (in crm_installer_fields)</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm_installer.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+          <xpath expr="//field[@name='date_deadline']/../field" position="before">
+              <field name="code" />
+          </xpath>
+            <xpath expr="//field[@name='date_deadline']/.." position="inside">
+                <field name="url_drive" widget="url"/>
+            </xpath>
+
+            <xpath expr="//page[@name='progress']" position="attributes">
+                <attribute name="invisible">True</attribute>
+            </xpath>
+
+            <xpath expr="//page[@name='contacts']" position="after">
+                <page string="Administration" name="administration">
+                    <group name="worksite_request" string="Worksite Request" class="col-12 col-lg-6" >
+                        <field name="date_worksite_request" />
+                        <field name="date_worksite_request_voucher" />
+                        <field name="date_worksite_request_ok" />
+                        <field name="additional_doc_ready" widget="boolean_toggle" />
+                        <field name="date_additional_doc_sent"/>
+                        <field name="date_additional_doc_voucher"/>
+                    </group>
+                    <group name="connection" string="Connection" class="col-12 col-lg-6">
+                        <field name="date_security_visit"/>
+                        <field name="date_security_ok"/>
+                        <field name="date_powergrid_request"/>
+                        <field name="date_powergrid_commissioned"/>
+                    </group>
+                    <group name="invoicing" string="Invoicing" class="col-12 col-lg-6">
+                        <field name="date_invoice_sent"/>
+                        <field name="is_maintenance_contract" widget="boolean_toggle"/>
+                        <field name="is_advance_pay_received" widget="boolean_toggle"/>
+                    </group>
+                </page>
+            </xpath>
+            <xpath expr="//page[@name='technical']/group" position="before">
+              <group name="technical_visit" string="Technical Visit" class="col-12 col-lg-6">
+                  <field name="technical_visit_user_id"/>
+                  <field name="date_technical_visit"/>
+                  <field name="difficulty"/>
+                  <field name="mandays_estimated"/>
+              </group>
+              <group name="installation" string="Installation" class="col-12 col-lg-6">
+                  <field name="installation_user_id"/>
+                  <field name="equipment_ordered" widget="boolean_toggle"/>
+                  <field name="date_worksite_end"/>
+                  <field name="mandays_spent"/>
+              </group>
+              <group name="reception" string="Reception" class="col-12 col-lg-6">
+                  <field name="is_installation_file_complete" widget="boolean_toggle"/>
+                  <field name="is_photo_received" widget="boolean_toggle"/>
+                  <field name="is_monitoring_sent" widget="boolean_toggle"/>
+                  <field name="is_monitoring_confirmed" widget="boolean_toggle"/>
+              </group>
+            </xpath>
+        </field>
+    </record>
+
+
+
+</odoo>
