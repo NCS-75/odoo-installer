@@ -20,7 +20,7 @@ class ResPartner(models.Model):
         "modified through the MyDS-Odoo API exclusively.",
     )
 
-    def _notify_myds_update(self):
+    def notify_myds_update(self):
         myds_server = self.env['ir.config_parameter'].sudo().get_param('dualsun.myds.url')
         if myds_server:
             odoo_server = self.env['ir.config_parameter'].sudo().get_param('web.base.url')

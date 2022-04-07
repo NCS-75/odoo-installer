@@ -35,4 +35,4 @@ class ResPartnerEventListener(Component):
             description="update partner %s" % (record.id,),
             identity_key=identity_exact, # ensure will call WS only once
             max_retries=5,
-        )._notify_myds_update()
+        ).notify_myds_update()
