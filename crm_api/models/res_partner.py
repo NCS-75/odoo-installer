@@ -15,13 +15,29 @@ class ResPartner(models.Model):
     myds_id = fields.Integer("MyDS ID", index=True, readonly=True)
     myds_url = fields.Char(
         "MyDS",
-        readonly=True,
         help="Related object on MyDualSun.\nNot editable because it is made to be "
         "modified through the MyDS-Odoo API exclusively.",
+        compute="_compute_myds_url",
     )
     is_myds_visible = fields.Boolean(
         string="Is MyDS visible?", compute="_compute_is_myds_visible"
     )
+
+    @api.depends("myds_id")
+    def _compute_myds_url(self):
+        myds_server = (
+            self.env["ir.config_parameter"].sudo().get_param("dualsun.myds.url")
+        )
+        for rec in self:
+            if not myds_server or not rec.myds_id:
+                rec.myds_url = False
+                continue
+            if rec.is_company:
+                rec.myds_url = myds_server + "/companies/" + str(rec.myds_id)
+            elif rec.type == "contact":
+                rec.myds_url = myds_server + "/users/" + str(rec.myds_id)
+            else:
+                rec.myds_url = False
 
     @api.depends("email", "user_ids", "role_id")
     def _compute_is_myds_visible(self):

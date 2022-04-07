@@ -15,13 +15,24 @@ class CrmLead(models.Model):
     myds_id = fields.Integer("MyDS ID", index=True, readonly=True)
     myds_url = fields.Char(
         "MyDS",
-        readonly=True,
+        compute="_compute_myds_url",
         help="Related object on MyDualSun.\nNot editable because it is made to be "
         "modified through the MyDS-Odoo API exclusively.",
     )
     is_myds_visible = fields.Boolean(
         string="Is MyDS visible?", compute="_compute_is_myds_visible"
     )
+
+    @api.depends("myds_id")
+    def _compute_myds_url(self):
+        myds_server = (
+            self.env["ir.config_parameter"].sudo().get_param("dualsun.myds.url")
+        )
+        for rec in self:
+            if not myds_server or not rec.myds_id:
+                rec.myds_url = False
+            else:
+                rec.myds_url = myds_server + "/projects/" + str(rec.myds_id)
 
     @api.depends(
         "street",
