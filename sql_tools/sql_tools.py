@@ -75,7 +75,7 @@ def insert_sql_datas(cr, module, model, data_file):
 
 
 def update_sql_datas(cr, module, model, data_file):
-    """Update existing existing data given in data_file"""
+    """Update existing data given in data_file"""
     file = _get_data_file(module, data_file)
     data_list = pyexcel.get_records(file_name=str(file))
     table_name = model.replace(".", "_")
